@@ -1,0 +1,92 @@
+.extend-text-outer
+{
+  position: relative;
+}
+
+.extend-text-inner
+{
+  position: relative;
+}
+
+.extend-text-tag-container
+{
+  position: absolute;
+  padding: 3px;
+  float: left;
+  z-index: 2;
+}
+
+.extend-text-tag-container ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.extend-text-tag
+{
+  display: inline-block;
+  margin-right: 6px;
+  float: left;
+  position: relative;
+}
+
+.extend-text-tag-text
+{
+  display: inline-block;
+  background-color: rgb(184, 215, 235);
+  border: 1px solid rgb(95, 134, 142);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.extend-text-tag.selected .extend-text-tag-text {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.extend-text-tag-remove
+{
+  position: relative;
+  left: 1px;
+  cursor: pointer;
+}
+
+.extend-text ul,
+.extend-text li
+{
+  margin: 0;
+  padding: 1px;
+}
+
+.extend-text ul
+{
+  list-style: none;
+  cursor: pointer;
+}
+
+.extend-text-textarea
+{
+  resize: none;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  height: inherit;
+  box-sizing: border-box;
+}
+
+.extend-text-options {
+  position: absolute;
+  border: 1px solid $black;
+  box-sizing: border-box;
+  background-color: $white;
+  z-index: 1;
+}
+
+.extend-text-option-focus
+{
+  background: #E1E9F6;
+}

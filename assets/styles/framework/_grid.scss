@@ -1,0 +1,162 @@
+.grid ul,
+.grid li {
+  padding:  0;
+  margin:  0;
+}
+
+.grid-header-data-cell,
+.grid-data-cell,
+.grid-actions {
+  display: inline-block;
+}
+
+.grid {
+  display: block;
+  border: 1px solid $black;
+  min-height: 75px;
+}
+
+.grid .grid-header {
+  @include user-select('none');
+  padding: 5px;
+}
+
+.grid .data-header > li,
+.grid .record-item > li {
+  height: 100%;
+}
+
+.grid .data-header {
+  @include user-select('none');
+}
+
+.grid .grid-header .settings {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+
+.grid .grid-header .settings:after {
+  content: "\e009";
+}
+
+.grid .data {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.grid .data.selectable {
+  @include user-select('none');
+  cursor: pointer;
+}
+
+.grid .data .data-header [class*="sort-"]:after,
+.grid .grid-header .settings:after,
+.grid .data .data-header .sortable:after {
+  font-family: 'icon-fonts';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  float: right;
+  width: 16px;
+  text-align: center;
+}
+
+.grid .data .data-header .sort-desc:after {
+  content: "\e004";
+}
+
+.grid .data .data-header .sort-asc:after {
+  content: "\e006";
+}
+
+.grid .data .data-header .sortable {
+  cursor: pointer;
+}
+
+.grid .data .data-header .sortable:not([class*="sort-"]):after {
+  content: "\e008";
+}
+
+.grid .data .data-header .text {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.grid .data > ul li {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.grid .data > ul {
+  border-top: 1px solid black;
+  display: inline-block;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.grid .data > ul:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+.grid .data > ul li {
+  border-right: 1px solid black;
+  padding: 3px;
+}
+
+.grid .data > ul li:last-child {
+  border-right:  none;
+}
+
+.grid .controls a,
+.grid .controls span[class^="font-icon-"],
+.grid .controls span,
+.grid .controls input {
+  vertical-align: middle;
+  text-decoration: none;
+  color: $black;
+}
+
+.grid .grid-footer {
+  padding: 6px 5px 5px 5px;
+}
+
+.grid .grid-wrapper {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.grid .loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.grid .loading .text {
+  border-radius: 10px;
+  margin: 20px auto 0 auto;
+  width: 53px;
+  padding: 10px;
+  background-color: $white;
+
+}
+
+.grid .settings-widget {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 1px solid $black;
+  background-color: $white;
+  z-index: 1001; //make sure it appears above the jquery ui resize widgets
+}
+
+.grid .ui-resizable-e {
+  right: 0;
+}

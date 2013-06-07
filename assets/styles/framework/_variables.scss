@@ -1,0 +1,59 @@
+//color palette
+$red-darker: rgb(82, 3, 0);
+$red-dark: rgb(127, 4, 0);
+$red: rgb(176, 63, 57);
+$red-light: rgb(220, 153, 150);
+$red-lighter: rgb(245, 230, 230);
+
+$green-darker: rgb(3, 82, 0);
+$green-dark: rgb(0, 127, 2);
+$green: rgb(63, 176, 57);
+$green-light: rgb(153, 220, 150);
+$green-lighter: rgb(230, 245, 230);
+
+$blue-darker: rgb(11, 26, 82);
+$blue-dark: rgb(0, 2, 172);
+$blue: rgb(63, 88, 176);
+$blue-light: rgb(135, 159, 220);
+$blue-lighter: rgb(230, 230, 245);
+
+$orange-darker: rgb(131, 45, 0);
+$orange-dark: rgb(255, 88, 0);
+$orange: rgb(255, 145, 80);
+$orange-light: rgb(255, 185, 148);
+$orange-lighter: rgb(255, 219, 203);
+
+$yellow-darker: rgb(127, 127, 0);
+$yellow-dark: rgb(207, 207, 0);
+$yellow: rgb(255, 255, 0);
+$yellow-light: rgb(254, 255, 109);
+$yellow-lighter: rgb(254, 255, 180);
+
+$black: rgb(0, 0, 0);
+$gray-darkest: rgb(30, 30, 30);
+$gray-darker: rgb(65, 65, 65);
+$gray-dark: rgb(100, 100, 100);
+$gray: rgb(135, 135, 135);
+$gray-light: rgb(170, 170, 170);
+$gray-lighter: rgb(205, 205, 205);
+$gray-lightest: rgb(240, 240, 240);
+$white: rgb(255, 255, 255);
+
+//functional colors
+$text-color: $gray-darker;
+
+$link-color: $blue-light;
+
+$success-text-color: $green-darker;
+$notice-text-color: $blue-darker;
+$warning-text-color: $yellow-darker;
+$error-text-color: $red-darker;
+
+
+$button-normal-color: $gray-light;
+$button-primary-color: $blue-light;
+$button-caution-color: $yellow-dark;
+$button-danger-color: $red;
+$button-safe-color: $green;
+
+$font-size: 1.3rem;

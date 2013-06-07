@@ -1,0 +1,26 @@
+.tabs,
+.tabs-container {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs .tab {
+  padding: 3px;
+  display: inline-block;
+  border: 1px solid $gray-lighter;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.tabs .tab.is-active {
+  background-color: $gray-lighter;
+}
+
+.tabs .tab-content {
+  display: none;
+}
+
+.tabs .tab-content.is-active {
+  border-top: 1px solid $gray-lighter;
+  display: block;
+}

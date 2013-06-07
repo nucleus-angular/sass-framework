@@ -1,0 +1,35 @@
+/* tree system */
+.tree > ul,
+.tree .tree-element > ul {
+  padding: 0;
+  list-style: none;
+}
+
+.tree .tree-element {
+  cursor: pointer;
+}
+
+.tree .tree-element > .tree-label:before,
+.tree .tree-element.tree-expanded > .tree-label:before {
+  @extend %nag-icon-font !optional;
+}
+
+.tree .tree-element > .tree-label:before {
+  content: "\e05";
+}
+
+.tree .tree-element.tree-expanded > .tree-label:before {
+  content: "\e006";
+}
+
+.tree .tree-element .node {
+  padding-left: $font-size;
+}
+
+.tree .tree-element > ul.node {
+  display: none;
+}
+
+.tree .tree-element.tree-expanded > ul.node {
+  display: block;
+}

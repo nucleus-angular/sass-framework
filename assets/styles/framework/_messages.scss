@@ -1,0 +1,62 @@
+.message {
+  padding: 5px;
+  border: 1px solid $black;
+  border-radius: 3px;
+
+  .icon {
+    &:before {
+      @extend %nag-icon-font !optional;
+      position: relative;
+      top: 1px;
+      padding-right: 5px;
+    }
+  }
+
+  &.success {
+    background-color: $green-lighter;
+    color: $success-text-color;
+    border-color: $green-darker;
+
+    .icon {
+      &:before {
+        content: "\e00b";
+      }
+    }
+  }
+
+  &.notice {
+    background-color: $blue-lighter;
+    color: $notice-text-color;
+    border-color: $blue-darker;
+
+    .icon {
+      &:before {
+        content: "\e00c";
+      }
+    }
+  }
+
+  &.warning {
+    background-color: shade($yellow-lighter, 5%);
+    color: $warning-text-color;
+    border-color: $yellow-darker;
+
+    .icon {
+      &:before {
+        content: "\e00a";
+      }
+    }
+  }
+
+  &.error {
+    background-color: $red-lighter;
+    color: $error-text-color;
+    border-color: $red-darker;
+
+    .icon {
+      &:before {
+        content: "\e00d";
+      }
+    }
+  }
+}

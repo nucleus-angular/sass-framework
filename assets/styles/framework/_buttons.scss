@@ -1,0 +1,97 @@
+@mixin button-size($size: normal) {
+  @if $size == small {
+    font-size: 1rem;
+    padding: 3px 9px;
+  }
+  @if $size == normal {
+    font-size: 1.3rem;
+    padding: 4px 12px;
+  }
+  @if $size == large {
+    font-size: 1.8rem;
+    padding: 5px 15px;
+  }
+  @if $size == largest {
+    font-size: 2.4rem;
+    padding: 6px 18px;
+  }
+}
+
+@mixin button-color($button-main-color, $button-text-color) {
+  &.quiet {
+    color: $text-color;
+  }
+
+  &:not(.quiet) {
+    color: $button-text-color;
+    background-color: $button-main-color;
+  }
+
+  &:hover {
+    &:not([disabled]) {
+      background-color: tint($button-main-color, 20%);
+    }
+  }
+
+  &:active {
+    &:not([disabled]) {
+      background-color: darken($button-main-color, 5%);
+    }
+  }
+}
+
+
+button {
+  @include button-size(normal);
+  @include button-color($button-normal-color, $white);
+
+  border-radius: 3px;
+  position: relative;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &.small {
+    @include button-size(small);
+  }
+
+  &.large {
+    @include button-size(large);
+  }
+
+  &.largest {
+    @include button-size(largest);
+  }
+
+  &.primary {
+    @include button-color($button-primary-color, $white);
+  }
+
+  &.caution {
+    @include button-color($button-caution-color, $white);
+  }
+
+  &.danger {
+    @include button-color($button-danger-color, $white);
+  }
+
+  &.safe {
+    @include button-color($button-safe-color, $white);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &.border {
+    border: 1px solid $black;
+  }
+
+  &.shadow {
+    box-shadow: 0 0 5px $gray;
+  }
+
+  &.square {
+    border-radius: 0;
+  }
+}
