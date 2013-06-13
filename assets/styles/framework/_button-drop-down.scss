@@ -16,7 +16,7 @@
       z-index: 502;
 
       &.border {
-        @include button-size(drop-down-border);
+        @include button-size(drop-down-normal);
 
         &.small {
           @include button-size(drop-down-small);

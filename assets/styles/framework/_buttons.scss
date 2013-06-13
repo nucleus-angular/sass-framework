@@ -45,13 +45,17 @@
 
   &:hover {
     &:not([disabled]) {
-      background-color: $button-light-color;
+      &:not(.solid-color) {
+        background-color: $button-light-color;
+      }
     }
   }
 
   &:active, &.is-active {
     &:not([disabled]) {
-      background-color: $button-dark-color;
+      &:not(.solid-color) {
+        background-color: $button-dark-color;
+      }
     }
   }
 }

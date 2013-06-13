@@ -1,0 +1,79 @@
+.revealing-panel {
+  .content {
+    //animation stuff
+    -webkit-transition:width 1.0s ease, height 1.0s ease;
+    transition:width 1.0s ease, height 1.0s ease;
+
+    position: fixed;
+    z-index: 11000;
+    background-color: white;
+    white-space: nowrap;
+    overflow: hidden;
+
+    //useful for want to have a revealing panel within a element in the page instead of on the page itself
+    &.absolute {
+      position: absolute;
+    }
+
+    &.left {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+
+      &.is-active {
+        overflow: auto;
+        border-right: 1px solid black;
+
+        //default value, should be manually handled on a case by case basis
+        width: 500px;
+      }
+
+    }
+
+    &.right {
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+
+      &.is-active {
+        ofoverflowerflow: auto;
+        border-left: 1px solid black;
+
+        //default value, should be manually handled on a case by case basis
+        width: 500px;
+      }
+    }
+
+    &.top {
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+
+      &.is-active {
+        overflow: auto;
+        border-bottom: 1px solid black;
+
+        //default value, should be manually handled on a case by case basis
+        height: 500px;
+      }
+    }
+
+    &.bottom {
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+
+      &.is-active {
+        overflow: auto;
+        border-top: 1px solid black;
+
+        //default value, should be manually handled on a case by case basis
+        height: 500px;
+      }
+    }
+  }
+}
