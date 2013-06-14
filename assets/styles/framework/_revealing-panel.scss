@@ -1,13 +1,15 @@
 .revealing-panel {
   .content {
     //animation stuff
-    -webkit-transition:width 1.0s ease, height 1.0s ease;
-    transition:width 1.0s ease, height 1.0s ease;
+    @include transition(width 1.0s ease, height 1.0s ease);
 
     position: fixed;
     z-index: 11000;
     background-color: white;
+
+    //prevents any content inside the panel from wrapping when the panel in being revealed
     white-space: nowrap;
+
     overflow: hidden;
 
     //useful for want to have a revealing panel within a element in the page instead of on the page itself
@@ -38,7 +40,7 @@
       width: 0;
 
       &.is-active {
-        ofoverflowerflow: auto;
+        overflow: auto;
         border-left: 1px solid black;
 
         //default value, should be manually handled on a case by case basis
