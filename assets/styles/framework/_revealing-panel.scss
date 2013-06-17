@@ -1,7 +1,7 @@
 .revealing-panel {
   .content {
     //animation stuff
-    @include transition(width .25s ease, height .25s ease);
+    @include transition(width .25s linear, height .25s linear);
 
     position: fixed;
     z-index: 11000;

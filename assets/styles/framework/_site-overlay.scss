@@ -1,6 +1,6 @@
 .site-overlay{
   //animation stuff
-  @include transition(background-color .25s ease);
+  @include transition(background-color .25s linear);
 
   position: fixed;
   top: 0;
