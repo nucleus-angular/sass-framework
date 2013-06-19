@@ -6,15 +6,16 @@
     position: fixed;
     z-index: 11000;
     background-color: white;
-
-    //prevents any content inside the panel from wrapping when the panel in being revealed
-    white-space: nowrap;
-
     overflow: hidden;
 
     //useful for want to have a revealing panel within a element in the page instead of on the page itself
     &.absolute {
       position: absolute;
+    }
+
+    &.conceal-animate,
+    &.is-active {
+      overflow: auto;
     }
 
     &.center {
@@ -23,17 +24,19 @@
       height: 500px;
       width: 500px;
       display: none;
-      opacity: 0;
       border: 1px solid $black;
 
-      //make sure that the content is still visible while fading out
-      &.fade-out {
+      &.reveal-animate {
+        @include animation(fadeIn .25s ease-in);
+      }
+
+      &.conceal-animate {
+        @include animation(fadeOut .25s ease-in);
         display: inline-block;
       }
 
       &.is-active {
         display: inline-block;
-        opacity: 1;
       }
     }
 
@@ -44,13 +47,15 @@
       width: 0;
 
       &.is-active {
-        overflow: auto;
         border-right: 1px solid black;
 
         //default value, should be manually handled on a case by case basis
         width: 500px;
       }
 
+      .inner-content {
+        min-width: 500px;
+      }
     }
 
     &.right {
@@ -60,11 +65,14 @@
       width: 0;
 
       &.is-active {
-        overflow: auto;
         border-left: 1px solid black;
 
         //default value, should be manually handled on a case by case basis
         width: 500px;
+      }
+
+      .inner-content {
+        min-width: 500px;
       }
     }
 
@@ -75,11 +83,14 @@
       width: 100%;
 
       &.is-active {
-        overflow: auto;
         border-bottom: 1px solid black;
 
         //default value, should be manually handled on a case by case basis
         height: 500px;
+      }
+
+      .inner-content {
+        min-height: 500px;
       }
     }
 
@@ -90,11 +101,14 @@
       width: 100%;
 
       &.is-active {
-        overflow: auto;
         border-top: 1px solid black;
 
         //default value, should be manually handled on a case by case basis
         height: 500px;
+      }
+
+      .inner-content {
+        min-height: 500px;
       }
     }
   }
