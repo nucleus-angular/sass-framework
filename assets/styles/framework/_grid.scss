@@ -54,12 +54,15 @@
 .grid .data .data-header [class*="sort-"]:after,
 .grid .grid-header .settings:after,
 .grid .data .data-header .sortable:after {
-  font-family: 'icon-fonts';
+  //todo: fix out why placeholder not working
+  //@extend %nag-icon-font;
+  font-family: 'nag-icon-font';
   font-style: normal;
   speak: none;
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+  display: inline-block;
   float: right;
   width: 16px;
   text-align: center;
