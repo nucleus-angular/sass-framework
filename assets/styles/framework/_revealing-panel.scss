@@ -43,7 +43,7 @@
     &.left {
       top: 0;
       left: 0;
-      height: 100%;
+      bottom: 0;
       width: 0;
 
       &.is-active {
@@ -61,7 +61,7 @@
     &.right {
       top: 0;
       right: 0;
-      height: 100%;
+      bottom: 0;
       width: 0;
 
       &.is-active {
@@ -79,8 +79,8 @@
     &.top {
       top: 0;
       left: 0;
+      right: 0;
       height: 0;
-      width: 100%;
 
       &.is-active {
         border-bottom: 1px solid black;
@@ -97,8 +97,8 @@
     &.bottom {
       bottom: 0;
       left: 0;
+      right: 0;
       height: 0;
-      width: 100%;
 
       &.is-active {
         border-top: 1px solid black;
