@@ -10,8 +10,8 @@
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="nag-icon-font-"]:before,
-[class^="nag-icon-font-"]:after {
+[class*="nag-icon-font-"]:before,
+[class*="nag-icon-font-"]:after {
   @extend %nag-icon-font;
 }
 
