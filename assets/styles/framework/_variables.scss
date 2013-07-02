@@ -41,19 +41,27 @@ $white: rgb(255, 255, 255);
 
 //functional colors
 $text-color: $gray-darker;
-
 $link-color: $blue-light;
 
-$success-text-color: $green-darker;
-$notice-text-color: $blue-darker;
-$warning-text-color: $yellow-darker;
-$error-text-color: $red-darker;
+$success-text-color: $green-dark;
+$notice-text-color: $blue-dark;
+$warning-text-color: $yellow-dark;
+$error-text-color: $red-dark;
 
+$success-border-color: $green;
+$notice-border-color: $blue;
+$warning-border-color: $yellow;
+$error-border-color: $red;
 
-$button-normal-color: $gray-light;
-$button-primary-color: $blue-light;
-$button-caution-color: $yellow-dark;
-$button-danger-color: $red;
-$button-safe-color: $green;
+$input-border-color: $gray;
+
+$normal-button-color: $gray-light;
+$primary-button-color: $blue-light;
+$caution-button-color: $yellow-dark;
+$danger-button-color: $red;
+$safe-button-color: $green;
+
+$darken-border-percent: 20%;
+$darken-shadow-percent: 20%;
 
 $font-size: 1.3rem;

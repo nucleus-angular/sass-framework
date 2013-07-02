@@ -1,92 +1,110 @@
-.extend-text-outer
-{
-  position: relative;
+.extend-text {
+  .container {
+    position: relative;
+
+    &.auto-complete {
+      &.is-active {
+        .display {
+          border-radius: 5px 5px 0 0;
+        }
+      }
+    }
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0 1px 1px 0;
+  }
+
+  ul {
+    list-style: none;
+    cursor: text;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  .tag-container {
+    position: absolute;
+    z-index: 2;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      float: left;
+    }
+  }
+
+  .tag {
+    display: inline-block;
+    margin-right: 6px;
+    float: left;
+    position: relative;
+
+    &.selected {
+      .text {
+        border: 1px solid rgb(255, 0, 0);
+      }
+    }
+
+    .text {
+      display: inline-block;
+      background-color: rgb(184, 215, 235);
+      border: 1px solid rgb(95, 134, 142);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    .remove {
+      position: relative;
+      left: 1px;
+      cursor: pointer;
+    }
+  }
+
+  .display {
+    z-index: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    height: inherit;
+  }
+
+  .auto-complete-options {
+    position: absolute;
+    border: 2px solid shade($input-border-color, $darken-border-percent);
+    box-sizing: border-box;
+    background-color: $white;
+    z-index: 1;
+    border-top: none;
+
+    li {
+      padding: 3px 6px;
+    }
+
+    .focus {
+      background: #E1E9F6;
+    }
+  }
 }
 
-.extend-text-inner
-{
-  position: relative;
+//validation
+.invalid {
+  .extend-text {
+    .auto-complete-options {
+      //display the darkened version as this should never show when the input is not selected
+      border-color: shade($error-border-color, $darken-border-percent);
+    }
+  }
 }
 
-.extend-text-tag-container
-{
-  position: absolute;
-  padding: 3px;
-  float: left;
-  z-index: 2;
-}
-
-.extend-text-tag-container ul
-{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
-
-.extend-text-tag
-{
-  display: inline-block;
-  margin-right: 6px;
-  float: left;
-  position: relative;
-}
-
-.extend-text-tag-text
-{
-  display: inline-block;
-  background-color: rgb(184, 215, 235);
-  border: 1px solid rgb(95, 134, 142);
-  border-radius: 2px;
-  padding: 0 2px;
-}
-
-.extend-text-tag.selected .extend-text-tag-text {
-  border: 1px solid rgb(255, 0, 0);
-}
-
-.extend-text-tag-remove
-{
-  position: relative;
-  left: 1px;
-  cursor: pointer;
-}
-
-.extend-text ul,
-.extend-text li
-{
-  margin: 0;
-  padding: 1px;
-}
-
-.extend-text ul
-{
-  list-style: none;
-  cursor: pointer;
-}
-
-.extend-text-textarea
-{
-  resize: none;
-  position: absolute;
-  margin: 0;
-  width: 100%;
-  z-index: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  height: inherit;
-  box-sizing: border-box;
-}
-
-.extend-text-options {
-  position: absolute;
-  border: 1px solid $black;
-  box-sizing: border-box;
-  background-color: $white;
-  z-index: 1;
-}
-
-.extend-text-option-focus
-{
-  background: #E1E9F6;
+.valid {
+  .extend-text {
+    .auto-complete-options {
+      //display the darkened version as this should never show when the input is not selected
+      border-color: shade($success-border-color, $darken-border-percent);
+    }
+  }
 }

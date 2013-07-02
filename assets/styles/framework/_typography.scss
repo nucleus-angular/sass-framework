@@ -1,15 +1,16 @@
-.text-success {
+.success-text {
   color: $success-text-color;
 }
 
-.text-notice {
+.notice-text {
   color: $notice-text-color;
 }
 
-.text-warning {
+.warning-text {
   color: $warning-text-color;
 }
 
-.text-error {
+.error-text,
+.danger-text {
   color: $error-text-color;
 }

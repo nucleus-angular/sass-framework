@@ -66,7 +66,7 @@
 
 button {
   @include button-size(normal);
-  @include button-color-auto($button-normal-color, $white);
+  @include button-color-auto($normal-button-color, $white);
 
   border-radius: 3px;
   position: relative;
@@ -87,19 +87,19 @@ button {
   }
 
   &.primary {
-    @include button-color-auto($button-primary-color, $white);
+    @include button-color-auto($primary-button-color, $white);
   }
 
   &.caution {
-    @include button-color-auto($button-caution-color, $white);
+    @include button-color-auto($caution-button-color, $white);
   }
 
   &.danger {
-    @include button-color-auto($button-danger-color, $white);
+    @include button-color-auto($danger-button-color, $white);
   }
 
   &.safe {
-    @include button-color-auto($button-safe-color, $white);
+    @include button-color-auto($safe-button-color, $white);
   }
 
   &[disabled] {
