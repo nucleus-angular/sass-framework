@@ -15,10 +15,14 @@
 }
 
 .tree .tree-element > .tree-label:before {
+  width: 13px;
+  font-size: 1rem;
   content: "\e005";
 }
 
 .tree .tree-element.tree-expanded > .tree-label:before {
+  width: 13px;
+  font-size: 1rem;
   content: "\e006";
 }
 

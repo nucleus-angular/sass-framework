@@ -1,6 +1,7 @@
 .message {
+  display: inline-block;
   padding: 5px;
-  border: 1px solid $black;
+  border: 1px solid $border-color;
   border-radius: 3px;
 
   .icon {
@@ -44,6 +45,18 @@
     .icon {
       &:before {
         content: "\e00a";
+      }
+    }
+  }
+
+  &.danger {
+    background-color: $red-lighter;
+    color: $error-text-color;
+    border-color: $red-darker;
+
+    .icon {
+      &:before {
+        content: "\e00d";
       }
     }
   }

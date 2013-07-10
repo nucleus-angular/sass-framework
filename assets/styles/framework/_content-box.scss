@@ -1,0 +1,72 @@
+@mixin content-box-arrow($border-color: $cb-border-color, $fill-color: $cb-header-background-color) {
+  &:before {
+    @include triangle(1.4rem, $border-color, up);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 17px;
+  }
+
+  &:after {
+    @include triangle(1.4rem, $fill-color, up);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -14px;
+    left: 17px;
+  }
+}
+
+.content-box {
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+  border-radius: 3px;
+  border: 1px solid $cb-border-color;
+  background-color: $cb-header-background-color;
+  //box-shadow: $shadow-panel;
+
+  &.with-top-arrow {
+    @include content-box-arrow();
+
+    &.no-header {
+      @include content-box-arrow($cb-border-color, $white);
+    }
+  }
+
+  header {
+    @include clearfix;
+    border-radius: 3px;
+    color: $cb-header-text-color;
+    font-weight: 600;
+    padding: 8px;
+
+    &.border {
+      border-bottom: 1px solid $cb-header-border-color;
+      border-radius: 3px 3px 0 0;
+    }
+
+    ~ .content {
+      border-radius: 0 0 3px 3px;
+    }
+
+    > .button-drop-down.actions,
+    > .close {
+      font-size: 1rem;
+      float: right;
+      cursor: pointer;
+      text-transform: uppercase;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .content {
+    border-radius: 3px;
+    background-color: $white;
+    padding: 8px;
+  }
+}
