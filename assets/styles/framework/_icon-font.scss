@@ -33,27 +33,30 @@
 .nag-icon-font-arrow-right:before {
   content: "\e005";
 }
+.nag-icon-font-arrow-down:before {
+  content: "\e006";
+}
 .nag-icon-font-arrow-left:before {
   content: "\e007";
 }
-.nag-icon-font-menu:before {
+.nag-icon-font-arrow-top-down:before {
   content: "\e008";
 }
-.nag-icon-font-cog:before {
+.nag-icon-font-gear:before {
   content: "\e009";
 }
-.nag-icon-font-warning:before {
+.nag-icon-font-warning-triangle:before {
   content: "\e00a";
 }
-.nag-icon-font-checkmark-circle:before {
+.nag-icon-font-success-circle:before {
   content: "\e00b";
 }
-.nag-icon-font-info:before {
+.nag-icon-font-notice-circle:before {
   content: "\e00c";
 }
-.nag-icon-font-cancel-circle:before {
+.nag-icon-font-error-circle:before {
   content: "\e00d";
 }
-.nag-icon-font-arrow-down:before {
-  content: "\e006";
+.nag-icon-font-x:before {
+  content: "\e00e";
 }

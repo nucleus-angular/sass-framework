@@ -6,21 +6,19 @@
   bottom: 0;
   background-color: $white;
   z-index: 10000;
+
+  .text {
+    padding-top: 50px;
+    width: 300px;
+    margin: 0 auto;
+    z-index: 1001;
+    text-align: center;
+  }
 }
 
 .non-blocking-loader .message {
   border-top: none;
   padding: 0.25em 0.5em;
   border-radius: 0 0 3px 3px;
-}
-
-.site-loader-text {
-  padding-top: 50px;
-  width: 131px;
-  margin: 0 auto;
-  padding-left: 20px;
-  z-index: 1001;
-  background-image: image_url('ajax-loader.gif', false, false);
-  background-repeat: no-repeat;
-  background-position: bottom left;
+  z-index: 10001;
 }
