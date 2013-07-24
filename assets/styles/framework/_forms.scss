@@ -91,12 +91,19 @@ input[type="text"], textarea {
     bottom: 1.5rem;
   }
 
+  .valid-icon:before,
+  .invalid-icon:before {
+    @extend %nag-icon-font;
+  }
+
   .valid-icon {
     color: $success-text-color;
+    content: "\e00b";
   }
 
   .invalid-icon {
     color: $error-text-color;
+    content: "\e00d";
   }
 
   span.input-message {
