@@ -84,9 +84,15 @@
       padding: 3px 6px;
     }
 
-    .focus {
+    .is-focused {
       background: #E1E9F6;
     }
+  }
+
+  .new-indicator {
+    position: absolute;
+    top: 15px;
+    right: 8px;
   }
 }
 

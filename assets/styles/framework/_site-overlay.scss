@@ -1,27 +1,38 @@
 .site-overlay{
-  //animation stuff
-  @include transition(background-color .25s linear);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: 0.5;
+    z-index: 999;
+    display: none;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-
-  &.fade-enter {
-    background-color: rgba(0, 0, 0, 0);
-
-    &.fade-enter-active {
-      background-color: rgba(0, 0, 0, 0.5);
+    &.is-active {
+        display: block;
     }
-  }
 
-  &.fade-leave {
-    &.fade-leave-active {
-      background-color: rgba(0, 0, 0, 0 );
+    //angular animation stuff
+    &.is-active-add,
+    &.is-active-remove {
+        @include transition(opacity .25s linear);
+        display: block;
     }
-  }
+
+    &.is-active-add {
+        opacity: 0;
+    }
+
+    &.is-active-add.is-active-add-active {
+        opacity: 0.5;
+    }
+
+    &.is-active-remove {
+        opacity: 0.5;
+    }
+
+    &.is-active-remove.is-active-remove-active {
+        opacity: 0;
+    }
 }
-
