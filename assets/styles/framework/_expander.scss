@@ -1,5 +1,13 @@
 .expander {
-  .handle {
+  > .handle {
     cursor: pointer;
+  }
+
+  > .content {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
   }
 }
