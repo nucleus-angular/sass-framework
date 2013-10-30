@@ -1,8 +1,11 @@
 .content-player {
+  display: inline-block;
   position: relative;
+  margin: 15px;
+  border: 1px solid $black;
 
   .content {
-    display: inline-block;
+    z-index: 99;
   }
 
   video {
@@ -11,13 +14,32 @@
   }
 
   .playlist {
-    padding: 0 0 0 30px;
+    transition: opacity .2s;
+
+    padding: 10px;
     position: absolute;
     top: 0;
+    right: 0;
     width: 200px;
+    z-index: 100;
+    background-color: $white;
+    opacity: .05;
+    overflow: auto;
+
+    &:hover {
+      opacity: .85;
+    }
 
     li {
       cursor: pointer;
+
+      &:not(:last-child) {
+        padding-bottom: 8px;
+      }
+
+      span {
+        padding-right: 4px;
+      }
     }
 
     .is-active {
@@ -26,8 +48,57 @@
   }
 
   .controls {
-    position: absolute;
-    bottom: 0;
-    color: green;
+    position: relative;
+    bottom: 65px;
+    color: rgb(255, 255, 255);
+    width: 95%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .26);
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    button {
+      width: 5%;
+    }
+
+    .progress {
+      .current-loaded {
+        background-color: rgb(170, 170, 170);
+
+        &:hover:after {
+          content: 'test';
+        }
+      }
+    }
+
+    .time {
+      display: inline-block;
+      width: 70px;
+    }
+
+    .volume {
+      //make sure the value bar does not move when volume icon changes
+      span:before {
+        width: 16px;
+      }
+
+      .progress-bar {
+        min-width: 15%;
+
+        .indicator {
+          background-color: rgb(230, 230, 230);
+        }
+      }
+    }
+
+    .full-screen {
+      float: right;
+    }
+
+    .toggle-play {
+      &.is-playing {
+        color: green;
+      }
+    }
   }
 }

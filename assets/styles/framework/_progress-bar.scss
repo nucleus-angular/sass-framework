@@ -1,0 +1,16 @@
+.progress-bar {
+  border: 1px solid rgb(230, 230, 230);
+  position: relative;
+  display: inline-block;
+  min-width: 40%;
+  height: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  .indicator {
+    position: absolute;
+    display: block;
+    height: 8px;
+    background-color: rgb(230, 230, 230);
+  }
+}
