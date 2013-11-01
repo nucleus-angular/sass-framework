@@ -1,6 +1,7 @@
 .extend-text {
   .container {
     position: relative;
+    display: inline-block;
 
     &.auto-complete {
       &.is-active {
@@ -79,6 +80,8 @@
     background-color: $white;
     z-index: 1;
     border-top: none;
+    max-height: 300px;
+    overflow: auto;
 
     li {
       padding: 3px 6px;
@@ -91,7 +94,7 @@
 
   .new-indicator {
     position: absolute;
-    top: 15px;
+    top: 11px;
     right: 8px;
   }
 }
