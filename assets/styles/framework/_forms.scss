@@ -1,8 +1,4 @@
 form {
-  label {
-    display: block;
-  }
-
   &.one-line {
     label {
       display: inline-block;
@@ -52,39 +48,32 @@ input[type="text"], textarea {
 .input-element {
   position: relative;
 
-  :not(.plain) {
-    input {
-      &:not(.plain) {
-        &.ng-invalid {
-          border-color: $error-border-color;
-
-          &:focus {
-            border-color: shade($error-border-color, $darken-border-percent);
-          }
-        }
-
-        &.ng-valid {
-          border-color: $success-border-color;
-
-          &:focus {
-            border-color: shade($success-border-color, $darken-border-percent);
-          }
-        }
-      }
-    }
-  }
-
   > .container {
     @include clearfix;
     display: inline-block;
     position: relative;
 
-  }
+    &:not(.plain) {
+      input {
+        &:not(.plain) {
+          &.ng-invalid {
+            border-color: $error-border-color;
 
-  .icons {
-    position: absolute;
-    bottom: 0rem;
-    left: -1.6rem;
+            &:focus {
+              border-color: shade($error-border-color, $darken-border-percent);
+            }
+          }
+
+          &.ng-valid {
+            border-color: $success-border-color;
+
+            &:focus {
+              border-color: shade($success-border-color, $darken-border-percent);
+            }
+          }
+        }
+      }
+    }
   }
 
   input[type="text"] ~ .icons {
@@ -96,17 +85,20 @@ input[type="text"], textarea {
     @extend %nag-icon-font;
   }
 
-  .valid-icon {
+  .valid-icon:before {
     color: $success-text-color;
     content: "\e00b";
   }
 
-  .invalid-icon {
+  .invalid-icon:before {
     color: $error-text-color;
     content: "\e00d";
   }
 
-  span.input-message {
-    padding-left: 5px;
+  .input-message {
+    &.inline {
+      display: inline;
+      padding-left: 5px;
+    }
   }
 }
