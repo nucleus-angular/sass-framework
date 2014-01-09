@@ -25,3 +25,49 @@
       transparent 75%, transparent
   );
 }
+
+@mixin bordered-triangle($border-color: $gray3, $fill-color: $gray1, $direction: up, $positionTop: 0px, $positionLeft: 0px) {
+    $beforeTop: $positionTop;
+    $beforeLeft: $positionLeft;
+    $afterTop: $positionTop;
+    $afterLeft: $positionLeft;
+    $pixelChangeTop: 1px;
+    $pixelChangeLeft: 1px;
+
+//make sure the border appears correctly
+    @if $direction == up {
+        $afterTop: $afterTop + 1px;
+    }
+
+    @if $direction == down {
+        $beforeTop: $beforeTop + 1px;
+    }
+
+    @if $direction == left {
+        $afterLeft: $afterLeft + 1px;
+    }
+
+    @if $direction == right {
+        $beforeLeft: $beforeLeft + 1px;
+    }
+
+    &:before {
+        @include triangle(1.4rem, $border-color, $direction);
+
+        content: '';
+        display: block;
+        position: absolute;
+        top: $beforeTop;
+        left: $beforeLeft;
+    }
+
+    &:after {
+        @include triangle(1.4rem, $fill-color, $direction);
+
+        content: '';
+        display: block;
+        position: absolute;
+        top: $afterTop;
+        left: $afterLeft;
+    }
+}
