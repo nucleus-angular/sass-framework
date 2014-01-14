@@ -1,43 +1,47 @@
-@mixin side-animation($property, $start-value, $end-value, $duration, $timing-function, $border, $border-side) {
-  &.is-active {
-    border-#{$border-side}: $border;
+@mixin reveal-animation($property, $start-value, $end-value, $duration, $timing-function, $border-side: '', $border-size: '', $border-type: '', $border-color: '') {
+  &.reveal {
+    @if $border-side != '' {
+      border-#{$border-side}: $border-size $border-type $border-color;
+    }
 
     //default value, should be manually handled on a case by case basis
     #{$property}: $end-value;
   }
 
-  &.is-active-add,
-  &.is-active-remove {
+  &.reveal-add,
+  &.reveal-remove {
     @include transition($property $duration $timing-function);
-    border-#{$border-side}: $border
+
+    @if $border-side != '' {
+      border-#{$border-side}: $border-size $border-type $border-color;
+    }
   }
 
-  &.is-active-add {
+  &.reveal-add {
     #{$property}: $start-value;
   }
 
-  &.is-active-add.is-active-add-active {
+  &.reveal-add.reveal-add-active {
     #{$property}: $end-value;
   }
 
-  &.is-active-remove {
+  &.reveal-remove {
     #{$property}: $end-value;
   }
 
-  &.is-active-remove.is-active-remove-active {
+  &.reveal-remove.reveal-remove-active {
     #{$property}: $start-value;
   }
 
-  .inner-content {
-    min-#{$property}: $end-value;
+  @if $property == 'height' or $property == 'width' {
+    .inner-content {
+      min-#{$property}: $end-value - $border-size;
+    }
   }
 }
 
 .revealing-panel {
-  .content {
-    //animation stuff
-    //@include transition(width .25s linear, height .25s linear);
-
+  > .content {
     position: fixed;
     z-index: 11000;
     background-color: white;
@@ -48,9 +52,13 @@
       position: absolute;
     }
 
-    &.conceal-animate,
-    &.is-active {
-      overflow: auto;
+    &.reveal {
+      overflow: visible;
+    }
+
+    &.reveal-add,
+    &.reveal-remove {
+      overflow: hidden;
     }
 
     &.center {
@@ -65,35 +73,17 @@
       //this handle center positioning
       margin: calc(-500px / 2) 0 0 calc(-500px / 2);
 
-      &.is-active {
+      &.reveal,
+      &.reveal-add,
+      &.reveal-remove {
         display: inline-block;
       }
 
-      &.is-active-add,
-      &.is-active-remove {
-        @include transition(opacity .25s linear);
-        display: inline-block;
-      }
-
-      &.is-active-add {
-        opacity: 0;
-      }
-
-      &.is-active-add.is-active-add-active {
-        opacity: 1;
-      }
-
-      &.is-active-remove {
-        opacity: 1;
-      }
-
-      &.is-active-remove.is-active-remove-active {
-        opacity: 0;
-      }
+      @include reveal-animation(opacity, 0, 1, .25s, linear);
     }
 
     &.left {
-      @include side-animation(width, 0, 500px, .25s, linear, 1px solid $black, right);
+      @include reveal-animation(width, 0, 500px, .25s, linear, right, 1px, solid, $black);
 
       top: 0;
       left: 0;
@@ -102,7 +92,7 @@
     }
 
     &.right {
-      @include side-animation(width, 0, 500px, .25s, linear, 1px solid $black, left);
+      @include reveal-animation(width, 0, 500px, .25s, linear, left, 1px, solid, $black);
 
       top: 0;
       right: 0;
@@ -111,7 +101,7 @@
     }
 
     &.top {
-      @include side-animation(height, 0, 500px, .25s, linear, 1px solid $black, bottom);
+      @include reveal-animation(height, 0, 500px, .25s, linear, bottom, 1px, solid, $black);
 
       top: 0;
       left: 0;
@@ -120,7 +110,7 @@
     }
 
     &.bottom {
-      @include side-animation(height, 0, 500px, .25s, linear, 1px solid $black, top);
+      @include reveal-animation(height, 0, 500px, .25s, linear, top, 1px, solid, $black);
 
       bottom: 0;
       left: 0;
