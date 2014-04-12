@@ -1,0 +1,70 @@
+.search-query {
+  .container {
+    &.invalid {
+      textarea {
+        background-color: $red-lighter;
+      }
+
+      .validation-icon:before {
+        color: $error-text-color;
+        content: "\e00d";
+      }
+    }
+
+    &.valid {
+      textarea {
+        background-color: $green-lighter;
+      }
+
+      .validation-icon:before {
+        color: $success-text-color;
+        content: "\e00b";
+      }
+    }
+
+    &.empty {
+      textarea {
+        background-color: $white;
+      }
+
+      .validation-icon:before {
+        color: $text-color;
+        content: "\e00f";
+      }
+    }
+  }
+
+  .input-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  textarea {
+    resize: none;
+    padding-right: 30px;
+  }
+
+  .validation-icon {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    font-size: 1.9rem;
+
+    &:before {
+      @extend %nag-icon-font;
+    }
+  }
+
+  .tooltip {
+    .handle {
+      cursor: pointer;
+    }
+
+    .content {
+      width: 200px;
+      text-align: center;
+      border: 1px solid $input-border-color;
+      border-radius: 5px;
+    }
+  }
+}
