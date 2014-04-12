@@ -1,6 +1,9 @@
 # Change Log
 
-Each change log are assumed to be accompanied by associated unit test and documentation updates.
+## master
+
+- cleanup up how icon fonts are used
+- added styling for search query component
 
 ## 0.5.0
 
