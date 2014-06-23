@@ -54,7 +54,8 @@ input[type="text"], textarea {
     position: relative;
 
     &:not(.plain) {
-      input {
+      input,
+      textarea {
         &:not(.plain) {
           &.ng-invalid {
             border-color: $error-border-color;
