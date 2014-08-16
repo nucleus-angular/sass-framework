@@ -58,48 +58,48 @@
   * @param $border-type
   * @param $color-gray
   */
-/*@mixin reveal-animation($property, $start-value, $end-value, $duration, $timing-function, $border-side: '', $border-size: '', $border-type: '', $color-gray: '') {
-  &.reveal {
-    @if $border-side != '' {
-      border-#{$border-side}: $border-size $border-type $color-gray;
-    }
+// @mixin reveal-animation($property, $start-value, $end-value, $duration, $timing-function, $border-side: '', $border-size: '', $border-type: '', $color-gray: '') {
+//   &.reveal {
+//     @if $border-side != '' {
+//       border-#{$border-side}: $border-size $border-type $color-gray;
+//     }
 
-    //default value, should be manually handled on a case by case basis
-    #{$property}: $end-value;
-  }
+//     //default value, should be manually handled on a case by case basis
+//     #{$property}: $end-value;
+//   }
 
-  //angular animation support
-  &.reveal-add,
-  &.reveal-remove {
-    @include transition($property $duration $timing-function);
+//   //angular animation support
+//   &.reveal-add,
+//   &.reveal-remove {
+//     @include transition($property $duration $timing-function);
 
-    @if $border-side != '' {
-      border-#{$border-side}: $border-size $border-type $color-gray;
-    }
-  }
+//     @if $border-side != '' {
+//       border-#{$border-side}: $border-size $border-type $color-gray;
+//     }
+//   }
 
-  &.reveal-add {
-    #{$property}: $start-value;
-  }
+//   &.reveal-add {
+//     #{$property}: $start-value;
+//   }
 
-  &.reveal-add.reveal-add-active {
-    #{$property}: $end-value;
-  }
+//   &.reveal-add.reveal-add-active {
+//     #{$property}: $end-value;
+//   }
 
-  &.reveal-remove {
-    #{$property}: $end-value;
-  }
+//   &.reveal-remove {
+//     #{$property}: $end-value;
+//   }
 
-  &.reveal-remove.reveal-remove-active {
-    #{$property}: $start-value;
-  }
+//   &.reveal-remove.reveal-remove-active {
+//     #{$property}: $start-value;
+//   }
 
-  @if $property == 'height' or $property == 'width' {
-    .inner-content {
-      min-#{$property}: $end-value - $border-size;
-    }
-  }
-}*/
+//   @if $property == 'height' or $property == 'width' {
+//     .inner-content {
+//       min-#{$property}: $end-value - $border-size;
+//     }
+//   }
+// }
 
 .revealing-panel {
   //useful for want to have a revealing panel within a element in the page instead of on the page itself

@@ -65,24 +65,33 @@
  * </div>
  * ```
  */
+$tree-padding: 8px;
 .tree {
   .leaf {
-    padding-left: 16px;
+    padding-left: $tree-padding;
 
     &.no-icon {
-      padding-left: 32px;
+      padding-left: $tree-padding + 14px;
     }
   }
 
   .tree {
     cursor: pointer;
 
-    &.expanded ul {
+    &.expanded > ul {
       display: block;
 
       .tree {
-        padding-left: 16px;
+        padding-left: $tree-padding;
+
+        &.no-icon {
+          padding-left: $tree-padding + 14px;
+        }
       }
+    }
+
+    &.no-icon {
+      padding-left: 14px;
     }
 
     ul {
@@ -93,6 +102,6 @@
   svg {
     width: 11px;
     height: 11px;
-    margin-right: 5px;
+    margin-right: 3px;
   }
 }
