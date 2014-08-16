@@ -1,0 +1,10 @@
+{
+  "name": "nucleus-angular-sass-framework",
+  "private": true,
+  "version": "0.5.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.11.9"
+  }
+}

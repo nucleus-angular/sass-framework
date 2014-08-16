@@ -26,7 +26,7 @@
   );
 }
 
-@mixin bordered-triangle($border-color: $gray3, $fill-color: $gray1, $direction: up, $positionTop: 0px, $positionLeft: 0px) {
+@mixin bordered-triangle($color-gray: $color-gray3, $fill-color: $color-gray1, $direction: up, $positionTop: 0px, $positionLeft: 0px) {
     $beforeTop: $positionTop;
     $beforeLeft: $positionLeft;
     $afterTop: $positionTop;
@@ -52,7 +52,7 @@
     }
 
     &:before {
-        @include triangle(1.4rem, $border-color, $direction);
+        @include triangle(1.4rem, $color-gray, $direction);
 
         content: '';
         display: block;

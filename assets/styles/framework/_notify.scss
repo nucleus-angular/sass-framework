@@ -1,11 +1,46 @@
+/**
+ * @section Notify
+ *
+ * Notify is a way to unobtrusively display a message to the user, be default it display in the top right corner.
+ *
+ * ```html
+ * <a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a>
+ * <div class="notify message notice" data-id="default">
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+ * </div>
+ * ```
+ *
+ * Notify elements are `position: fixed` so just add `top`/`bottom`/`left`/`right` to the container to position it.
+ *
+ * ```html
+ * <a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a>
+ * <div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.notify').hide();
+ *
+ *   $('.show-notify').click(function(event) {
+ *     event.preventDefault();
+ *     $('body').append($('[data-id=' + $(this).attr('id') + ']').clone().show());
+ *     setTimeout(function() {
+ *       $('body > .notify').remove();
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .notify {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 15px;
+  right: 15px;
   z-index: 9999;
   display: inline-block;
-}
 
-.notify.absolute {
-  position: absolute;
+  &.absolute {
+    position: fixed;
+  }
 }

@@ -1,45 +1,99 @@
+/**
+ * @section Button Drop Down
+ *
+ * A button that when clicked expands a drop down menu.
+ *
+ * ```html
+ * <div class="button-drop-down">
+ *   <button class="solid-color">test</button>
+ *   <div class="content">content</div>
+ * </div>
+ * ```
+ *
+ * When the container has the `is-active` class, the content for the drop down is displayed.
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * You can use button classes too:
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color small">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color large">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color largest">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * Note the some button classes will cause visual issue.
+ *
+ * ```html
+ * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
+ *   <button class="solid-color largest">test</button>
+ *   <div class="content" style="width: 200px;">content</div>
+ * </div>
+ * ```
+ *
+ * Since buttons by default have a inset shadow to better indicate they are clickable items, when using it within the content of a button drop down, it is
+ * recommended that you use `solid-color` class on the button.
+ */
 .button-drop-down {
   @include user-select(none);
 
   display: inline-block;
   position: relative;
-  color: $white;
+  color: $color-white;
   font-weight: 200;
   display: inline-block;
 
-  button {
-    z-index: 495;
-
-    &.is-active {
+  &.is-active {
+    button {
       border-bottom: none;
       border-radius: 3px 3px 0 0;
       z-index: 502;
+    }
 
-      &.border {
-        @include button-size(drop-down-normal);
-
-        &.small {
-          @include button-size(drop-down-small);
-        }
-
-        &.large {
-          @include button-size(drop-down-large);
-        }
-
-        &.largest {
-          @include button-size(drop-down-largest);
-        }
-      }
+    .content {
+      display: inherit;
     }
   }
 
+  button {
+    z-index: 495;
+  }
+
   .content {
+    display: none;
     border-radius: 0 3px 3px 3px;
     padding: 5px;
-    background-color: darken($gray-light, 5%);
+    background-color: $color-silver-chalice;
     z-index: 501;
   }
 
+  /**
+   * @section Button Drop Down
+   * @subsection Not Positioned
+   *
+   * By default, the content of the button drop down is position absolute however if you don't want this (useful if you need something like fixed positioning),
+   * you can add the `not-positioned` class to the container.
+   */
   &:not(.not-positioned) {
     > .content {
       position: absolute;
@@ -52,22 +106,61 @@
     }
   }
 
+  /**
+   * @section Button Drop Down
+   * @subsection Border
+   *
+   * If you wish to have a border, add a `border` class to the container.
+   *
+   * ```html
+   * <div class="button-drop-down border">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   */
   &.border {
+    &.is-active {
+      button {
+        border-bottom: none;
+      }
+    }
+
+    button {
+      border: 1px solid $color-black;
+    }
+
     .content {
-      border: 1px solid $black;
+      border: 1px solid $color-black;
 
       //this is something that will probably have to be set manually on a case by case level, this should handle common cases though
       top: 97%;
     }
   }
 
-  &.shadow {
-    .content {
-      border: none;
-      box-shadow: 0 0 5px darken($gray-light, 5%);
-    }
-  }
-
+  /**
+   * @section Button Drop Down
+   * @subsection Left
+   *
+   * By default, the button drop down content extends over the right side of the button.  To make the button drop down content extend over the left side of the,
+   * button, add a `left` class to the container.
+   *
+   * ```html
+   * <div style="position: relative; height: 60px;">
+   *   <div class="button-drop-down left is-active" style="margin-bottom: 30px;position: absolute; right: 0;">
+   *     <button class="solid-color">test</button>
+   *     <div class="content" style="width: 200px;">content</div>
+   *   </div>
+   * </div>
+   * ```
+   */
   &.left {
     .content {
       left: auto;
@@ -76,12 +169,24 @@
     }
   }
 
+  /**
+   * @section Button Drop Down
+   * @subsection Square
+   *
+   * By default, the button drop down has rounded corners but if you don't want that, add a `square` class to the container.
+   *
+   * ```html
+   * <div class="button-drop-down square is-active" style="margin-bottom: 30px;">
+   *   <button class="solid-color">test</button>
+   *   <div class="content" style="width: 200px;">content</div>
+   * </div>
+   * ```
+   */
   &.square {
     button {
-      &.square {
-        border-radius: 0;
-      }
+      border-radius: 0;
     }
+
     .content {
       border-radius: 0;
     }

@@ -2,7 +2,7 @@
   display: inline-block;
   position: relative;
   margin: 15px;
-  border: 1px solid $black;
+  border: 1px solid $color-black;
 
   .content {
     z-index: 99;
@@ -97,7 +97,7 @@
 
     .toggle-play {
       &.is-playing {
-        color: green;
+        color: $color-apple;
       }
     }
   }

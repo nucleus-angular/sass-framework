@@ -1,35 +1,87 @@
+/**
+ * @section Search Query
+ *
+ * One of the features of the extend text element is the search query feature that lets you build a search query when queries advance information.  This does
+ * provide some specific styling of it's own.  Note that the search query can only work with the textarea box and not the input text box.
+ */
 .parsing {
+  /**
+   * @section Search Query
+   * @subsection Input Container
+   *
+   * In order to property display the search query is different states, the input for the search query must be wrapped in an element with the `inputs` class.
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs">
+   *     <textarea class="display"></textarea>
+   *   </div>
+   * </div>
+   * ```
+   */
   .inputs {
+    height: 30px;
+    /**
+     * @section Search Query
+     * @subsection States
+     *
+     * A search query element can be in different states which are applied to the element with the `inputs` class.
+     *
+     * This first state is an empty state indicated by the `empty` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs empty">
+     *     <textarea class="display" /></textarea>
+     *   </div>
+     * </div>
+     * ```
+     *
+     * The state is an invalid state indicated by the `invalid` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs invalid">
+     *     <textarea class="display">firstName = 'John</textarea>
+     *   </div>
+     * </div>
+     * ```
+     *
+     * The last state is a valid state indicated by the `valid` class.
+     *
+     * ```html
+     * <div class="extend-text parsing">
+     *   <div class="inputs valid">
+     *     <textarea class="display">firstName = 'John'</textarea>
+     *   </div>
+     * </div>
+     * ```
+     */
     &.invalid {
       textarea {
-        background-color: $red-lighter;
+        border-color: $color-medium-carmine;
+        background-color: $color-medium-carmine-l50;
       }
 
-      .validation-icon:before {
-        color: $error-text-color;
-        content: "\e00d";
+      .validation-icon {
+        fill: $color-maroon;
       }
     }
 
     &.valid {
       textarea {
-        background-color: $green-lighter;
+        border-color: $color-apple;
+        background-color: $color-apple-l50;
       }
 
-      .validation-icon:before {
-        color: $success-text-color;
-        content: "\e00b";
+      .validation-icon {
+        fill: $color-japanese-laurel;
       }
     }
 
     &.empty {
-      textarea {
-        background-color: $white;
-      }
-
-      .validation-icon:before {
-        color: $text-color;
-        content: "\e00f";
+      .validation-icon {
+        fill: $color-tundora;
       }
     }
   }
@@ -40,30 +92,67 @@
   }
 
   textarea {
+    //the size of the textarea is something the a javascript component should handle
     resize: none;
+
+    //add padding to make room for the validation icon
     padding-right: 30px;
   }
 
-  .validation-icon {
-    position: absolute;
-    top: 9px;
-    right: 5px;
-    font-size: 1.9rem;
-
-    &:before {
-      @extend %nag-icon-font;
-    }
-  }
-
+  /**
+   * @section Search Query
+   * @subsection Tooltip
+   *
+   * The search query can also provide a validation tooltip to provide additional help/visual queue on the state of the search query
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs empty">
+   *     <textarea class="display" /></textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+   *       <div class="content" style="width: 202px;">State typing you search query</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs invalid">
+   *     <textarea class="display">firstName = 'John</textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
+   *       <div class="content" style="width: 350px;">This is a problem with the query near "= 'John"</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text parsing">
+   *   <div class="inputs valid">
+   *     <textarea class="display">firstName = 'John'</textarea>
+   *     <div class="tooltip help">
+   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" /></span>
+   *       <div class="content" style="width: 84px;">Query valid</div>
+   *     </div>
+   *   </div>
+   * </div>
+   * ```
+   */
   .tooltip {
+    position: absolute;
+    top: 11px;
+    right: 5px;
+
     .handle {
       cursor: pointer;
     }
 
     .content {
-      width: 200px;
       text-align: center;
-      border: 1px solid $input-border-color;
+      border: 1px solid $color-gray;
       border-radius: 5px;
     }
   }

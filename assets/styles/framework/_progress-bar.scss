@@ -1,16 +1,112 @@
+/**
+ * @section Progress Bars
+ *
+ * Progress bars are used to indicate the system is doing something.
+ *
+ * ```html
+ * <div class="progress-bar">
+ *   <div class="indicator"></div>
+ * </div>
+ * ```
+ *
+ * You give the `indicator` and width percentage from `1%` to `100%`, to indicator the progress.
+ *
+ * ```html
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 25%;"></div>
+ * </div>
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 50%;"></div>
+ * </div>
+ * <div class="progress-bar">
+ *   <div class="indicator" style="width: 75%;"></div>
+ * </div>
+ * ```
+ */
 .progress-bar {
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid rgb(180, 180, 180);
   position: relative;
   display: inline-block;
   min-width: 40%;
-  height: 8px;
+  height: 16px;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 8px;
 
   .indicator {
     position: absolute;
     display: block;
-    height: 8px;
+    height: 16px;
     background-color: rgb(230, 230, 230);
+  }
+
+  /**
+   * @section Progress Bars
+   * @subsection States
+   *
+   * There are a number of different states that a progress bar can be in that determine the coloring on the progress bar.
+   *
+   * You can add the `safe` class to add a greenish color.
+   *
+   * ```html
+   * <div class="progress-bar safe">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `notice` class to add a blueish color.
+   *
+   * ```html
+   * <div class="progress-bar notice">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `caution` class to add a yellowish color.
+   *
+   * ```html
+   * <div class="progress-bar caution">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   *
+   * You can add the `danger` class to add a redish color.
+   *
+   * ```html
+   * <div class="progress-bar danger">
+   *   <div class="indicator" style="width: 50%;"></div>
+   * </div>
+   * ```
+   */
+  &.safe {
+    border-color: $color-crusoe;
+
+    .indicator {
+      background-color: $color-japanese-laurel;
+    }
+  }
+
+  &.notice {
+    border-color: $color-downriver;
+
+    .indicator {
+      background-color: $color-dark-blue;
+    }
+  }
+
+  &.caution {
+    border-color: $color-olive;
+
+    .indicator {
+      background-color: $color-rio-grande;
+    }
+  }
+
+  &.danger {
+    border-color: $color-rosewood;
+
+    .indicator {
+      background-color: $color-maroon;
+    }
   }
 }

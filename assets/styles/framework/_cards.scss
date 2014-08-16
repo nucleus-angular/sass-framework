@@ -1,0 +1,151 @@
+/**
+ * @section Cards
+ * @subsection Card Arrow
+ *
+ * You can use the `card-arrow()` mixin in order to add an arrow.  The `with-arrow` class should work however if you need custom coloring, then you need to
+ * manually call the mixin yourself.
+ *
+ * @mixin card-arrow
+ * @param $color-border The color of the border
+ * @param $fill-color The color of the triangle
+ * @param $triangle-position Where the triangle should point
+ */
+@mixin card-arrow($color-border: $color-gray, $fill-color: $color-gallery, $triangle-position: up) {
+  &:before {
+    @include triangle(1.4rem, $color-border, $triangle-position);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 17px;
+  }
+
+  &:after {
+    @include triangle(1.4rem, $fill-color, $triangle-position);
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 17px;
+  }
+}
+
+/**
+ * @title Cards
+ * @section Cards
+ *
+ * A card is a generic content container that can content a header and content section indicated by the `content` class.
+ *
+ * ```html
+ * <div class="card">
+ *   <header>Title</header>
+ *   <div class="content">
+ *     Some content for this card
+ *   </div>
+ * </div>
+ * ```
+ */
+.card {
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+  border-radius: 3px;
+  border: 1px solid $color-gray;
+  background-color: $color-gallery;
+
+  /**
+   * @section Cards
+   * @subsection With Arrow
+   *
+   * You can add a arrow to the content box (for maybe a tooltip or something similar) by adding the class `with-arrow` to the container.
+   *
+   * ```html
+   * <div class="card with-arrow">
+   *   <header>Title</header>
+   *   <div class="content">
+   *     Some content for this card
+   *   </div>
+   * </div>
+   * ```
+   *
+   * If the card has not header, you must also provide the `no-header` class to make sure the triangle color is correct.
+   *
+   * ```html
+   * <div class="card with-arrow no-header">
+   *   <div class="content">
+   *     Some content for this card
+   *   </div>
+   * </div>
+   * ```
+   */
+  &.with-arrow {
+    @include card-arrow();
+
+    &.no-header {
+      @include card-arrow($color-gray, $color-white);
+    }
+  }
+
+  header {
+    @include clearfix;
+    border-radius: 3px;
+    color: $color-chetwode-blue;
+    font-weight: 600;
+    padding: 5px;
+
+    ~ .content {
+      border-radius: 0 0 3px 3px;
+    }
+
+    /**
+     * @section Cards
+     * @subsection Header Border
+     *
+     * You can add a border to the header by adding the `border` class to the header.
+     *
+     * ```html
+     * <div class="card">
+     *   <header class="border">Title</header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     */
+    &.border {
+      border-bottom: 1px solid $color-tundora;
+      border-radius: 3px 3px 0 0;
+    }
+
+    /**
+     * @section Cards
+     * @subsection Header Actions
+     *
+     * You can provide action element to the header by adding the `action` class to the element in the header.
+     *
+     * ```html
+     * <div class="card">
+     *   <header>Title<span class="action close">X</span></header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     */
+    > .action {
+      font-size: 1rem;
+      float: right;
+      cursor: pointer;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .content {
+    border-radius: 3px;
+    background-color: $color-white;
+    padding: 8px;
+  }
+}

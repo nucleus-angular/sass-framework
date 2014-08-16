@@ -1,13 +1,35 @@
+/**
+ * @section Expander
+ *
+ * Expander is an element that toggle display of the content.  The container must have the `expander` class and it's dom must have an element with the `handle`
+ * class and `content` class.  The content is only visable when the container has a class of `is-active`.
+ *
+ * ```html
+ * <div class="expander">
+ *   <div class="handle">Handle</div>
+ *   <div class="content">Content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div class="expander is-active">
+ *   <div class="handle">Handle</div>
+ *   <div class="content">Content</div>
+ * </div>
+ * ```
+ */
 .expander {
+  &.is-active {
+    > .content {
+      display: block;
+    }
+  }
+
   > .handle {
     cursor: pointer;
   }
 
   > .content {
     display: none;
-
-    &.is-active {
-      display: block;
-    }
   }
 }

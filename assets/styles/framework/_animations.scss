@@ -1,3 +1,16 @@
+/**
+ * @section Animations
+ *
+ * This is the collection of the animations that are defined.
+ */
+
+/**
+ * @section Animations
+ * subsection Fade In
+ * @animation fadeIn
+ *
+ * Provides a smooth animation of the element's `opacity` from `0` to `1`.
+ */
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -18,6 +31,13 @@
   100% {opacity: 1;}
 }
 
+/**
+ * @section Animations
+ * @subsection Fade Out
+ * @animation fadeOut
+ *
+ * Provides a smooth animation of the element's `opacity` from `1` to `0` and also adds `display: none` at the end of the animation.
+ */
 @-webkit-keyframes fadeOut {
   0% {opacity: 1;}
   100% {opacity: 0;display: none;}

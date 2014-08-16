@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Style Guide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="styledocer-node" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="external.css" />
+    <script src="jquery.js"></script>
+    <script src="svg-injector.js"></script>
+    <script src="jquery.js"></script>
+    <script src="rainbow.js"></script>
+    <script src="main.js"></script>
+    
+      
+        <script src="custom.js"></script>
+      
+    
+  </head>
+  <body id="styledocer-node">
+    <div class="styledocer-wrapper">
+      <div class="styledocer-sidebar">
+        <div class="styledocer-sidebar-inner">
+          <header class="styledocer-header">
+            <h1 class="styledocer-doc-title"><a href="./">Style Guide</a></h1>
+          </header>
+          <nav class="styledocer-nav">
+            <ul class="styledocer-menu" data-styledocer-ref="Tree">
+              <li class="styledocer-menu-item"><a href="./index.html"><span class="styledocer-name">Overview</span></a></li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-animations.html"><span class="styledocer-name">Animations</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-button-drop-down.html"><span class="styledocer-name">Button Drop Down</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-buttons.html"><span class="styledocer-name">Buttons</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-cards.html"><span class="styledocer-name">Cards</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-expander.html"><span class="styledocer-name">Expander</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-extend-text.html"><span class="styledocer-name">Extend Text</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-forms.html"><span class="styledocer-name">Forms</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-input-element.html"><span class="styledocer-name">Input Element</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-notify.html"><span class="styledocer-name">Notify</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-progress-bars.html"><span class="styledocer-name">Progress Bars</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-revealing-panel.html"><span class="styledocer-name">Revealing Panel</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-svg-icons.html"><span class="styledocer-name">SVG Icons</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-search-query.html"><span class="styledocer-name">Search Query</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-site-loader.html"><span class="styledocer-name">Site Loader</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-site-overlay.html"><span class="styledocer-name">Site Overlay</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tabs.html"><span class="styledocer-name">Tabs</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tooltip.html"><span class="styledocer-name">Tooltip</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tree.html"><span class="styledocer-name">Tree</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-variables.html"><span class="styledocer-name">Variables</span></a>
+                  
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="styledocer-content">
+        <article class="styledocer-article">
+          
+            <section id="section-Tree" class="styledocer-section first">
+              <h1 class="styledocer-title">Tree</h1>
+              <div class="styledocer-description">
+                <p>Display a list of element is a tree view that can be expanded and collapsed.  The main container must have the <code>tree</code> class and the tree data uses <code>ul</code>/<code>li</code> elements.</p>
+<p>Tree elements are by default collapsed.  Nodes that have children need to have the <code>tree</code> class and nodes that don&#39;t have children need to have the <code>leaf</code> class.</p>
+<p><div class="tree">
+  <ul>
+    <li class="tree">
+      <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2
+      <ul>
+        <li class="leaf">
+          <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+        </li>
+        <li class="leaf no-icon">leaf 2-2</li>
+        <li class="tree">
+          <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2-2
+          <ul>
+            <li class="leaf no-icon">leaf 2-2-1</li>
+            <li class="leaf">
+              <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+            </li>
+            <li class="leaf">
+              <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+            </li>
+          </ul>
+        </li>
+        <li class="leaf no-icon">leaf 2-4</li>
+      </ul>
+    </li>
+  </ul>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;tree&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tree&quot;&gt;
+      &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg&quot; /&gt;tree 2
+      &lt;ul&gt;
+        &lt;li class=&quot;leaf&quot;&gt;
+          &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg&quot; /&gt;leaf 2-1
+        &lt;/li&gt;
+        &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-2&lt;/li&gt;
+        &lt;li class=&quot;tree&quot;&gt;
+          &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg&quot; /&gt;tree 2-2
+          &lt;ul&gt;
+            &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-2-1&lt;/li&gt;
+            &lt;li class=&quot;leaf&quot;&gt;
+              &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg&quot; /&gt;leaf 2-2-2
+            &lt;/li&gt;
+            &lt;li class=&quot;leaf&quot;&gt;
+              &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg&quot; /&gt;leaf 2-2-3
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-4&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>In order to expanded a tree, add the <code>expanded</code> class to the element with the <code>tree</code> class.</p>
+<p><div class="tree">
+  <ul>
+    <li class="tree expanded">
+      <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2
+      <ul>
+        <li class="leaf">
+          <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+        </li>
+        <li class="leaf no-icon">leaf 2-2</li>
+        <li class="tree expanded">
+          <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2-2
+          <ul>
+            <li class="leaf no-icon">leaf 2-2-1</li>
+            <li class="leaf">
+              <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+            </li>
+            <li class="leaf">
+              <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+            </li>
+          </ul>
+        </li>
+        <li class="leaf no-icon">leaf 2-4</li>
+      </ul>
+    </li>
+  </ul>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;tree&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;tree expanded&quot;&gt;
+      &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg&quot; /&gt;tree 2
+      &lt;ul&gt;
+        &lt;li class=&quot;leaf&quot;&gt;
+          &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg&quot; /&gt;leaf 2-1
+        &lt;/li&gt;
+        &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-2&lt;/li&gt;
+        &lt;li class=&quot;tree expanded&quot;&gt;
+          &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg&quot; /&gt;tree 2-2
+          &lt;ul&gt;
+            &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-2-1&lt;/li&gt;
+            &lt;li class=&quot;leaf&quot;&gt;
+              &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg&quot; /&gt;leaf 2-2-2
+            &lt;/li&gt;
+            &lt;li class=&quot;leaf&quot;&gt;
+              &lt;img class=&quot;svg-icon&quot; data-src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg&quot; /&gt;leaf 2-2-3
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;leaf no-icon&quot;&gt;leaf 2-4&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+              </div>
+              
+              
+            </section>
+          
+        </article>
+        <footer class="styledocer-footer">
+          <span>Created using <a href="https://github.com/ryanzec/style-doc">style-doc</a></span>
+          <span>Default theme based off of <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a></span>
+          <span>SVG icons from <a href="https://github.com/iconic/open-iconic">Iconic Open</a> using <a href="">SVGInjector</a></span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

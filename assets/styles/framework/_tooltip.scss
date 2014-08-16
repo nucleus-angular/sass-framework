@@ -1,11 +1,53 @@
-//tooltip.scss
-.tooltip .handle {
-  display: inline-block;
-}
+/**
+ * @section Tooltip
+ *
+ * A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it on clicking on it).
+ *
+ * It will content a element with the `handle` class that the user can interact with and an element with the `content` class that is the tooltip content.
+ *
+ * ```html
+ * <div class="tooltip" style="margin-left: 100px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * If you add the `is-active` class to the main tooltip container, the content will show.
+ *
+ * ```html
+ * <div class="tooltip is-active" style="margin-left: 100px; margin-bottom: 50px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * Positioning the tooltip is just a matter of setting the `top`/`left`/`right`/`bottom` properties.
+ *
+ * ```html
+ * <div class="tooltip is-active" style="margin-left: 250px; margin-bottom: 50px;">
+ *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   <div class="content" style="left: -158px;">This is a tooltip content</div>
+ * </div>
+ * ```
+ */
+.tooltip {
+  position: relative;
 
-.tooltip .content {
-  position: absolute;
-  padding: 5px;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
+  &.is-active {
+    .content {
+      display: block;
+    }
+  }
+
+  .handle {
+    display: inline-block;
+  }
+
+  .content {
+    position: absolute;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    display: none;
+  }
 }

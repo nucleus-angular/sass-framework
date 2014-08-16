@@ -1,14 +1,15 @@
+/**
+ * @section Extend Text
+ *
+ * This component extends the capibilities of your standard text box/textarea elements.
+ */
 .extend-text {
-  .container {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    &.auto-complete {
-      &.is-active {
-        .display {
-          border-radius: 5px 5px 0 0;
-        }
-      }
+  &.auto-complete {
+    &.is-active .display {
+      border-radius: 5px 5px 0 0;
     }
   }
 
@@ -19,11 +20,10 @@
   ul,
   li {
     margin: 0;
-    padding: 0 1px 1px 0;
+    padding: 0;
   }
 
   ul {
-    list-style: none;
     cursor: text;
   }
 
@@ -31,12 +31,39 @@
     cursor: pointer;
   }
 
+  /**
+   * @section Extend Text
+   * @subsection Tagging
+   *
+   * One functionality of extend text is the ability of tagging or selecting multiple values with in a text box.
+   *
+   * ```html
+   * <div class="extend-text is-active" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="tag-container" style="top: 8px; left: 4px;">
+   *     <ul class="tags">
+   *       <li class="tag">
+   *         <span data-value="tag-value">tag value</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *       <li class="tag">
+   *         <span data-value="tag-value2">tag value2</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *       <li class="tag">
+   *         <span data-value="tag-value3">tag value3</span>
+   *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *       </li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   */
   .tag-container {
     position: absolute;
     z-index: 2;
 
     ul {
-      list-style: none;
       padding: 0;
       margin: 0;
       float: left;
@@ -48,25 +75,72 @@
     margin-right: 6px;
     float: left;
     position: relative;
+    background-color: rgb(184, 215, 235);
+    border: 1px solid rgb(95, 134, 142);
+    border-radius: 2px;
+    padding: 0 2px;
 
+    /**
+     * @section Extend Text
+     * @subsection Tagging - Selected Tag
+     *
+     * Add the `selected` class to a tag to change the border color.
+     *
+     * ```html
+     * <div class="extend-text is-active" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *     <ul class="tags">
+     *       <li class="tag">
+     *         <span data-value="tag-value">tag value</span>
+     *       </li>
+     *       <li class="tag selected">
+     *         <span data-value="tag-value2">tag value2</span>
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value3">tag value3</span>
+     *       </li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */
     &.selected {
-      .text {
-        border: 1px solid rgb(255, 0, 0);
-      }
+      border-color: rgb(255, 0, 0);
     }
 
-    .text {
-      display: inline-block;
-      background-color: rgb(184, 215, 235);
-      border: 1px solid rgb(95, 134, 142);
-      border-radius: 2px;
-      padding: 0 2px;
-    }
-
+    /**
+     * @section Extend Text
+     * @subsection Tagging - Remove Icon
+     *
+     * You can also add an svg icon to indicate you want to remove the tag by adding the svg with the `remove` class.
+     *
+     * ```html
+     * <div class="extend-text is-active" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *     <ul class="tags">
+     *       <li class="tag">
+     *         <span data-value="tag-value">tag value</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value2">tag value2</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *       <li class="tag">
+     *         <span data-value="tag-value3">tag value3</span>
+     *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *       </li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */
     .remove {
-      position: relative;
-      left: 1px;
       cursor: pointer;
+      width: 10px;
+      height: 10px;
     }
   }
 
@@ -76,25 +150,86 @@
     height: inherit;
   }
 
+  /**
+   * @section Extend Text
+   * @subsection Auto Complete
+   *
+   * One functionality of extend text is the ability of doing an auto complete.
+   *
+   * ```html
+   * <div class="extend-text auto-complete" style="width: 500px;">
+   *   <div class="container">
+   *     <input class="display" type="text" />
+   *   </div>
+   * </div>
+   * ```
+   *
+   * ```html
+   * <div class="extend-text is-active auto-complete" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="auto-complete-options" style="top: 33px;">
+   *     <ul>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *       <li data-value="auto complete option1">auto complete option1</li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   */
   .auto-complete-options {
     position: absolute;
-    border: 2px solid shade($input-border-color, $darken-border-percent);
+    border: 2px solid shade($color-gray, $percentage-darkest);
     box-sizing: border-box;
-    background-color: $white;
+    background-color: $color-white;
     z-index: 1;
     border-top: none;
     max-height: 300px;
     overflow: auto;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
 
     li {
       padding: 3px 6px;
     }
 
+    /**
+     * @section Extend Text
+     * @subsection Auto Complete - Focused Item
+     *
+     * To highlight an auto complete option, add the `is-focused` class to the item.
+     *
+     * ```html
+     * <div class="extend-text is-active auto-complete" style="width: 500px;">
+     *   <input class="display" type="text" />
+     *   <div class="auto-complete-options" style="top: 33px;">
+     *     <ul>
+     *       <li data-value="auto complete option1">auto complete option1</li>
+     *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+     *       <li data-value="auto complete option1">auto complete option1</li>
+     *     </ul>
+     *   </div>
+     * </div>
+     * ```
+     */
     .is-focused {
       background: #E1E9F6;
     }
   }
 
+  /**
+   * @section Extend Text
+   * @subsection Auto-Complete - New Indicator
+   *
+   * If you want to allow the use to enter a value that the auto complete does not give you, you can use the `new-indicator` class.
+   *
+   * ```html
+   * <div class="extend-text auto-complete" style="width: 500px;">
+   *   <input class="display" type="text" />
+   *   <div class="new-indicator">New</div>
+   * </div>
+   * ```
+   */
   .new-indicator {
     position: absolute;
     top: 11px;
@@ -102,21 +237,132 @@
   }
 }
 
-//validation
+/**
+ * @section Extend Text
+ * @subsection Auto Complete & Tagging
+ *
+ * The Auto Complete and Tagging styling can co-exist.
+ *
+ * ```html
+ * <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *   <input class="display" type="text" />
+ *   <div class="tag-container" style="top: 8px; left: 4px;">
+ *     <ul class="tags">
+ *       <li class="tag">
+ *         <span data-value="tag-value">tag value</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *       <li class="tag">
+ *         <span data-value="tag-value2">tag value2</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *       <li class="tag">
+ *         <span data-value="tag-value3">tag value3</span>
+ *         <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </li>
+ *     </ul>
+ *   </div>
+ *   <div class="auto-complete-options" style="top: 33px;">
+ *     <ul>
+ *       <li data-value="auto complete option1">auto complete option1</li>
+ *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *       <li data-value="auto complete option1">auto complete option1</li>
+ *     </ul>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+/**
+ * @section Extend Text
+ * @subsection Validation
+ *
+ * The extend text component also works with the input elements validation.
+ *
+ * Valid
+ *
+ * ```html
+ * <div class="input-element valid">
+ *   <div class="container">
+ *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *        <input class="display" type="text" />
+ *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *          <ul class="tags">
+ *            <li class="tag">
+ *              <span data-value="tag-value">tag value</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value2">tag value2</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value3">tag value3</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *          </ul>
+ *        </div>
+ *        <div class="auto-complete-options" style="top: 33px;">
+ *          <ul>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *          </ul>
+ *        </div>
+ *     </div>
+ *   </div>
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *   <div class="input-message inline">Valid</div>
+ * </div>
+ * ```
+ *
+ * Invalid
+ *
+ * ```html
+ * <div class="input-element invalid">
+ *   <div class="container">
+ *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *        <input class="display" type="text" />
+ *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *          <ul class="tags">
+ *            <li class="tag">
+ *              <span data-value="tag-value">tag value</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value2">tag value2</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *            <li class="tag">
+ *              <span data-value="tag-value3">tag value3</span>
+ *              <img class="remove svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *            </li>
+ *          </ul>
+ *        </div>
+ *        <div class="auto-complete-options" style="top: 33px;">
+ *          <ul>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
+ *            <li data-value="auto complete option1">auto complete option1</li>
+ *          </ul>
+ *        </div>
+ *     </div>
+ *   </div>
+ *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *   <div class="input-message inline">Invalid</div>
+ * </div>
+ * ```
+ */
 .invalid {
-  .extend-text {
-    .auto-complete-options {
-      //display the darkened version as this should never show when the input is not selected
-      border-color: shade($error-border-color, $darken-border-percent);
-    }
+  .extend-text .auto-complete-options {
+    //display the darkened version as this should never show when the input is not selected
+    border-color: $color-medium-carmine;
   }
 }
 
 .valid {
-  .extend-text {
-    .auto-complete-options {
-      //display the darkened version as this should never show when the input is not selected
-      border-color: shade($success-border-color, $darken-border-percent);
-    }
+  .extend-text .auto-complete-options {
+    //display the darkened version as this should never show when the input is not selected
+    border-color: $color-apple;
   }
 }

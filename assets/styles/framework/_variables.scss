@@ -1,74 +1,223 @@
-//color palette
-$red-darker: rgb(82, 3, 0);
-$red-dark: rgb(127, 4, 0);
-$red: rgb(176, 63, 57);
-$red-light: rgb(220, 153, 150);
-$red-lighter: rgb(245, 230, 230);
+/**
+ * @section Variables
+ *
+ * There are a number of pre-defined global variables that you can use.
+ */
+/**
+ * @section Variables
+ * @subsection Colors
+ *
+ * These are the only color that should be used within the application.
+ */
+/**
+ * @var $color-rosewood
+ */
+$color-rosewood: hsla(2.2, 100%, 16.1%, 1);
 
-$green-darker: rgb(3, 82, 0);
-$green-dark: rgb(0, 127, 2);
-$green: rgb(63, 176, 57);
-$green-light: rgb(153, 220, 150);
-$green-lighter: rgb(230, 245, 230);
+/**
+ * @var $color-maroon
+ */
+$color-maroon: hsla(1, 100%, 23.9%, 1);
 
-$blue-darker: rgb(11, 26, 82);
-$blue-dark: rgb(0, 2, 172);
-$blue: rgb(63, 88, 176);
-$blue-light: rgb(135, 159, 220);
-$blue-lighter: rgb(230, 230, 245);
+/**
+ * @var $color-medium-carmine
+ * @var $color-medium-carmine-l50
+ * @var $color-medium-carmine-d30
+ */
+$color-medium-carmine: hsla(1, 51.7%, 45.5%, 1);
+$color-medium-carmine-l50: hsla(1, 51.7%, 95.5%, 1);
+$color-medium-carmine-d30: hsla(1, 51.7%, 15.5%, 1);
 
-$orange-darker: rgb(131, 45, 0);
-$orange-dark: rgb(255, 88, 0);
-$orange: rgb(255, 145, 80);
-$orange-light: rgb(255, 185, 148);
-$orange-lighter: rgb(255, 219, 203);
+/**
+ * @var $color-dawn-pink
+ */
+$color-dawn-pink: hsla(2.6,49.3%,72.2%,1);
 
-$yellow-darker: rgb(127, 127, 0);
-$yellow-dark: rgb(207, 207, 0);
-$yellow: rgb(255, 255, 0);
-$yellow-light: rgb(254, 255, 109);
-$yellow-lighter: rgb(254, 255, 180);
+/**
+ * @var $color-crusoe
+ */
+$color-crusoe: hsla(117.8, 100%, 16.1%, 1);
 
-$black: rgb(0, 0, 0);
-$gray-darkest: rgb(30, 30, 30);
-$gray-darker: rgb(65, 65, 65);
-$gray-dark: rgb(100, 100, 100);
-$gray: rgb(135, 135, 135);
-$gray-light: rgb(170, 170, 170);
-$gray-lighter: rgb(205, 205, 205);
-$gray-lightest: rgb(240, 240, 240);
-$white: rgb(255, 255, 255);
+/**
+ * @var $color-japanese-laurel
+ */
+$color-japanese-laurel: hsla(120.5, 100%, 24.7%, 1);
 
-//functional colors
-$text-color: $gray-darker;
-$link-color: $blue-light;
-$border-color: $gray;
+/**
+ * @var $color-apple
+ * @var $color-apple-l50
+ * @var $color-apple-d30
+ */
+$color-apple: hsla(117, 51.7%, 45.5%, 1);
+$color-apple-l50: hsla(117, 51.7%, 95.5%, 1);
+$color-apple-d30: hsla(117, 51.7%, 15.5%, 1);
 
-$success-text-color: $green-dark;
-$notice-text-color: $blue-dark;
-$warning-text-color: $yellow-dark;
-$error-text-color: $red-dark;
+/**
+ * @var $color-panache
+ */
+$color-panache: hsla(120, 40.5%, 92.7%, 1);
 
-$success-border-color: $green;
-$notice-border-color: $blue;
-$warning-border-color: $yellow;
-$error-border-color: $red;
+/**
+ * @var $color-downriver
+ */
+$color-downriver: rgba(9, 24, 80, 1);
 
-$input-border-color: $border-color;
+/**
+ * @var $color-dark-blue
+ */
+$color-dark-blue: hsla(239.3, 100%, 33.5%, 1);
 
-$normal-button-color: $gray-light;
-$primary-button-color: $blue-light;
-$caution-button-color: $yellow-dark;
-$danger-button-color: $red;
-$safe-button-color: $green;
+/**
+ * @var $color-san-marino
+ */
+$color-san-marino: hsla(226.7, 47.3%, 46.9%, 1);
 
-$cb-border-color: $border-color;
-$cb-header-border-color: $gray-lighter;
-$cb-header-background-color: $gray-lightest;
-$cb-header-text-color: $blue-light;
+/**
+ * @var $color-chetwode-blue
+ */
+$color-chetwode-blue: hsla(223.1, 54.1%, 69.2%, 1);
 
-$darken-border-percent: 20%;
-$darken-shadow-percent: 20%;
+/**
+ * @var $color-snuff
+ */
+$color-snuff: hsla(240, 40.5%, 92.7%, 1);
 
+/**
+ * @var $color-olive
+ */
+$color-olive: hsla(60, 100%, 24.7%, 1);
+
+/**
+ * @var $color-rio-grande
+ */
+$color-rio-grande: rgba(207, 207, 0, 1);
+
+/**
+ * @var $color-yellow
+ */
+$color-yellow: hsla(60, 100%, 50%, 1);
+
+/**
+ * @var $color-portafino
+ */
+$color-portafino: hsla(60.8, 100%, 85.3%, 1);
+
+/**
+ * @var $color-black
+ */
+$color-black: hsla(0, 0%, 0%, 1);
+
+/**
+ * @var $color-tundora
+ */
+$color-tundora: hsla(0, 0%, 25.5%, 1);
+$color-tundora-l50: hsla(0, 0%, 75.5%, 1);
+
+/**
+ * @var $color-gray
+ */
+$color-gray: hsla(0, 0%, 50%, 1);
+
+/**
+ * @var $color-silver-chalice
+ */
+$color-silver-chalice: hsla(0, 0%, 66.7%, 1);
+
+/**
+ * @var $color-silver
+ * @var $color-silver-d20
+ */
+$color-silver: hsla(0, 0%, 80.4%, 1);
+$color-silver-d20: hsla(0, 0%, 60.4%, 1);
+
+/**
+ * @var $color-gallery
+ */
+$color-gallery: hsla(0, 0%, 93.7%, 1);
+
+/**
+ * @var $color-white
+ * @var $color-white-d15
+ */
+$color-white: hsla(0, 0%, 100%, 1);
+$color-white-d15: hsla(0, 0%, 85%, 1);
+
+/**
+ * @section Variables
+ * @subsection Percentage
+ *
+ * General percentage values.
+ *
+ * @todo see if we can get rid of these
+ *
+ * @var $percentage-dark
+ * @var $percentage-darker
+ * @var $percentage-darkest
+ * @var $percentage-light
+ * @var $percentage-lighter
+ * @var $percentage-lightest
+ */
+$percentage-dark: 10%;
+$percentage-darker: 20%;
+$percentage-darkest: 30%;
+
+$percentage-light: 10%;
+$percentage-lighter: 20%;
+$percentage-lightest: 30%;
+
+/**
+ * @section Variables
+ * @subsection Font
+ *
+ * Variables that deal with fonts.
+ *
+ * @var $font-size
+ * @var $font-family
+ */
 $font-size: 1.3rem;
 $font-family: sans-serif;
+
+/**
+ * @section Variables
+ * @subsection Valid Colors
+ *
+ * These are colors used to indicator something is valid.
+ *
+ * @var $border-color-valid
+ * @var $background-color-valid
+ * @var $color-valid
+ */
+$border-color-valid: $color-apple;
+$background-color-valid: $color-apple-l50;
+$color-valid: $color-japanese-laurel;
+
+/**
+ * @section Variables
+ * @subsection Invalid Colors
+ *
+ * These are colors used to indicator something is invalid.
+ *
+ * @var $border-color-invalid
+ * @var $background-color-invalid
+ * @var $color-invalid
+ */
+$border-color-invalid: $color-medium-carmine;
+$background-color-invalid: $color-medium-carmine-l50;
+$color-invalid: $color-maroon;
+
+/**
+ * @section Variables
+ * @subsection Forms
+ *
+ * These are variables used for from styles
+ *
+ * @var $border-input
+ * @var $box-shadow-input
+ * @var $box-shadow-focus-input
+ */
+$border-input: 2px solid shade($color-gray, $percentage-darkest);
+$box-shadow-input: inset 0px 0px 15px $color-gallery;
+$box-shadow-focus-input: inset 0px 0px 15px shade($color-gallery, $percentage-darkest);
+
+//neat variables
+$max-width: 100%;

@@ -1,75 +1,118 @@
+/**
+ * @section Messages
+ *
+ * Messages are elements to display a piece of information that stands out from most of the other content.
+ *
+ * ```html
+ * <div class="message">This is a generic message.</div>
+ * ```
+ */
 .message {
   display: inline-block;
   padding: 5px;
-  border: 1px solid $border-color;
+  border: 1px solid $color-gray;
   border-radius: 3px;
 
+  /**
+   * @section Messages
+   * #subsection Icon
+   *
+   * Messages element can also have an icon.
+   *
+   * ```html
+   * <div class="message">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   * </div>
+   * ```
+   */
   .icon {
-    &:before {
-      @extend %nag-icon-font !optional;
-      position: relative;
-      top: 1px;
-      padding-right: 5px;
-    }
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 12px;
   }
 
-  &.success {
-    background-color: $green-lighter;
-    color: $success-text-color;
-    border-color: $green-darker;
+  /**
+   * @section Messages
+   * @subsection States
+   *
+   * There are a number of different states that a message can be in that determine the coloring on the message box.
+   *
+   * You can add the `safe` class to add a greenish color.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `notice` class to add a blueish color.
+   *
+   * ```html
+   * <div class="message notice">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `caution` class to add a yellowish color.
+   *
+   * ```html
+   * <div class="message caution">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a generic message.
+   * </div>
+   * ```
+   *
+   * You can add the `danger` class to add a redish color.
+   *
+   * ```html
+   * <div class="message danger">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a generic message.
+   * </div>
+   * ```
+   */
+  &.safe {
+    background-color: $color-panache;
+    color: $color-japanese-laurel;
+    fill: $color-panache;
+    border-color: $color-crusoe;
 
     .icon {
-      &:before {
-        content: "\e00b";
-      }
+      background-color: $color-crusoe;
     }
   }
 
   &.notice {
-    background-color: $blue-lighter;
-    color: $notice-text-color;
-    border-color: $blue-darker;
+    background-color: $color-snuff;
+    color: $color-dark-blue;
+    fill: $color-snuff;
+    border-color: $color-downriver;
 
     .icon {
-      &:before {
-        content: "\e00c";
-      }
+      background-color: $color-downriver;
     }
   }
 
-  &.warning {
-    background-color: shade($yellow-lighter, 5%);
-    color: $warning-text-color;
-    border-color: $yellow-darker;
+  &.caution {
+    background-color: shade($color-portafino, 5%);
+    color: $color-rio-grande;
+    fill: shade($color-portafino, 5%);;
+    border-color: $color-olive;
 
     .icon {
-      &:before {
-        content: "\e00a";
-      }
+      background-color: $color-olive;
     }
   }
 
   &.danger {
-    background-color: $red-lighter;
-    color: $error-text-color;
-    border-color: $red-darker;
+    background-color: $color-dawn-pink;
+    color: $color-maroon;
+    fill: $color-dawn-pink;
+    border-color: $color-rosewood;
 
     .icon {
-      &:before {
-        content: "\e00d";
-      }
-    }
-  }
-
-  &.error {
-    background-color: $red-lighter;
-    color: $error-text-color;
-    border-color: $red-darker;
-
-    .icon {
-      &:before {
-        content: "\e00d";
-      }
+      background-color: $color-rosewood;
     }
   }
 }

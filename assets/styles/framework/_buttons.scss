@@ -1,7 +1,20 @@
+/**
+ * @section Buttons
+ * @subsection Button Size
+ *
+ * This mixin adds the appropriate sizing properties for the different support sizes.  The following sizes are supported:
+ *
+ * - small
+ * - normal (default)
+ * - large
+ * - largest
+ *
+ * @mixin button-size
+ * @param $size string Button size
+ */
 @mixin button-size($size: normal) {
   @if $size == small {
     font-size: 1rem;
-    line-height: 1rem;
     padding: 3px 9px;
   }
   @if $size == normal {
@@ -9,48 +22,62 @@
   }
   @if $size == large {
     font-size: 1.8rem;
-    line-height: 1.8rem;
     padding: 5px 15px;
   }
   @if $size == largest {
     font-size: 2.4rem;
-    line-height: 2.4rem;
     padding: 6px 18px;
-  }
-  @if $size == drop-down-small {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding: 3px 9px 4px 9px;
-  }
-  @if $size == drop-down-normal {
-    padding: 4px 12px 5px 12px;
-  }
-  @if $size == drop-down-large {
-    font-size: 1.8rem;
-    line-height: 1.8rem;
-    padding: 5px 15px 6px 15px;
-  }
-  @if $size == drop-down-largest {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    padding: 6px 18px 7px 18px;
   }
 }
 
-@mixin button-color($button-regular-color, $button-light-color, $button-dark-color, $button-text-color) {
+/**
+ * @section Buttons
+ * @subsection Button Color
+ *
+ * This mixin adds the appropriate shadow colors for the different button states.
+ *
+ * @mixin button-color
+ * @param $button-main-color color Button main background color
+ * @param $button-text-color color Button text color
+ */
+@mixin button-color($button-main-color, $button-text-color) {
+  /**
+   * @section Buttons
+   * @subsection Quiet
+   *
+   * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
+   *
+   * ```html
+   * <button>Default</button>
+   * ```
+   */
   &.quiet {
-    color: $text-color;
+    color: $color-tundora;
   }
 
   &:not(.quiet) {
     color: $button-text-color;
-    background-color: $button-regular-color;
+    background-color: $button-main-color;
+  }
+
+  /**
+   * @section Buttons
+   * @subsection Border
+   *
+   * If you wish to added a border to the button, add the `border` class.
+   *
+   * ```html
+   * <button class="border">Border</button>
+   * ```
+   */
+  &.border {
+    border: 1px solid darken($button-main-color, $percentage-darkest);
   }
 
   &:hover {
     &:not([disabled]) {
       &:not(.solid-color) {
-        background-color: $button-light-color;
+        box-shadow: inset 0 0 20px darken($button-main-color, $percentage-darkest);
       }
     }
   }
@@ -58,26 +85,61 @@
   &:active, &.is-active {
     &:not([disabled]) {
       &:not(.solid-color) {
-        background-color: $button-dark-color;
+        box-shadow: inset 0 0 30px darken($button-main-color, $percentage-darkest);
       }
     }
   }
 }
 
-@mixin button-color-auto($button-main-color, $button-text-color) {
-  @include button-color($button-main-color, tint($button-main-color, 20%), darken($button-main-color, 5%), $button-text-color);
-}
-
+/**
+ * @section Buttons
+ *
+ * Standard button.
+ *
+ * ```html
+ * <button>Default</button>
+ * ```
+ */
 button {
   @include button-size(normal);
-  @include button-color-auto($normal-button-color, $white);
+  @include button-color($color-silver-chalice, $color-white);
 
   border-radius: 3px;
   position: relative;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2rem;
 
+  &:focus {
+    outline: none;
+  }
+
+  /**
+   * @section Buttons
+   * @subsection Sizes
+   *
+   * Button can have 3 additional sizes in addition to the defualt size.
+   *
+   * You can add a `small` class.
+   *
+   * ```html
+   * <button class="small">Small</button>
+   * ```
+   *
+   * You can add a `large` class.
+   *
+   * ```html
+   * <button class="large">Large</button>
+   * ```
+   *
+   * You can add a `largest` class.
+   *
+   * ```html
+   * <button class="largest">Largest</button>
+   * ```
+   */
   &.small {
     @include button-size(small);
   }
@@ -90,34 +152,77 @@ button {
     @include button-size(largest);
   }
 
+  /**
+   * @section Buttons
+   * @subsection States
+   *
+   * Buttons can have a number of differnt states that change the color of the button.
+   *
+   * The `primary` class can be added to indicate the primary action to be done.
+   *
+   * ```html
+   * <button class="primary">Primary</button>
+   * ```
+   *
+   * The `caution` class can be added to indicate that you should be careful in clicking the button.
+   *
+   * ```html
+   * <button class="caution">Caution</button>
+   * ```
+   *
+   * The `danger` class can be added to indicate a negative action will be performed when clicking the button (like removing a record).
+   *
+   * ```html
+   * <button class="danger">Danger</button>
+   * ```
+   *
+   * The `safe` class can be added to indicate a positive action will be performed when clicking the button (like adding a record).
+   *
+   * ```html
+   * <button class="safe">Safe</button>
+   * ```
+   */
   &.primary {
-    @include button-color-auto($primary-button-color, $white);
+    @include button-color($color-chetwode-blue, $color-white);
   }
 
   &.caution {
-    @include button-color-auto($caution-button-color, $white);
+    @include button-color($color-rio-grande, $color-white);
   }
 
   &.danger {
-    @include button-color-auto($danger-button-color, $white);
+    @include button-color($color-medium-carmine, $color-white);
   }
 
   &.safe {
-    @include button-color-auto($safe-button-color, $white);
+    @include button-color($color-apple, $color-white);
   }
 
+  /**
+   * @section Buttons
+   * @subsection Disabled
+   *
+   * Disabled button will automatically appear faded and have the proper cursor to indicate the button can't be clicked on.
+   *
+   * ```html
+   * <button disabled>Disabled</button>
+   * ```
+   */
   &[disabled] {
     opacity: 0.5;
+    cursor: not-allowed;
   }
 
-  &.border {
-    border: 1px solid $black;
-  }
-
-  &.shadow {
-    box-shadow: 0 0 5px $gray;
-  }
-
+  /**
+   * @section Buttons
+   * @subsection Square
+   *
+   * Button are rounded by default however you can add the `square` class to remove the rounded corners.
+   *
+   * ```html
+   * <button class="square">Square</button>
+   * ```
+   */
   &.square {
     border-radius: 0;
   }

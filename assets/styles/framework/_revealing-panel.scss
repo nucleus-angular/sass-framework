@@ -1,19 +1,80 @@
-@mixin reveal-animation($property, $start-value, $end-value, $duration, $timing-function, $border-side: '', $border-size: '', $border-type: '', $border-color: '') {
+/**
+ * @section Revealing Panel
+ *
+ * Revealing panel is a type of modal window system that displays a site overlay and content on top of that overlay.  There are a number of different ways to display the revealing panel.
+ *
+ * @TODO: add example using absolute positioning
+ * @TODO: add animations in (needs to support angular)
+ *
+ * You can display the panel on all 4 sides on the page.
+ *
+ * ```html
+ * <ul>
+ *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (auto removed in 2 seconds)</a></li>
+ * </ul>
+ * <div class="revealing-panel">
+ *   <div class="site-overlay"></div>
+ *   <div class="content">Revealing panel content</div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-revealing-panel').click(function(event) {
+ *     event.preventDefault();
+ *     var position = $(this).data('position');
+ *     $('.revealing-panel').addClass('is-active').addClass(position);
+ *     $('.site-overlay').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *       $('.revealing-panel').removeClass('is-active').removeClass(position);
+ *       $('.site-overlay').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
+
+ /*
+  * @section Revealing Panel
+  * @subsection Reveal Animation
+  *
+  * @TODO: have animation based on is-active class
+  *
+  * Added css for angular animation
+  *
+  * @mixin reveal-animation
+  * @param $property
+  * @param $start-value
+  * @param $end-value
+  * @param $duration
+  * @param $timing-function
+  * @param $border-side
+  * @param $border-size
+  * @param $border-type
+  * @param $color-gray
+  */
+/*@mixin reveal-animation($property, $start-value, $end-value, $duration, $timing-function, $border-side: '', $border-size: '', $border-type: '', $color-gray: '') {
   &.reveal {
     @if $border-side != '' {
-      border-#{$border-side}: $border-size $border-type $border-color;
+      border-#{$border-side}: $border-size $border-type $color-gray;
     }
 
     //default value, should be manually handled on a case by case basis
     #{$property}: $end-value;
   }
 
+  //angular animation support
   &.reveal-add,
   &.reveal-remove {
     @include transition($property $duration $timing-function);
 
     @if $border-side != '' {
-      border-#{$border-side}: $border-size $border-type $border-color;
+      border-#{$border-side}: $border-size $border-type $color-gray;
     }
   }
 
@@ -38,84 +99,127 @@
       min-#{$property}: $end-value - $border-size;
     }
   }
-}
+}*/
 
 .revealing-panel {
-  > .content {
-    position: fixed;
-    z-index: 11000;
-    background-color: white;
-    overflow: hidden;
-
-    //useful for want to have a revealing panel within a element in the page instead of on the page itself
-    &.absolute {
+  //useful for want to have a revealing panel within a element in the page instead of on the page itself
+  &.absolute {
+    > .content {
       position: absolute;
     }
+  }
 
-    &.reveal {
-      overflow: visible;
-    }
+  /*&.reveal {
+    overflow: visible;
+  }
 
-    &.reveal-add,
-    &.reveal-remove {
-      overflow: hidden;
-    }
+  &.reveal-add,
+  &.reveal-remove {
+    overflow: hidden;
+  }*/
 
-    &.center {
+  &.center {
+    > .content {
       top: 50%;
       left: 50%;
       height: 500px;
       width: 500px;
       display: none;
       opacity: 1;
-      border: 1px solid $black;
+      border: 1px solid $color-black;
 
       //this handle center positioning
       margin: calc(-500px / 2) 0 0 calc(-500px / 2);
 
-      &.reveal,
+      /*&.reveal,
       &.reveal-add,
       &.reveal-remove {
         display: inline-block;
+      }*/
+
+      //@include reveal-animation(opacity, 0, 1, .25s, linear);
+    }
+  }
+
+  &.left {
+    &.is-active {
+      > .content {
+        width: 500px;
       }
-
-      @include reveal-animation(opacity, 0, 1, .25s, linear);
     }
 
-    &.left {
-      @include reveal-animation(width, 0, 500px, .25s, linear, right, 1px, solid, $black);
+    > .content {
+      //@include reveal-animation(width, 0, 500px, .25s, linear, right, 1px, solid, $color-black);
 
       top: 0;
       left: 0;
       bottom: 0;
       width: 0;
     }
+  }
 
-    &.right {
-      @include reveal-animation(width, 0, 500px, .25s, linear, left, 1px, solid, $black);
+  &.right {
+    &.is-active {
+      > .content {
+        width: 500px;
+      }
+    }
+
+    > .content {
+      //@include reveal-animation(width, 0, 500px, .25s, linear, left, 1px, solid, $color-black);
 
       top: 0;
       right: 0;
       bottom: 0;
       width: 0;
     }
+  }
 
-    &.top {
-      @include reveal-animation(height, 0, 500px, .25s, linear, bottom, 1px, solid, $black);
+  &.top {
+    &.is-active {
+      > .content {
+        height: 500px;
+      }
+    }
+
+    > .content {
+      //@include reveal-animation(height, 0, 500px, .25s, linear, bottom, 1px, solid, $color-black);
 
       top: 0;
       left: 0;
       right: 0;
       height: 0;
     }
+  }
 
-    &.bottom {
-      @include reveal-animation(height, 0, 500px, .25s, linear, top, 1px, solid, $black);
+  &.bottom {
+    &.is-active {
+      > .content {
+        height: 500px;
+      }
+    }
+
+    > .content {
+      //@include reveal-animation(height, 0, 500px, .25s, linear, top, 1px, solid, $color-black);
 
       bottom: 0;
       left: 0;
       right: 0;
       height: 0;
+    }
+  }
+
+  > .content {
+    position: fixed;
+    z-index: 11000;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+  }
+
+  &.is-active {
+    > .content {
+      display: block;
     }
   }
 }

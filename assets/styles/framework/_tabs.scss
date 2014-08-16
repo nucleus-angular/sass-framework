@@ -1,3 +1,25 @@
+/**
+ * @section Tabs
+ *
+ * Tabs allow you segment data and use the same screen space.
+ *
+ * Tabs are contained in an element with the `tabs-container` class and each tab should also have the `tab` class.
+ *
+ * Tab contents are in elements with the `tab-content` class.
+ *
+ * The active tab and tab content should have the `is-active` class.
+ *
+ * ```html
+ * <div class="tabs">
+ *   <div class="tabs-container">
+ *     <span class="tab">Tab 1</span>
+ *     <span class="tab is-active">Tab 2</span>
+ *   </div>
+ *   <div class="tab-content">Tab content 1</div>
+ *   <div class="tab-content is-active">Tab content 2</div>
+ * <div>
+ * ```
+ */
 .tabs,
 .tabs-container {
   margin: 0;
@@ -7,13 +29,13 @@
 .tabs .tab {
   padding: 3px;
   display: inline-block;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $color-tundora;
   border-bottom: none;
   cursor: pointer;
 }
 
 .tabs .tab.is-active {
-  background-color: $gray-lighter;
+  background-color: $color-tundora-l50;
 }
 
 .tabs .tab-content {
@@ -21,6 +43,6 @@
 }
 
 .tabs .tab-content.is-active {
-  border-top: 1px solid $gray-lighter;
+  border-top: 1px solid $color-tundora;
   display: block;
 }

@@ -1,16 +1,55 @@
+h1 {
+  font-size: 3.2rem;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin: 0 0 1rem 0;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+h4 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+h5 {
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+}
+
+h6 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+
+a {
+  color: $color-dark-blue;
+  text-decoration: none;
+}
+
+body {
+  color: $color-tundora;
+}
+
 .success-text {
-  color: $success-text-color;
+  color: $color-japanese-laurel;
 }
 
 .notice-text {
-  color: $notice-text-color;
+  color: $color-dark-blue;
 }
 
 .warning-text {
-  color: $warning-text-color;
+  color: $color-rio-grande;
 }
 
 .error-text,
 .danger-text {
-  color: $error-text-color;
+  color: $color-maroon;
 }

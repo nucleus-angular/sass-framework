@@ -1,10 +1,36 @@
+/**
+ * @section Site Overlay
+ *
+ * @TODO: make it possible to put a site overlay within an element inside of only the entire page
+ * @TODO: add animation is (needs to support angular animation)
+ *
+ * A site overlay is an element that fades everything behind it (z-index wise) in order to focus attention to anything above the site overlay.
+ *
+ * ```html
+ * <a class="show-site-overlay" href>click me to show site overlay (auto removed in 2 seconds)</a>
+ * <div class="site-overlay"></div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-site-overlay').click(function(event) {
+ *     event.preventDefault();
+ *     $('.site-overlay').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *     $('.site-overlay').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .site-overlay{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $black;
+    background-color: $color-black;
     opacity: 0.5;
     z-index: 999;
     display: none;
@@ -14,7 +40,7 @@
     }
 
     //angular animation stuff
-    &.is-active-add,
+    /*&.is-active-add,
     &.is-active-remove {
         @include transition(opacity .25s linear);
         display: block;
@@ -34,5 +60,5 @@
 
     &.is-active-remove.is-active-remove-active {
         opacity: 0;
-    }
+    }*/
 }

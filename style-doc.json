@@ -1,0 +1,13 @@
+{
+  "source": [
+    "assets/**/*.scss"
+  ],
+  "overview": "styleguide.md",
+  "externalStyles": [{
+    "type": "sass",
+    "file": "style-doc.scss"
+  }],
+  "customJavaScriptIncludes": [
+    "custom.js"
+  ]
+}

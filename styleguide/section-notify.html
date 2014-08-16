@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Style Guide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="styledocer-node" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="external.css" />
+    <script src="jquery.js"></script>
+    <script src="svg-injector.js"></script>
+    <script src="jquery.js"></script>
+    <script src="rainbow.js"></script>
+    <script src="main.js"></script>
+    
+      
+        <script src="custom.js"></script>
+      
+    
+  </head>
+  <body id="styledocer-node">
+    <div class="styledocer-wrapper">
+      <div class="styledocer-sidebar">
+        <div class="styledocer-sidebar-inner">
+          <header class="styledocer-header">
+            <h1 class="styledocer-doc-title"><a href="./">Style Guide</a></h1>
+          </header>
+          <nav class="styledocer-nav">
+            <ul class="styledocer-menu" data-styledocer-ref="Notify">
+              <li class="styledocer-menu-item"><a href="./index.html"><span class="styledocer-name">Overview</span></a></li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-animations.html"><span class="styledocer-name">Animations</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-button-drop-down.html"><span class="styledocer-name">Button Drop Down</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-buttons.html"><span class="styledocer-name">Buttons</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-cards.html"><span class="styledocer-name">Cards</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-expander.html"><span class="styledocer-name">Expander</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-extend-text.html"><span class="styledocer-name">Extend Text</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-forms.html"><span class="styledocer-name">Forms</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-input-element.html"><span class="styledocer-name">Input Element</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-notify.html"><span class="styledocer-name">Notify</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-progress-bars.html"><span class="styledocer-name">Progress Bars</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-revealing-panel.html"><span class="styledocer-name">Revealing Panel</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-svg-icons.html"><span class="styledocer-name">SVG Icons</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-search-query.html"><span class="styledocer-name">Search Query</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-site-loader.html"><span class="styledocer-name">Site Loader</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-site-overlay.html"><span class="styledocer-name">Site Overlay</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tabs.html"><span class="styledocer-name">Tabs</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tooltip.html"><span class="styledocer-name">Tooltip</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-tree.html"><span class="styledocer-name">Tree</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
+                  <a href="section-variables.html"><span class="styledocer-name">Variables</span></a>
+                  
+                </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="styledocer-content">
+        <article class="styledocer-article">
+          
+            <section id="section-Notify" class="styledocer-section first">
+              <h1 class="styledocer-title">Notify</h1>
+              <div class="styledocer-description">
+                <p>Notify is a way to unobtrusively display a message to the user, be default it display in the top right corner.</p>
+<p><a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a></p>
+<p><div class="notify message notice" data-id="default">
+  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+</div></p>
+<pre><code class="lang-html">&lt;a id=&quot;default&quot; class=&quot;show-notify&quot; href&gt;click me to show default notify (auto removed in 2 seconds)&lt;/a&gt;
+&lt;div class=&quot;notify message notice&quot; data-id=&quot;default&quot;&gt;
+  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;This is a notification message.
+&lt;/div&gt;
+</code></pre>
+<p>Notify elements are <code>position: fixed</code> so just add <code>top</code>/<code>bottom</code>/<code>left</code>/<code>right</code> to the container to position it.</p>
+<p><a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a></p>
+<p><div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
+  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+</div></p>
+<pre><code class="lang-html">&lt;a id=&quot;positioned&quot; class=&quot;show-notify&quot; href&gt;click me to show positioned notify (auto removed in 2 seconds)&lt;/a&gt;
+&lt;div class=&quot;notify message danger&quot; data-id=&quot;positioned&quot; style=&quot;top: 300px; left: 150px; right: auto;&quot;&gt;
+  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;This is a positioned notification message.
+&lt;/div&gt;
+</code></pre>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.notify').hide();
+
+  $('.show-notify').click(function(event) {
+    event.preventDefault();
+    $('body').append($('[data-id=' + $(this).attr('id') + ']').clone().show());
+    setTimeout(function() {
+      $('body > .notify').remove();
+    }, 2000);
+  });
+});
+</script>
+
+              </div>
+              
+              
+            </section>
+          
+        </article>
+        <footer class="styledocer-footer">
+          <span>Created using <a href="https://github.com/ryanzec/style-doc">style-doc</a></span>
+          <span>Default theme based off of <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a></span>
+          <span>SVG icons from <a href="https://github.com/iconic/open-iconic">Iconic Open</a> using <a href="">SVGInjector</a></span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

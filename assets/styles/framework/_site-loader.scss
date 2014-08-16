@@ -1,24 +1,90 @@
+/**
+ * @section Site Loader
+ *
+ * Site loader in a way to indicate the the site is working.
+ */
+/**
+ * @section Site Loader
+ * @subsection Blocking
+ *
+ * @TODO: MAke it possible to do blocking but display like a non-blocking (display content but don't let the user click on anything).
+ *
+ * The blocking site loader take the full screen and blocks the user from doing anything while the loader is up.
+ *
+ * ```html
+ * <a class="show-site-loader" href>click me to show blocking site loader (auto removed in 2 seconds)</a>
+ * <div class="site-loader">
+ *   <div class="text">The application is loading...</div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.show-site-loader').click(function(event) {
+ *     event.preventDefault();
+ *     $('.site-loader').addClass('is-active');
+ *
+ *     setTimeout(function() {
+ *      $('.site-loader').removeClass('is-active');
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
 .site-loader {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $white;
-  z-index: 10000;
+  background-color: $color-white;
+  z-index: 10001;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 
   .text {
     padding-top: 50px;
-    width: 300px;
-    margin: 0 auto;
     z-index: 1001;
     text-align: center;
   }
 }
 
-.non-blocking-loader .message {
+/**
+ * @section Site Loader
+ * @subsection Non-Blocking
+ *
+ * The non-blocking loaded is used let the user know the application is working but they can still click around.  This used a specially styled notify/message element.
+ *
+ * ```html
+ * <a class="show-non-blocking" href>click me to show non-blocking site loader (auto removed in 2 seconds)</a>
+ * <div class="notify message danger non-blocking-loader">The site is working...</div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.notify').hide();
+ *
+ *   $('.show-non-blocking').click(function(event) {
+ *     event.preventDefault();
+ *     $('body').append($('.notify').clone().show());
+ *     setTimeout(function() {
+ *       $('body > .notify').remove();
+ *     }, 2000);
+ *   });
+ * });
+ * </script>
+ */
+.non-blocking-loader.message {
+  top: 0;
+  right: 50%;
+  margin-right: -150px;
+  width: 300px;
+  text-align: center;
   border-top: none;
   padding: 0.25em 0.5em;
   border-radius: 0 0 3px 3px;
-  z-index: 10001;
+  z-index: 10000;
 }

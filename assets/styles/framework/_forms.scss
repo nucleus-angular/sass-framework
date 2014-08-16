@@ -1,101 +1,332 @@
+/**
+ * @section Forms
+ *
+ * These are the styles available for displaying forms.
+ *
+ * By default, `label` and `input` elements each display on there own line unless the `input` is wrapped within the `label`.
+ *
+ * ```html
+ * <form>
+ *   <div>
+ *     <label for="first-name">First Name</label>
+ *     <input id="first-name" type="text" />
+ *   </div>
+ *   <div>
+ *     <label for="last-name">Last Name</label>
+ *     <input id="last-name" type="text" />
+ *   </div>
+ *   <div>
+ *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *   </div>
+ *   <div>
+ *     <label for="country">Select Country</label>
+ *     <select id="country">
+ *       <option>USA</option>
+ *       <option>Other</option>
+ *     </select>
+ *   <div>
+ *   <div>
+ *     <label>Is Admin</label>
+ *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+ *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *   </div>
+ * </form>
+ * ```
+ */
 form {
-  &.one-line {
-    label {
+  /**
+   * @section Forms
+   * @subsection Compact
+   *
+   * If you wish labels and input to be displayed on the same line regardless of how the dom is structure, add the `compact` class to the form.
+   *
+   * ```html
+   * <form class="compact">
+   *   <div>
+   *     <label for="first-name">First Name</label>
+   *     <input id="first-name" type="text" />
+   *   </div>
+   *   <div>
+   *     <label for="last-name">Last Name</label>
+   *     <input id="last-name" type="text" />
+   *   </div>
+   *   <div>
+   *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+   *   </div>
+   *   <div>
+   *     <label for="country">Select Country</label>
+   *     <select id="country">
+   *       <option>USA</option>
+   *       <option>Other</option>
+   *     </select>
+   *   <div>
+   *   <div>
+   *     <label>Is Admin</label>
+   *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+   *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+   *   </div>
+   * </form>
+   * ```
+   */
+  &.compact {
+    label,
+    .label {
       display: inline-block;
       text-align: right;
+      padding-right: 10px;
+    }
+  }
+}
 
-      &.with-separator {
-        &:after {
-          content: ":";
-        }
+label,
+.label {
+  display: block;
+}
+
+input ~ label {
+  display: inline-block;
+}
+
+input:not([type]),
+input[type="text"],
+textarea {
+  border-radius: 5px;
+  border: $border-input;
+  padding: 2px;
+  margin: 5px 0;
+  outline: none;
+  box-shadow: $box-shadow-input;
+
+  &:focus {
+    box-shadow: $box-shadow-focus-input;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 5px;
+}
+
+input[disabled] {
+  opacity: .7;
+}
+
+/**
+ * @section Input Element
+ *
+ * There is a special structure that can be used by added the `input-element` class to a containing element to support custom data validation styling.
+ *
+ * ```html
+ * <form class="compact">
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label for="first-name">First Name</label>
+ *         <input id="first-name" type="text" />
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *       <div class="input-message inline">Valid</div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label for="last-name">Last Name</label>
+ *         <input id="last-name" type="text" />
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *       <div class="input-message inline">Valid</div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <div class="container">
+ *         <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <div class="container">
+ *         <label for="country">Select Country</label>
+ *         <select id="country">
+ *           <option>USA</option>
+ *           <option>Other</option>
+ *         </select>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <div class="container">
+ *         <label>Is Admin</label>
+ *         <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
+ *         <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *       </div>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ * </form>
+ * ```
+ */
+.input-element {
+  position: relative;
+
+  /**
+   * @section Input Element
+   * @subsection Plain
+   *
+   * By default, the `input` element will be colored based on validation however if you wish to keep in `input` itself plain, add the `plain` class to the
+   * container element.
+   *
+   * ```html
+   * <div class="input-element invalid plain">
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *   <div class="container">
+   *     <input type="text" class="ng-invalid" />
+   *   </div>
+   *   <div class="input-message">Invalid</div>
+   * </div>
+   * <div class="input-element valid plain">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="input-message">Valid</div>
+   * </div>
+   * ```
+   */
+  &:not(.plain) {
+    /**
+     * @section Input Element
+     * @subsection Invalid
+     *
+     * If an input element is invalid, you need to add the `invalid` class on the container.
+     *
+     * ```html
+     * <div class="input-element invalid">
+     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+     *   <div class="container">
+     *     <input type="text" class="ng-invalid" />
+     *   </div>
+     *   <div class="input-message">Invalid</div>
+     * </div>
+     * ```
+     */
+    &.invalid {
+      input,
+      textarea {
+        border-color: $border-color-invalid;
+        background-color: $background-color-invalid;
+
+        /*&:focus {
+          border-color: $color-medium-carmine-d30;
+        }*/
+      }
+    }
+
+    /**
+     * @section Input Element
+     * @subsection Valid
+     *
+     * If an input element is valid, you need to add the `valid` class on the container.
+     *
+     * ```html
+     * <div class="input-element valid">
+     *   <div class="container">
+     *     <input type="text" class="ng-valid" />
+     *   </div>
+     *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+     *   <div class="input-message">Valid</div>
+     * </div>
+     * ```
+     */
+    &.valid {
+      input,
+      textarea {
+        border-color: $border-color-valid;
+        background-color: $background-color-valid;
+
+        /*&:focus {
+          border-color: $color-apple-d30;
+        }*/
       }
     }
   }
 
-  &.compact {
-    .input-element {
-      display: inline-block;
-      padding-left: 1.6rem;
+  &.invalid {
+    .icon {
+      fill: $color-invalid;
     }
 
-    .valid-icon.before,
-    .invalid-icon.before {
-      left: 0;
+    .input-message {
+      color: $color-invalid;
     }
   }
-}
 
-label {
-  &.container {
-    display: inline-block;
+  &.valid {
+    .icon {
+      fill: $color-valid;
+    }
+
+    .input-message {
+      color: $color-valid;
+    }
   }
-}
-
-input[type="text"], textarea {
-  border-radius: 5px;
-  border: 2px solid $input-border-color;
-  padding: 5px;
-  margin: 5px 0;
-  outline: none;
-  box-shadow: inset 0px 0px 15px $gray-lightest;
-
-  &:focus {
-    border-color: shade($input-border-color, $darken-border-percent);
-    box-shadow: inset 0px 0px 15px shade($gray-lightest, $darken-shadow-percent);
-  }
-}
-
-.input-element {
-  position: relative;
 
   > .container {
     @include clearfix;
     display: inline-block;
     position: relative;
-
-    &:not(.plain) {
-      input,
-      textarea {
-        &:not(.plain) {
-          &.ng-invalid {
-            border-color: $error-border-color;
-
-            &:focus {
-              border-color: shade($error-border-color, $darken-border-percent);
-            }
-          }
-
-          &.ng-valid {
-            border-color: $success-border-color;
-
-            &:focus {
-              border-color: shade($success-border-color, $darken-border-percent);
-            }
-          }
-        }
-      }
-    }
   }
 
-  input[type="text"] ~ .icons {
-    bottom: 1.5rem;
+  /**
+   * @section Input Element
+   * @subsection Icon
+   *
+   * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   * </div>
+   * ```
+   */
+  .icon {
+    vertical-align: middle;
   }
 
-  .valid-icon:before,
-  .invalid-icon:before {
-    @extend %nag-icon-font;
-  }
-
-  .valid-icon:before {
-    color: $success-text-color;
-    content: "\e00b";
-  }
-
-  .invalid-icon:before {
-    color: $error-text-color;
-    content: "\e00d";
-  }
-
+  /**
+   * @section Input Element
+   * @subsection Message
+   *
+   * You you provide message element (useful for showing success/error message) by adding the `message` class to the element.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <div class="input-message">Valid</div>
+   * </div>
+   * ```
+   *
+   * By defualt it is displayed `block` but you can add the `inline` class to the message element to have it displayed `inline`.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <div class="container">
+   *     <input type="text" class="ng-valid" />
+   *   </div>
+   *   <div class="input-message inline">Valid</div>
+   * </div>
+   * ```
+   */
   .input-message {
     &.inline {
       display: inline;

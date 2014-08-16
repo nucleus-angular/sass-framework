@@ -1,39 +1,98 @@
-/* tree system */
-.tree > ul,
-.tree .tree-element > ul {
-  padding: 0;
-  list-style: none;
-}
+/**
+ * @section Tree
+ *
+ * Display a list of element is a tree view that can be expanded and collapsed.  The main container must have the `tree` class and the tree data uses `ul`/`li` elements.
+ *
+ * Tree elements are by default collapsed.  Nodes that have children need to have the `tree` class and nodes that don't have children need to have the `leaf` class.
+ *
+ * ```html
+ * <div class="tree">
+ *   <ul>
+ *     <li class="tree">
+ *       <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2
+ *       <ul>
+ *         <li class="leaf">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-2</li>
+ *         <li class="tree">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-right.svg" />tree 2-2
+ *           <ul>
+ *             <li class="leaf no-icon">leaf 2-2-1</li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+ *             </li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+ *             </li>
+ *           </ul>
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-4</li>
+ *       </ul>
+ *     </li>
+ *   </ul>
+ * </div>
+ * ```
+ *
+ * In order to expanded a tree, add the `expanded` class to the element with the `tree` class.
+ *
+ * ```html
+ * <div class="tree">
+ *   <ul>
+ *     <li class="tree expanded">
+ *       <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2
+ *       <ul>
+ *         <li class="leaf">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/file.svg" />leaf 2-1
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-2</li>
+ *         <li class="tree expanded">
+ *           <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/chevron-bottom.svg" />tree 2-2
+ *           <ul>
+ *             <li class="leaf no-icon">leaf 2-2-1</li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/aperture.svg" />leaf 2-2-2
+ *             </li>
+ *             <li class="leaf">
+ *               <img class="svg-icon" data-src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/camera-slr.svg" />leaf 2-2-3
+ *             </li>
+ *           </ul>
+ *         </li>
+ *         <li class="leaf no-icon">leaf 2-4</li>
+ *       </ul>
+ *     </li>
+ *   </ul>
+ * </div>
+ * ```
+ */
+.tree {
+  .leaf {
+    padding-left: 16px;
 
-.tree .tree-element {
-  cursor: pointer;
-}
+    &.no-icon {
+      padding-left: 32px;
+    }
+  }
 
-.tree .tree-element > .tree-label:before,
-.tree .tree-element.tree-expanded > .tree-label:before {
-  @extend %nag-icon-font !optional;
-}
+  .tree {
+    cursor: pointer;
 
-.tree .tree-element > .tree-label:before {
-  width: 13px;
-  font-size: 1rem;
-  content: "\e005";
-}
+    &.expanded ul {
+      display: block;
 
-.tree .tree-element.tree-expanded > .tree-label:before {
-  width: 13px;
-  font-size: 1rem;
-  content: "\e006";
-}
+      .tree {
+        padding-left: 16px;
+      }
+    }
 
-.tree .tree-element .node {
-  padding-left: $font-size;
-}
+    ul {
+      display: none;
+    }
+  }
 
-.tree .tree-element > ul.node {
-  display: none;
-}
-
-.tree .tree-element.tree-expanded > ul.node {
-  display: block;
+  svg {
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+  }
 }
