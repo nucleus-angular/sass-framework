@@ -67,6 +67,10 @@
  */
 $tree-padding: 8px;
 .tree {
+  li {
+    cursor: pointer;
+  }
+
   .leaf {
     padding-left: $tree-padding;
 
@@ -76,8 +80,6 @@ $tree-padding: 8px;
   }
 
   .tree {
-    cursor: pointer;
-
     &.expanded > ul {
       display: block;
 
