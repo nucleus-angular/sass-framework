@@ -22,20 +22,20 @@
  */
 .tabs,
 .tabs-container {
-  margin: 0;
-  padding: 0;
+  margin: $margin-tabs;
+  padding: $padding-tabs;
 }
 
 .tabs .tab {
-  padding: 3px;
+  padding: $padding-tab-tabs;
   display: inline-block;
-  border: 1px solid $color-tundora;
+  border: $border-tabs;
   border-bottom: none;
   cursor: pointer;
 }
 
 .tabs .tab.is-active {
-  background-color: $color-tundora-l50;
+  background-color: $background-color-tab-is-active-tabs;
 }
 
 .tabs .tab-content {
@@ -43,6 +43,6 @@
 }
 
 .tabs .tab-content.is-active {
-  border-top: 1px solid $color-tundora;
+  border-top: $border-tabs;
   display: block;
 }

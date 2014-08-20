@@ -30,9 +30,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-black;
-    opacity: 0.5;
-    z-index: 999;
+    background-color: $background-color-so;
+    opacity: $opacity-so;
+    z-index: $z-index-so;
     display: none;
 
     &.is-active {

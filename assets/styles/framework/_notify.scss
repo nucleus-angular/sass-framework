@@ -35,12 +35,14 @@
  */
 .notify {
   position: fixed;
+  //these are not variables because it is expected these values will not be consistent through the application
   top: 15px;
   right: 15px;
-  z-index: 9999;
+
+  z-index: $z-index-notify;
   display: inline-block;
 
   &.absolute {
-    position: fixed;
+    position: absolute;
   }
 }

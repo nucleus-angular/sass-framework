@@ -27,8 +27,8 @@
  *   <div>
  *   <div>
  *     <label>Is Admin</label>
- *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
- *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+ *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
  *   </div>
  * </form>
  * ```
@@ -51,7 +51,7 @@ form {
    *     <input id="last-name" type="text" />
    *   </div>
    *   <div>
-   *     <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+   *     <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
    *   </div>
    *   <div>
    *     <label for="country">Select Country</label>
@@ -62,8 +62,8 @@ form {
    *   <div>
    *   <div>
    *     <label>Is Admin</label>
-   *     <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
-   *     <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
+   *     <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+   *     <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
    *   </div>
    * </form>
    * ```
@@ -72,17 +72,23 @@ form {
     label,
     .label {
       display: inline-block;
-      text-align: right;
-      padding-right: 10px;
+      text-align: $text-align-compact-label;
+      padding-right: $padding-compact-label;
     }
+  }
+
+  .input-text {
+    display: inline-block;
   }
 }
 
 label,
 .label {
   display: block;
+  margin: $margin-label;
 }
 
+//label that come after the input (like radio/checkboxes) should be inline-block regardless if it is in a compact form
 input ~ label {
   display: inline-block;
 }
@@ -90,81 +96,153 @@ input ~ label {
 input:not([type]),
 input[type="text"],
 textarea {
-  border-radius: 5px;
+  border-radius: $border-radius-input;
   border: $border-input;
-  padding: 2px;
-  margin: 5px 0;
+  padding: $padding-input;
   outline: none;
-  box-shadow: $box-shadow-input;
 
   &:focus {
-    box-shadow: $box-shadow-focus-input;
+    border-color: $border-color-notice;
+    box-shadow: $box-shadow-focused-input;
   }
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 5px;
 }
 
 input[disabled] {
-  opacity: .7;
+  opacity: $opacity-disabled-input;
 }
 
+select {
+  background: transparent;
+  border: 0;
+  border-radius: $border-radius-input;
+  height: $height-select;
+  outline: none;
+  border: $border-input;
+}
+//TODO: break into own file
 /**
  * @section Input Element
  *
  * There is a special structure that can be used by added the `input-element` class to a containing element to support custom data validation styling.
  *
  * ```html
+ * <form>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <label for="first-name">First Name</label>
+ *       <input id="first-name" type="text" />
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <label for="last-name">Last Name</label>
+ *       <input id="last-name" type="text" />
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   </div>
+ *   <div>
+ *     <div class="input-element invalid" data-input-type="select">
+ *       <label for="country">Select Country</label>
+ *       <select id="country" style="width: 100px;">
+ *         <option>USA</option>
+ *         <option>Other</option>
+ *       </select>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <label for="bio">Bio</label>
+ *       <textarea id="bio">Bio</textarea>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <div class="input-element valid">
+ *       <label>Is Admin</label>
+ *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
+ *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *     </div>
+ *   </div>
+ * </form>
+ * ```
+ *
+ * Compact form.
+ *
+ * ```html
  * <form class="compact">
  *   <div>
  *     <div class="input-element valid">
- *       <div class="container">
- *         <label for="first-name">First Name</label>
- *         <input id="first-name" type="text" />
- *       </div>
+ *       <label for="first-name">First Name</label>
+ *       <input id="first-name" type="text" />
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *       <div class="input-message inline">Valid</div>
  *     </div>
  *   </div>
  *   <div>
  *     <div class="input-element valid">
- *       <div class="container">
- *         <label for="last-name">Last Name</label>
- *         <input id="last-name" type="text" />
- *       </div>
+ *       <label for="last-name">Last Name</label>
+ *       <input id="last-name" type="text" />
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
- *       <div class="input-message inline">Valid</div>
  *     </div>
  *   </div>
  *   <div>
  *     <div class="input-element invalid">
- *       <div class="container">
- *         <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+ *       <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
  *       </div>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
  *     </div>
  *   </div>
  *   <div>
- *     <div class="input-element invalid">
- *       <div class="container">
- *         <label for="country">Select Country</label>
- *         <select id="country">
- *           <option>USA</option>
- *           <option>Other</option>
- *         </select>
+ *     <div class="input-element invalid" data-input-type="select">
+ *       <label for="country">Select Country</label>
+ *       <select id="country" style="width: 100px;">
+ *         <option>USA</option>
+ *         <option>Other</option>
+ *       </select>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
  *       </div>
- *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *     </div>
+ *   <div>
+ *   <div>
+ *     <div class="input-element invalid">
+ *       <label for="bio">Bio</label>
+ *       <textarea id="bio">Bio</textarea>
+ *       <div class="tooltip">
+ *         <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+ *         <div class="content">Error message</div>
+ *       </div>
  *     </div>
  *   <div>
  *   <div>
  *     <div class="input-element valid">
- *       <div class="container">
- *         <label>Is Admin</label>
- *         <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
- *         <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
- *       </div>
+ *       <label>Is Admin</label>
+ *       <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+ *       <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
  *       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
  *     </div>
  *   </div>
@@ -172,7 +250,14 @@ input[disabled] {
  * ```
  */
 .input-element {
+  display: inline-block;
   position: relative;
+
+  input:not([type]),
+  input[type="text"],
+  textarea {
+    padding-right: $padding-right-input-text-ie;
+  }
 
   /**
    * @section Input Element
@@ -183,21 +268,73 @@ input[disabled] {
    *
    * ```html
    * <div class="input-element invalid plain">
+   *   <label>Label:</label>
+   *   <input type="text" />
    *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-   *   <div class="container">
-   *     <input type="text" class="ng-invalid" />
-   *   </div>
-   *   <div class="input-message">Invalid</div>
    * </div>
    * <div class="input-element valid plain">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
+   *   <label>Label:</label>
+   *   <input type="text" />
    *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="input-message">Valid</div>
    * </div>
    * ```
    */
+
+  /**
+   * @section Input Element
+   * @subsection Icon
+   *
+   * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
+   *
+   * ```html
+   * <div class="input-element valid">
+   *   <label>Label:</label>
+   *   <input type="text" />
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   * </div>
+   * ```
+   */
+  /**
+   * @section Input Element
+   * @subsection Tooltip
+   *
+   * You you provide tooltip to for example, display an error message if the validation failed.
+   *
+   * ```html
+   * <div class="input-element invalid">
+   *   <label>Label:</label>
+   *   <input type="text" />
+   *   <div class="tooltip">
+   *     <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+   *     <div class="content">Error message</div>
+   *   </div>
+   * </div>
+   * ```
+   */
+  .tooltip,
+  .icon {
+    position: absolute;
+    top: $top-tooltip-icon-ie;
+    right: $right-tooltip-icon-ie;
+  }
+
+  select ~ .tooltip,
+  select ~ .icon {
+    right: $right-select-tooltip-icon-ie;
+  }
+
+  input[type="checkbox"] ~ .tooltip,
+  input[type="checkbox"] ~ .icon {
+    top: $top-checkbox-tooltip-icon-ie;
+    right: $right-checkbox-tooltip-icon-ie;
+  }
+
+  input[type="radio"] ~ .tooltip,
+  input[type="radio"] ~ .icon {
+    top: $top-radio-tooltip-icon-ie;
+    right: $right-radio-tooltip-icon-ie;
+  }
+
   &:not(.plain) {
     /**
      * @section Input Element
@@ -207,23 +344,22 @@ input[disabled] {
      *
      * ```html
      * <div class="input-element invalid">
+     *   <label>Label:</label>
+     *   <input type="text" />
      *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-     *   <div class="container">
-     *     <input type="text" class="ng-invalid" />
-     *   </div>
-     *   <div class="input-message">Invalid</div>
      * </div>
      * ```
      */
     &.invalid {
       input,
-      textarea {
-        border-color: $border-color-invalid;
-        background-color: $background-color-invalid;
+      textarea,
+      select {
+        border-color: $border-color-danger;
+        background-color: $background-color-danger;
 
-        /*&:focus {
-          border-color: $color-medium-carmine-d30;
-        }*/
+        &:focus {
+          box-shadow: $box-shadow-invalid-ie;
+        }
       }
     }
 
@@ -235,101 +371,63 @@ input[disabled] {
      *
      * ```html
      * <div class="input-element valid">
-     *   <div class="container">
-     *     <input type="text" class="ng-valid" />
-     *   </div>
+     *   <label>Label:</label>
+     *   <input type="text" />
      *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-     *   <div class="input-message">Valid</div>
      * </div>
      * ```
      */
     &.valid {
       input,
-      textarea {
-        border-color: $border-color-valid;
-        background-color: $background-color-valid;
+      textarea,
+      select {
+        border-color: $border-color-safe;
+        background-color: $background-color-safe;
 
-        /*&:focus {
-          border-color: $color-apple-d30;
-        }*/
+        &:focus {
+          box-shadow: $box-shadow-valid-ie;
+        }
       }
     }
   }
 
   &.invalid {
-    .icon {
-      fill: $color-invalid;
+    .icon,
+    .tooltip .handle {
+      fill: $color-danger;
     }
 
-    .input-message {
-      color: $color-invalid;
+    .tooltip .content {
+      color: $color-danger;
     }
   }
 
   &.valid {
-    .icon {
-      fill: $color-valid;
+    .icon,
+    .tooltip .handle {
+      fill: $color-safe;
     }
 
-    .input-message {
-      color: $color-valid;
-    }
-  }
-
-  > .container {
-    @include clearfix;
-    display: inline-block;
-    position: relative;
-  }
-
-  /**
-   * @section Input Element
-   * @subsection Icon
-   *
-   * You you provide an icon for the input element that is SVG, you just need to add the `icon` class to the element.
-   *
-   * ```html
-   * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   * </div>
-   * ```
-   */
-  .icon {
-    vertical-align: middle;
-  }
-
-  /**
-   * @section Input Element
-   * @subsection Message
-   *
-   * You you provide message element (useful for showing success/error message) by adding the `message` class to the element.
-   *
-   * ```html
-   * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
-   *   <div class="input-message">Valid</div>
-   * </div>
-   * ```
-   *
-   * By defualt it is displayed `block` but you can add the `inline` class to the message element to have it displayed `inline`.
-   *
-   * ```html
-   * <div class="input-element valid">
-   *   <div class="container">
-   *     <input type="text" class="ng-valid" />
-   *   </div>
-   *   <div class="input-message inline">Valid</div>
-   * </div>
-   * ```
-   */
-  .input-message {
-    &.inline {
-      display: inline;
+    .tooltip .content {
+      color: $color-safe;
     }
   }
 }
+
+form.compact .input-element {
+  .tooltip,
+  .icon {
+    top: $top-tooltip-icon-compact-ie;
+  }
+
+  input[type="checkbox"] ~ .tooltip,
+  input[type="checkbox"] ~ .icon {
+    top: $top-checkbox-tooltip-icon-compact-ie;
+  }
+
+  input[type="radio"] ~ .tooltip,
+  input[type="radio"] ~ .icon {
+    top: $top-radio-tooltip-icon-compact-ie;
+  }
+}
+

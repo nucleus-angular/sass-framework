@@ -117,18 +117,19 @@
   &.reveal-remove {
     overflow: hidden;
   }*/
-
   &.center {
     > .content {
       top: 50%;
       left: 50%;
+      border-radius: $border-radius-center-rp;
+      display: none;
+      //opacity: 1;
+      border: $border-rp;
+
+      //these handle center positioning
+      //these are not variables as it is not expect for these values to be consistent through the application
       height: 500px;
       width: 500px;
-      display: none;
-      opacity: 1;
-      border: 1px solid $color-black;
-
-      //this handle center positioning
       margin: calc(-500px / 2) 0 0 calc(-500px / 2);
 
       /*&.reveal,
@@ -144,6 +145,7 @@
   &.left {
     &.is-active {
       > .content {
+        //these are not variables as it is not expect for these values to be consistent through the application
         width: 500px;
       }
     }
@@ -161,6 +163,7 @@
   &.right {
     &.is-active {
       > .content {
+        //these are not variables as it is not expect for these values to be consistent through the application
         width: 500px;
       }
     }
@@ -178,6 +181,7 @@
   &.top {
     &.is-active {
       > .content {
+        //these are not variables as it is not expect for these values to be consistent through the application
         height: 500px;
       }
     }
@@ -195,6 +199,7 @@
   &.bottom {
     &.is-active {
       > .content {
+        //these are not variables as it is not expect for these values to be consistent through the application
         height: 500px;
       }
     }
@@ -211,10 +216,11 @@
 
   > .content {
     position: fixed;
-    z-index: 11000;
-    background-color: white;
+    z-index: $z-index-content-rp;
+    background-color: $background-color-content-rp;
     overflow: hidden;
     display: none;
+    padding: $padding-content-rp;
   }
 
   &.is-active {

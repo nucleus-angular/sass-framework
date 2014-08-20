@@ -1,0 +1,74 @@
+/**
+ * @section Utility
+ *
+ * There are a number of classes that can be used to add certain effects to an element.  All utility classes and prepended with `u-`.
+ */
+
+/**
+ * @section Utility
+ * @subsection Hiding
+ *
+ * In order to hide an element, just add the `u-hid` class.
+ *
+ * ```html
+ * <div>this should be shown</div>
+ * <div class="u-hide">this should not be shown</div>
+ * ```
+ */
+.u-hide {
+  display: none;
+}
+
+/**
+ * @section Utility
+ * @subsection Centering
+ *
+ * Sometimes you want to be able to center and element and there are 3 utility classes for this.
+ *
+ * The first class in `u-center` with will center the element both vertically and horizontally.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ *
+ * The second class in `u-center-vertical` with will center the element vertically.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center-vertical" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ *
+ * The last class in `u-center-horizontal` with will center the element horizontally.
+ *
+ * ```html
+ * <div style="width: 100px; height: 100px; position: relative; background-color: green;">
+ *   <div class="u-center-horizontal" style="width: 25px; height: 25px; background-color: red"></div>
+ * </div>
+ * ```
+ */
+.u-center,
+.u-center-vertical,
+.u-center-horizontal {
+  margin: auto;
+  position: absolute;
+}
+
+.u-center {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.u-center-vertical {
+  top: 0;
+  bottom: 0;
+}
+
+.u-center-horizontal {
+  left: 0;
+  right: 0;
+}

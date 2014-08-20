@@ -24,20 +24,20 @@
  * ```
  */
 .progress-bar {
-  border: 1px solid rgb(180, 180, 180);
+  border: $border-pb;
   position: relative;
   display: inline-block;
-  min-width: 40%;
-  height: 16px;
+  min-width: $min-width-pb;
+  height: $height-pb;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: $border-radius-pb;
 
   .indicator {
     position: absolute;
     display: block;
-    height: 16px;
-    background-color: rgb(230, 230, 230);
+    height: $height-pb;
+    background-color: $background-color-indicator-pb;
   }
 
   /**
@@ -79,34 +79,34 @@
    * ```
    */
   &.safe {
-    border-color: $color-crusoe;
+    border-color: $border-color-safe;
 
     .indicator {
-      background-color: $color-japanese-laurel;
+      background-color: $background-color-safe;
     }
   }
 
   &.notice {
-    border-color: $color-downriver;
+    border-color: $border-color-notice;
 
     .indicator {
-      background-color: $color-dark-blue;
+      background-color: $background-color-notice;
     }
   }
 
   &.caution {
-    border-color: $color-olive;
+    border-color: $border-color-caution;
 
     .indicator {
-      background-color: $color-rio-grande;
+      background-color: $background-color-caution
     }
   }
 
   &.danger {
-    border-color: $color-rosewood;
+    border-color: $border-color-danger;
 
     .indicator {
-      background-color: $color-maroon;
+      background-color: $background-color-danger
     }
   }
 }

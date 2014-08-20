@@ -53,19 +53,11 @@
                       
                     
                       
-                        <li class="styledocer-menu-item mixin"><a href="#section-Card-Arrow"><span class="styledocer-name">Card Arrow<img src="media-play.svg" /></span></a></li>
-                      
-                    
-                      
                         <li class="styledocer-menu-item"><a href="#section-Header-Actions"><span class="styledocer-name">Header Actions</span></a></li>
                       
                     
                       
                         <li class="styledocer-menu-item"><a href="#section-Header-Border"><span class="styledocer-name">Header Border</span></a></li>
-                      
-                    
-                      
-                        <li class="styledocer-menu-item"><a href="#section-With-Arrow"><span class="styledocer-name">With Arrow</span></a></li>
                       
                     
                   </ul>
@@ -148,6 +140,11 @@
                 </li>
               
                 <li class="styledocer-menu-item">
+                  <a href="section-utility.html"><span class="styledocer-name">Utility</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
                   <a href="section-variables.html"><span class="styledocer-name">Variables</span></a>
                   
                 </li>
@@ -182,33 +179,32 @@
               
             </section>
           
-            <section id="section-Card-Arrow" class="styledocer-section">
-              <h1 class="styledocer-title"><img src="media-play.svg" />Card Arrow</h1>
-              <div class="styledocer-description">
-                <p>You can use the <code>card-arrow()</code> mixin in order to add an arrow.  The <code>with-arrow</code> class should work however if you need custom coloring, then you need to
-manually call the mixin yourself.</p>
-
-              </div>
-              
-              
-                <div class="styledocer-mixin">
-                  <div class="signature">card-arrow(<span class="type">$color-border</span> <span class="name">The</span><span class="type">$fill-color</span> <span class="name">The</span><span class="type">$triangle-position</span> <span class="name">Where</span>)</div>
-                </div>
-              
-            </section>
-          
             <section id="section-Header-Actions" class="styledocer-section">
               <h1 class="styledocer-title">Header Actions</h1>
               <div class="styledocer-description">
-                <p>You can provide action element to the header by adding the <code>action</code> class to the element in the header.</p>
+                <p>You can provide actions element to the header by adding the <code>actions</code> class to the element in the header.</p>
 <p><div class="card">
-  <header>Title<span class="action close">X</span></header>
+  <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
   <div class="content">
     Some content for this card
   </div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;card&quot;&gt;
-  &lt;header&gt;Title&lt;span class=&quot;action close&quot;&gt;X&lt;/span&gt;&lt;/header&gt;
+  &lt;header&gt;Title&lt;span class=&quot;actions close&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/span&gt;&lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    Some content for this card
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>You can even have multiple actions.</p>
+<p><div class="card">
+  <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
+  <div class="content">
+    Some content for this card
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;card&quot;&gt;
+  &lt;header&gt;Title&lt;span class=&quot;actions close&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/span&gt;&lt;/header&gt;
   &lt;div class=&quot;content&quot;&gt;
     Some content for this card
   &lt;/div&gt;
@@ -232,41 +228,6 @@ manually call the mixin yourself.</p>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;card&quot;&gt;
   &lt;header class=&quot;border&quot;&gt;Title&lt;/header&gt;
-  &lt;div class=&quot;content&quot;&gt;
-    Some content for this card
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-              </div>
-              
-              
-            </section>
-          
-            <section id="section-With-Arrow" class="styledocer-section">
-              <h1 class="styledocer-title">With Arrow</h1>
-              <div class="styledocer-description">
-                <p>You can add a arrow to the content box (for maybe a tooltip or something similar) by adding the class <code>with-arrow</code> to the container.</p>
-<p><div class="card with-arrow">
-  <header>Title</header>
-  <div class="content">
-    Some content for this card
-  </div>
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;card with-arrow&quot;&gt;
-  &lt;header&gt;Title&lt;/header&gt;
-  &lt;div class=&quot;content&quot;&gt;
-    Some content for this card
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<p>If the card has not header, you must also provide the <code>no-header</code> class to make sure the triangle color is correct.</p>
-<p><div class="card with-arrow no-header">
-  <div class="content">
-    Some content for this card
-  </div>
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;card with-arrow no-header&quot;&gt;
   &lt;div class=&quot;content&quot;&gt;
     Some content for this card
   &lt;/div&gt;

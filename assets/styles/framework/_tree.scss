@@ -65,17 +65,16 @@
  * </div>
  * ```
  */
-$tree-padding: 8px;
 .tree {
   li {
     cursor: pointer;
   }
 
   .leaf {
-    padding-left: $tree-padding;
+    padding: $padding-tree;
 
     &.no-icon {
-      padding-left: $tree-padding + 14px;
+      padding: $padding-no-icon-tree;
     }
   }
 
@@ -84,16 +83,16 @@ $tree-padding: 8px;
       display: block;
 
       .tree {
-        padding-left: $tree-padding;
+        padding: $padding-tree;
 
         &.no-icon {
-          padding-left: $tree-padding + 14px;
+          padding: $padding-no-icon-tree;
         }
       }
     }
 
     &.no-icon {
-      padding-left: 14px;
+      padding: $padding-tree;
     }
 
     ul {
@@ -102,8 +101,8 @@ $tree-padding: 8px;
   }
 
   svg {
-    width: 11px;
-    height: 11px;
-    margin-right: 3px;
+    width: $width-icon-tree;
+    height: $height-icon-tree;
+    margin: $margin-icon-tree;
   }
 }

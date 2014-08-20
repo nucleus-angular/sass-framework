@@ -9,7 +9,7 @@
 
   &.auto-complete {
     &.is-active .display {
-      border-radius: 5px 5px 0 0;
+      border-radius: $border-radius-et $border-radius-et 0 0;
     }
   }
 
@@ -17,6 +17,7 @@
     width: 100%;
   }
 
+  //TODO: move to normalize?
   ul,
   li {
     margin: 0;
@@ -40,7 +41,7 @@
    * ```html
    * <div class="extend-text is-active" style="width: 500px;">
    *   <input class="display" type="text" />
-   *   <div class="tag-container" style="top: 8px; left: 4px;">
+   *   <div class="tag-container" style="top: 5px; left: 4px;">
    *     <ul class="tags">
    *       <li class="tag">
    *         <span data-value="tag-value">tag value</span>
@@ -61,24 +62,18 @@
    */
   .tag-container {
     position: absolute;
-    z-index: 2;
-
-    ul {
-      padding: 0;
-      margin: 0;
-      float: left;
-    }
+    z-index: $z-index-container-tagging;
   }
 
   .tag {
     display: inline-block;
-    margin-right: 6px;
+    margin: $margin-tag-tagging;
     float: left;
     position: relative;
-    background-color: rgb(184, 215, 235);
-    border: 1px solid rgb(95, 134, 142);
-    border-radius: 2px;
-    padding: 0 2px;
+    background-color: $background-color-tag-tagging;
+    border: $border-tag-tagging;
+    border-radius: $border-radius-tag-tagging;
+    padding: $padding-tag-tagging;
 
     /**
      * @section Extend Text
@@ -89,7 +84,7 @@
      * ```html
      * <div class="extend-text is-active" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *   <div class="tag-container" style="top: 5px; left: 4px;">
      *     <ul class="tags">
      *       <li class="tag">
      *         <span data-value="tag-value">tag value</span>
@@ -106,7 +101,7 @@
      * ```
      */
     &.selected {
-      border-color: rgb(255, 0, 0);
+      border-color: $border-color-selected-tag-tagging;
     }
 
     /**
@@ -118,7 +113,7 @@
      * ```html
      * <div class="extend-text is-active" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="tag-container" style="top: 8px; left: 4px;">
+     *   <div class="tag-container" style="top: 5px; left: 4px;">
      *     <ul class="tags">
      *       <li class="tag">
      *         <span data-value="tag-value">tag value</span>
@@ -139,15 +134,16 @@
      */
     .remove {
       cursor: pointer;
-      width: 10px;
-      height: 10px;
+      width: $width-tag-remove-icon-tagging;
+      height: $height-tag-remove-icon-tagging;
     }
   }
 
   .display {
-    z-index: 1;
+    z-index: $z-index-et;
     overflow: hidden;
     height: inherit;
+    margin: 0;
   }
 
   /**
@@ -167,7 +163,7 @@
    * ```html
    * <div class="extend-text is-active auto-complete" style="width: 500px;">
    *   <input class="display" type="text" />
-   *   <div class="auto-complete-options" style="top: 33px;">
+   *   <div class="auto-complete-options" style="top: 27px;">
    *     <ul>
    *       <li data-value="auto complete option1">auto complete option1</li>
    *       <li data-value="auto complete option1">auto complete option1</li>
@@ -179,18 +175,17 @@
    */
   .auto-complete-options {
     position: absolute;
-    border: 2px solid shade($color-gray, $percentage-darkest);
-    box-sizing: border-box;
-    background-color: $color-white;
-    z-index: 1;
+    border: $border-options-ac;
+    background-color: $background-color-options-ac;
+    z-index: $z-index-et;
     border-top: none;
-    max-height: 300px;
+    max-height: $max-height-options-ac;
     overflow: auto;
     width: 100%;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 $border-radius-et $border-radius-et;
 
     li {
-      padding: 3px 6px;
+      padding: $padding-option-ac;
     }
 
     /**
@@ -202,7 +197,7 @@
      * ```html
      * <div class="extend-text is-active auto-complete" style="width: 500px;">
      *   <input class="display" type="text" />
-     *   <div class="auto-complete-options" style="top: 33px;">
+     *   <div class="auto-complete-options" style="top: 27px;">
      *     <ul>
      *       <li data-value="auto complete option1">auto complete option1</li>
      *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -213,7 +208,7 @@
      * ```
      */
     .is-focused {
-      background: #E1E9F6;
+      background-color: $background-color-option-is-focused-ac;
     }
   }
 
@@ -232,8 +227,8 @@
    */
   .new-indicator {
     position: absolute;
-    top: 11px;
-    right: 8px;
+    top: $top-new-indicator-et;
+    right: $right-new-indicator-et;
   }
 }
 
@@ -246,7 +241,7 @@
  * ```html
  * <div class="extend-text is-active auto-complete" style="width: 500px;">
  *   <input class="display" type="text" />
- *   <div class="tag-container" style="top: 8px; left: 4px;">
+ *   <div class="tag-container" style="top: 5px; left: 4px;">
  *     <ul class="tags">
  *       <li class="tag">
  *         <span data-value="tag-value">tag value</span>
@@ -262,7 +257,7 @@
  *       </li>
  *     </ul>
  *   </div>
- *   <div class="auto-complete-options" style="top: 33px;">
+ *   <div class="auto-complete-options" style="top: 27px;">
  *     <ul>
  *       <li data-value="auto complete option1">auto complete option1</li>
  *       <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -286,7 +281,7 @@
  *   <div class="container">
  *     <div class="extend-text is-active auto-complete" style="width: 500px;">
  *        <input class="display" type="text" />
- *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *        <div class="tag-container" style="top: 5px; left: 4px;">
  *          <ul class="tags">
  *            <li class="tag">
  *              <span data-value="tag-value">tag value</span>
@@ -302,7 +297,7 @@
  *            </li>
  *          </ul>
  *        </div>
- *        <div class="auto-complete-options" style="top: 33px;">
+ *        <div class="auto-complete-options" style="top: 27px;">
  *          <ul>
  *            <li data-value="auto complete option1">auto complete option1</li>
  *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -323,7 +318,7 @@
  *   <div class="container">
  *     <div class="extend-text is-active auto-complete" style="width: 500px;">
  *        <input class="display" type="text" />
- *        <div class="tag-container" style="top: 8px; left: 4px;">
+ *        <div class="tag-container" style="top: 5px; left: 4px;">
  *          <ul class="tags">
  *            <li class="tag">
  *              <span data-value="tag-value">tag value</span>
@@ -339,7 +334,7 @@
  *            </li>
  *          </ul>
  *        </div>
- *        <div class="auto-complete-options" style="top: 33px;">
+ *        <div class="auto-complete-options" style="top: 27px;">
  *          <ul>
  *            <li data-value="auto complete option1">auto complete option1</li>
  *            <li class="is-focused" data-value="auto complete option1">auto complete option1</li>
@@ -356,13 +351,13 @@
 .invalid {
   .extend-text .auto-complete-options {
     //display the darkened version as this should never show when the input is not selected
-    border-color: $color-medium-carmine;
+    border-color: $border-color-danger;
   }
 }
 
 .valid {
   .extend-text .auto-complete-options {
     //display the darkened version as this should never show when the input is not selected
-    border-color: $color-apple;
+    border-color: $border-color-safe;
   }
 }

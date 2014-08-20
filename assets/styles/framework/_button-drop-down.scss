@@ -5,7 +5,7 @@
  *
  * ```html
  * <div class="button-drop-down">
- *   <button class="solid-color">test</button>
+ *   <button >test</button>
  *   <div class="content">content</div>
  * </div>
  * ```
@@ -14,7 +14,7 @@
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color">test</button>
+ *   <button >test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
@@ -23,51 +23,43 @@
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color small">test</button>
+ *   <button class="small">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color large">test</button>
+ *   <button class="large">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
  *
  * ```html
  * <div class="button-drop-down is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color largest">test</button>
+ *   <button class="largest">test</button>
  *   <div class="content" style="width: 200px;">content</div>
  * </div>
  * ```
- *
- * Note the some button classes will cause visual issue.
- *
- * ```html
- * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
- *   <button class="solid-color largest">test</button>
- *   <div class="content" style="width: 200px;">content</div>
- * </div>
- * ```
- *
- * Since buttons by default have a inset shadow to better indicate they are clickable items, when using it within the content of a button drop down, it is
- * recommended that you use `solid-color` class on the button.
  */
 .button-drop-down {
   @include user-select(none);
 
   display: inline-block;
   position: relative;
-  color: $color-white;
-  font-weight: 200;
+  color: $color-bdd;
+  font-weight: $font-weight-bdd;
   display: inline-block;
 
   &.is-active {
     button {
       border-bottom: none;
-      border-radius: 3px 3px 0 0;
-      z-index: 502;
+      border-radius: $border-radius-bdd $border-radius-bdd 0 0;
+      z-index: $z-index-button-is-active-bdd;
+    }
+
+    button {
+      background-color: $background-color-content-bdd;
     }
 
     .content {
@@ -76,20 +68,22 @@
   }
 
   button {
-    z-index: 495;
+    z-index: $z-index-button-bdd;
   }
 
   .content {
     display: none;
-    border-radius: 0 3px 3px 3px;
-    padding: 5px;
-    background-color: $color-silver-chalice;
-    z-index: 501;
+    border-radius: 0 $border-radius-bdd $border-radius-bdd $border-radius-bdd;
+    padding: $padding-content-bdd;
+    background-color: $background-color-content-bdd;
+    z-index: $z-index-content-bdd;
   }
 
   /**
    * @section Button Drop Down
    * @subsection Not Positioned
+   *
+   * @TODO: example
    *
    * By default, the content of the button drop down is position absolute however if you don't want this (useful if you need something like fixed positioning),
    * you can add the `not-positioned` class to the container.
@@ -114,14 +108,14 @@
    *
    * ```html
    * <div class="button-drop-down border">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```
    *
    * ```html
    * <div class="button-drop-down border is-active" style="margin-bottom: 30px;">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```
@@ -134,11 +128,11 @@
     }
 
     button {
-      border: 1px solid $color-black;
+      border: $border-bdd;
     }
 
     .content {
-      border: 1px solid $color-black;
+      border: $border-bdd;
 
       //this is something that will probably have to be set manually on a case by case level, this should handle common cases though
       top: 97%;
@@ -155,7 +149,7 @@
    * ```html
    * <div style="position: relative; height: 60px;">
    *   <div class="button-drop-down left is-active" style="margin-bottom: 30px;position: absolute; right: 0;">
-   *     <button class="solid-color">test</button>
+   *     <button >test</button>
    *     <div class="content" style="width: 200px;">content</div>
    *   </div>
    * </div>
@@ -165,7 +159,7 @@
     .content {
       left: auto;
       right: 0;
-      border-radius: 3px 0 3px 3px;
+      border-radius: $border-radius-bdd 0 $border-radius-bdd $border-radius-bdd;
     }
   }
 
@@ -177,7 +171,7 @@
    *
    * ```html
    * <div class="button-drop-down square is-active" style="margin-bottom: 30px;">
-   *   <button class="solid-color">test</button>
+   *   <button >test</button>
    *   <div class="content" style="width: 200px;">content</div>
    * </div>
    * ```

@@ -1,38 +1,4 @@
 /**
- * @section Cards
- * @subsection Card Arrow
- *
- * You can use the `card-arrow()` mixin in order to add an arrow.  The `with-arrow` class should work however if you need custom coloring, then you need to
- * manually call the mixin yourself.
- *
- * @mixin card-arrow
- * @param $color-border The color of the border
- * @param $fill-color The color of the triangle
- * @param $triangle-position Where the triangle should point
- */
-@mixin card-arrow($color-border: $color-gray, $fill-color: $color-gallery, $triangle-position: up) {
-  &:before {
-    @include triangle(1.4rem, $color-border, $triangle-position);
-
-    content: '';
-    display: block;
-    position: absolute;
-    top: -7px;
-    left: 17px;
-  }
-
-  &:after {
-    @include triangle(1.4rem, $fill-color, $triangle-position);
-
-    content: '';
-    display: block;
-    position: absolute;
-    top: -6px;
-    left: 17px;
-  }
-}
-
-/**
  * @title Cards
  * @section Cards
  *
@@ -50,53 +16,21 @@
 .card {
   position: relative;
   display: inline-block;
-  margin: 15px 0;
-  border-radius: 3px;
-  border: 1px solid $color-gray;
-  background-color: $color-gallery;
-
-  /**
-   * @section Cards
-   * @subsection With Arrow
-   *
-   * You can add a arrow to the content box (for maybe a tooltip or something similar) by adding the class `with-arrow` to the container.
-   *
-   * ```html
-   * <div class="card with-arrow">
-   *   <header>Title</header>
-   *   <div class="content">
-   *     Some content for this card
-   *   </div>
-   * </div>
-   * ```
-   *
-   * If the card has not header, you must also provide the `no-header` class to make sure the triangle color is correct.
-   *
-   * ```html
-   * <div class="card with-arrow no-header">
-   *   <div class="content">
-   *     Some content for this card
-   *   </div>
-   * </div>
-   * ```
-   */
-  &.with-arrow {
-    @include card-arrow();
-
-    &.no-header {
-      @include card-arrow($color-gray, $color-white);
-    }
-  }
+  margin: $margin-card;
+  border-radius: $border-radius-card;
+  border: $border-card;
 
   header {
     @include clearfix;
-    border-radius: 3px;
-    color: $color-chetwode-blue;
-    font-weight: 600;
-    padding: 5px;
+    border-radius: $border-radius-card $border-radius-card 0 0;
+    color: $color-header-card;
+    font-weight: $font-weight-header-card;
+    padding: $padding-header-card;
+    background-color: $background-color-header-card;
+    position: relative;
 
     ~ .content {
-      border-radius: 0 0 3px 3px;
+      border-radius: 0 0 $border-radius-card $border-radius-card;
     }
 
     /**
@@ -115,37 +49,58 @@
      * ```
      */
     &.border {
-      border-bottom: 1px solid $color-tundora;
-      border-radius: 3px 3px 0 0;
+      border-bottom: $border-bottom-header-card;
+      border-radius: $border-radius-card $border-radius-card 0 0;
     }
 
     /**
      * @section Cards
      * @subsection Header Actions
      *
-     * You can provide action element to the header by adding the `action` class to the element in the header.
+     * You can provide actions element to the header by adding the `actions` class to the element in the header.
      *
      * ```html
      * <div class="card">
-     *   <header>Title<span class="action close">X</span></header>
+     *   <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
+     *   <div class="content">
+     *     Some content for this card
+     *   </div>
+     * </div>
+     * ```
+     *
+     * You can even have multiple actions.
+     *
+     * ```html
+     * <div class="card">
+     *   <header>Title<span class="actions close"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span></header>
      *   <div class="content">
      *     Some content for this card
      *   </div>
      * </div>
      * ```
      */
-    > .action {
-      font-size: 1rem;
-      float: right;
+    > .actions {
       cursor: pointer;
-      position: relative;
-      top: 2px;
+      position: absolute;
+      top: $top-header-actions-card;
+      right: $right-header-actions-card;;
+
+      svg {
+        fill: $color-header-card;
+        width: $width-header-actions-svg-card;
+        height: $height-header-actions-svg-card;
+        margin-left: $margin-left-header-actions-svg-card;
+
+        &last-child {
+          margin-left: 0;
+        }
+      }
     }
   }
 
   .content {
-    border-radius: 3px;
-    background-color: $color-white;
-    padding: 8px;
+    border-radius: $border-radius-card;
+    background-color: $background-color-content-card;
+    padding: $padding-content-card;
   }
 }

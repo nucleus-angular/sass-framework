@@ -12,21 +12,23 @@
  * @mixin button-size
  * @param $size string Button size
  */
+
 @mixin button-size($size: normal) {
   @if $size == small {
-    font-size: 1rem;
-    padding: 3px 9px;
+    font-size: $font-size-small-button;
+    padding: $padding-small-button;
   }
   @if $size == normal {
-    padding: 4px 12px;
+    font-size: $font-size-button;
+    padding: $padding-button;
   }
   @if $size == large {
-    font-size: 1.8rem;
-    padding: 5px 15px;
+    font-size: $font-size-large-button;
+    padding: $padding-large-button;
   }
   @if $size == largest {
-    font-size: 2.4rem;
-    padding: 6px 18px;
+    font-size: $font-size-largest-button;
+    padding: $padding-largest-button;
   }
 }
 
@@ -76,17 +78,13 @@
 
   &:hover {
     &:not([disabled]) {
-      &:not(.solid-color) {
-        box-shadow: inset 0 0 20px darken($button-main-color, $percentage-darkest);
-      }
+        background-color: darken($button-main-color, $percentage-darker);
     }
   }
 
   &:active, &.is-active {
     &:not([disabled]) {
-      &:not(.solid-color) {
-        box-shadow: inset 0 0 30px darken($button-main-color, $percentage-darkest);
-      }
+        background-color: darken($button-main-color, $percentage-darker);
     }
   }
 }
@@ -102,15 +100,17 @@
  */
 button {
   @include button-size(normal);
-  @include button-color($color-silver-chalice, $color-white);
+  @include button-color($color-silver-chalice, $color-button);
 
-  border-radius: 3px;
+  border-radius: $border-radius-button;
   position: relative;
   border: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: $font-weight-button;
   cursor: pointer;
-  font-size: 1.2rem;
+
+   @if $is-uppercased-button == true {
+    text-transform: uppercase;
+  }
 
   &:focus {
     outline: none;
@@ -209,7 +209,7 @@ button {
    * ```
    */
   &[disabled] {
-    opacity: 0.5;
+    opacity: $opacity-disabled-button;
     cursor: not-allowed;
   }
 

@@ -27,7 +27,7 @@
             <h1 class="styledocer-doc-title"><a href="./">Style Guide</a></h1>
           </header>
           <nav class="styledocer-nav">
-            <ul class="styledocer-menu" data-styledocer-ref="Messages">
+            <ul class="styledocer-menu" data-styledocer-ref="Utility">
               <li class="styledocer-menu-item"><a href="./index.html"><span class="styledocer-name">Overview</span></a></li>
               
                 <li class="styledocer-menu-item">
@@ -72,20 +72,6 @@
               
                 <li class="styledocer-menu-item">
                   <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
-                  
-                  <ul class="styledocer-menu-child">
-                    
-                      
-                    
-                      
-                        <li class="styledocer-menu-item"><a href="#section-Messages"><span class="styledocer-name">Messages</span></a></li>
-                      
-                    
-                      
-                        <li class="styledocer-menu-item"><a href="#section-States"><span class="styledocer-name">States</span></a></li>
-                      
-                    
-                  </ul>
                   
                 </li>
               
@@ -142,6 +128,20 @@
                 <li class="styledocer-menu-item">
                   <a href="section-utility.html"><span class="styledocer-name">Utility</span></a>
                   
+                  <ul class="styledocer-menu-child">
+                    
+                      
+                    
+                      
+                        <li class="styledocer-menu-item"><a href="#section-Centering"><span class="styledocer-name">Centering</span></a></li>
+                      
+                    
+                      
+                        <li class="styledocer-menu-item"><a href="#section-Hiding"><span class="styledocer-name">Hiding</span></a></li>
+                      
+                    
+                  </ul>
+                  
                 </li>
               
                 <li class="styledocer-menu-item">
@@ -156,12 +156,43 @@
       <div class="styledocer-content">
         <article class="styledocer-article">
           
-            <section id="section-Messages" class="styledocer-section first">
-              <h1 class="styledocer-title">Messages</h1>
+            <section id="section-Utility" class="styledocer-section first">
+              <h1 class="styledocer-title">Utility</h1>
               <div class="styledocer-description">
-                <p>Messages are elements to display a piece of information that stands out from most of the other content.</p>
-<p><div class="message">This is a generic message.</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message&quot;&gt;This is a generic message.&lt;/div&gt;
+                <p>There are a number of classes that can be used to add certain effects to an element.  All utility classes and prepended with <code>u-</code>.</p>
+
+              </div>
+              
+              
+            </section>
+          
+            <section id="section-Centering" class="styledocer-section">
+              <h1 class="styledocer-title">Centering</h1>
+              <div class="styledocer-description">
+                <p>Sometimes you want to be able to center and element and there are 3 utility classes for this.</p>
+<p>The first class in <code>u-center</code> with will center the element both vertically and horizontally.</p>
+<p><div style="width: 100px; height: 100px; position: relative; background-color: green;">
+  <div class="u-center" style="width: 25px; height: 25px; background-color: red"></div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 100px; height: 100px; position: relative; background-color: green;&quot;&gt;
+  &lt;div class=&quot;u-center&quot; style=&quot;width: 25px; height: 25px; background-color: red&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The second class in <code>u-center-vertical</code> with will center the element vertically.</p>
+<p><div style="width: 100px; height: 100px; position: relative; background-color: green;">
+  <div class="u-center-vertical" style="width: 25px; height: 25px; background-color: red"></div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 100px; height: 100px; position: relative; background-color: green;&quot;&gt;
+  &lt;div class=&quot;u-center-vertical&quot; style=&quot;width: 25px; height: 25px; background-color: red&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>The last class in <code>u-center-horizontal</code> with will center the element horizontally.</p>
+<p><div style="width: 100px; height: 100px; position: relative; background-color: green;">
+  <div class="u-center-horizontal" style="width: 25px; height: 25px; background-color: red"></div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 100px; height: 100px; position: relative; background-color: green;&quot;&gt;
+  &lt;div class=&quot;u-center-horizontal&quot; style=&quot;width: 25px; height: 25px; background-color: red&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
               </div>
@@ -169,59 +200,14 @@
               
             </section>
           
-            <section id="section-Messages" class="styledocer-section">
-              <h1 class="styledocer-title">Messages</h1>
+            <section id="section-Hiding" class="styledocer-section">
+              <h1 class="styledocer-title">Hiding</h1>
               <div class="styledocer-description">
-                <h1 id="subsection-icon">subsection Icon</h1>
-<p>Messages element can also have an icon.</p>
-<p><div class="message">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;This is a generic message.
-&lt;/div&gt;
-</code></pre>
-
-              </div>
-              
-              
-            </section>
-          
-            <section id="section-States" class="styledocer-section">
-              <h1 class="styledocer-title">States</h1>
-              <div class="styledocer-description">
-                <p>There are a number of different states that a message can be in that determine the coloring on the message box.</p>
-<p>You can add the <code>safe</code> class to add a greenish color.</p>
-<p><div class="message safe">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message safe&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;This is a generic message.
-&lt;/div&gt;
-</code></pre>
-<p>You can add the <code>notice</code> class to add a blueish color.</p>
-<p><div class="message notice">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a generic message.
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message notice&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;This is a generic message.
-&lt;/div&gt;
-</code></pre>
-<p>You can add the <code>caution</code> class to add a yellowish color.</p>
-<p><div class="message caution">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a generic message.
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message caution&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;This is a generic message.
-&lt;/div&gt;
-</code></pre>
-<p>You can add the <code>danger</code> class to add a redish color.</p>
-<p><div class="message danger">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a generic message.
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message danger&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;This is a generic message.
-&lt;/div&gt;
+                <p>In order to hide an element, just add the <code>u-hid</code> class.</p>
+<p><div>this should be shown</div></p>
+<p><div class="u-hide">this should not be shown</div></p>
+<pre><code class="lang-html">&lt;div&gt;this should be shown&lt;/div&gt;
+&lt;div class=&quot;u-hide&quot;&gt;this should not be shown&lt;/div&gt;
 </code></pre>
 
               </div>

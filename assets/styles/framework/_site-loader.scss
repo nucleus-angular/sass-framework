@@ -37,8 +37,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-white;
-  z-index: 10001;
+  background-color: $background-color-sl;
+  z-index: $z-index-sl;
   display: none;
 
   &.is-active {
@@ -46,9 +46,9 @@
   }
 
   .text {
-    padding-top: 50px;
-    z-index: 1001;
-    text-align: center;
+    padding: $padding-text-sl;
+    z-index: $z-index-sl;
+    text-align: $text-align-text-sl;
   }
 }
 
@@ -78,13 +78,12 @@
  * </script>
  */
 .non-blocking-loader.message {
-  top: 0;
-  right: 50%;
-  margin-right: -150px;
-  width: 300px;
-  text-align: center;
-  border-top: none;
-  padding: 0.25em 0.5em;
-  border-radius: 0 0 3px 3px;
-  z-index: 10000;
+  top: $top-non-blocking-sl;
+  right: $right-non-blocking-sl;
+  margin: $margin-non-blocking-sl;
+  width: $width-non-blocking-sl;
+  text-align: $text-align-non-blocking-sl;
+  padding: $padding-non-blocking-sl;
+  border-radius: $border-radius-non-blocking-sl;
+  z-index: $z-index-non-blocking-sl;
 }

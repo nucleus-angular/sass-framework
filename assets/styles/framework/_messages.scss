@@ -9,9 +9,9 @@
  */
 .message {
   display: inline-block;
-  padding: 5px;
-  border: 1px solid $color-gray;
-  border-radius: 3px;
+  padding: $padding-message;
+  border: $border-message;
+  border-radius: $border-radius;
 
   /**
    * @section Messages
@@ -27,11 +27,11 @@
    */
   .icon {
     vertical-align: middle;
-    margin-right: 5px;
-    width: 24px;
-    height: 24px;
-    padding: 4px;
-    border-radius: 12px;
+    margin: $margin-icon-message;
+    width: $width-icon-message;
+    height: $height-icon-message;
+    padding: $padding-icon-message;
+    border-radius: $border-radius-icon-message;
   }
 
   /**
@@ -73,46 +73,46 @@
    * ```
    */
   &.safe {
-    background-color: $color-panache;
-    color: $color-japanese-laurel;
-    fill: $color-panache;
-    border-color: $color-crusoe;
+    background-color: $background-color-safe;
+    color: $color-safe;
+    fill: $background-color-safe;
+    border-color: $border-color-safe;
 
     .icon {
-      background-color: $color-crusoe;
+      background-color: $border-color-safe;
     }
   }
 
   &.notice {
-    background-color: $color-snuff;
-    color: $color-dark-blue;
-    fill: $color-snuff;
-    border-color: $color-downriver;
+    background-color: $background-color-notice;
+    color: $color-notice;
+    fill: $background-color-notice;
+    border-color: $border-color-notice;
 
     .icon {
-      background-color: $color-downriver;
+      background-color: $border-color-notice;
     }
   }
 
   &.caution {
-    background-color: shade($color-portafino, 5%);
-    color: $color-rio-grande;
-    fill: shade($color-portafino, 5%);;
-    border-color: $color-olive;
+    background-color: $background-color-caution;
+    color: $color-caution;
+    fill: $background-color-caution;
+    border-color: $border-color-caution;
 
     .icon {
-      background-color: $color-olive;
+      background-color: $border-color-caution;
     }
   }
 
   &.danger {
-    background-color: $color-dawn-pink;
-    color: $color-maroon;
-    fill: $color-dawn-pink;
-    border-color: $color-rosewood;
+    background-color: $background-color-danger;
+    color: $color-danger;
+    fill: $background-color-danger;
+    border-color: $border-color-danger;
 
     .icon {
-      background-color: $color-rosewood;
+      background-color: $border-color-danger;
     }
   }
 }

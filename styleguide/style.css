@@ -333,11 +333,6 @@ pre .regexp {
     color: #972;
 }
 #styledocer-node .styledocer-description {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #222;
-    line-height: 1.5;
-    word-wrap: break-word;
-    font-size: 14px;
     margin: 10px 0 20px;
 }
 #styledocer-node .styledocer-description pre {

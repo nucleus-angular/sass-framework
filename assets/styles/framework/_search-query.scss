@@ -20,7 +20,7 @@
    * ```
    */
   .inputs {
-    height: 30px;
+    height: $height-inputs-sq;
     /**
      * @section Search Query
      * @subsection States
@@ -59,29 +59,29 @@
      */
     &.invalid {
       textarea {
-        border-color: $color-medium-carmine;
-        background-color: $color-medium-carmine-l50;
+        border-color: $border-color-danger;
+        background-color: $background-color-danger;
       }
 
       .validation-icon {
-        fill: $color-maroon;
+        fill: $color-danger;
       }
     }
 
     &.valid {
       textarea {
-        border-color: $color-apple;
-        background-color: $color-apple-l50;
+        border-color: $border-color-safe;
+        background-color: $background-color-safe;
       }
 
       .validation-icon {
-        fill: $color-japanese-laurel;
+        fill: $color-safe;
       }
     }
 
     &.empty {
       .validation-icon {
-        fill: $color-tundora;
+        fill: $color-icon-empty-sq;
       }
     }
   }
@@ -96,7 +96,7 @@
     resize: none;
 
     //add padding to make room for the validation icon
-    padding-right: 30px;
+    padding-right: $padding-textarea-sq;
   }
 
   /**
@@ -143,17 +143,17 @@
    */
   .tooltip {
     position: absolute;
-    top: 11px;
-    right: 5px;
+    top: $top-tooltip-sq;
+    right: $right-tooltip-sq;
 
     .handle {
       cursor: pointer;
     }
 
     .content {
-      text-align: center;
-      border: 1px solid $color-gray;
-      border-radius: 5px;
+      text-align: $text-align-tooltip-content-sq;
+      border: $border-tooltip-content-sq;
+      border-radius: $border-radius-tooltip-content-sq;
     }
   }
 }

@@ -81,11 +81,11 @@
                       
                     
                       
-                        <li class="styledocer-menu-item"><a href="#section-Message"><span class="styledocer-name">Message</span></a></li>
+                        <li class="styledocer-menu-item"><a href="#section-Plain"><span class="styledocer-name">Plain</span></a></li>
                       
                     
                       
-                        <li class="styledocer-menu-item"><a href="#section-Plain"><span class="styledocer-name">Plain</span></a></li>
+                        <li class="styledocer-menu-item"><a href="#section-Tooltip"><span class="styledocer-name">Tooltip</span></a></li>
                       
                     
                       
@@ -152,6 +152,11 @@
                 </li>
               
                 <li class="styledocer-menu-item">
+                  <a href="section-utility.html"><span class="styledocer-name">Utility</span></a>
+                  
+                </li>
+              
+                <li class="styledocer-menu-item">
                   <a href="section-variables.html"><span class="styledocer-name">Variables</span></a>
                   
                 </li>
@@ -167,54 +172,172 @@
               <h1 class="styledocer-title">Input Element</h1>
               <div class="styledocer-description">
                 <p>There is a special structure that can be used by added the <code>input-element</code> class to a containing element to support custom data validation styling.</p>
+<p><form>
+  <div>
+    <div class="input-element valid">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" />
+      <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+    </div>
+  </div>
+  <div>
+    <div class="input-element valid">
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" />
+      <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+    </div>
+  </div>
+  <div>
+    <div class="input-element invalid">
+      <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="input-element invalid" data-input-type="select">
+      <label for="country">Select Country</label>
+      <select id="country" style="width: 100px;">
+        <option>USA</option>
+        <option>Other</option>
+      </select>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
+      </div>
+    </div>
+  <div>
+  <div>
+    <div class="input-element invalid">
+      <label for="bio">Bio</label>
+      <textarea id="bio">Bio</textarea>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
+      </div>
+    </div>
+  <div>
+  <div>
+    <div class="input-element valid">
+      <label>Is Admin</label>
+      <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+      <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
+      <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+    </div>
+  </div>
+</form></p>
+<pre><code class="lang-html">&lt;form&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element valid&quot;&gt;
+      &lt;label for=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
+      &lt;input id=&quot;first-name&quot; type=&quot;text&quot; /&gt;
+      &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element valid&quot;&gt;
+      &lt;label for=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
+      &lt;input id=&quot;last-name&quot; type=&quot;text&quot; /&gt;
+      &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element invalid&quot;&gt;
+      &lt;input id=&quot;is-active&quot; type=&quot;checkbox&quot; /&gt; &lt;label for=&quot;is-active&quot;&gt;Is Active&lt;/label&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element invalid&quot; data-input-type=&quot;select&quot;&gt;
+      &lt;label for=&quot;country&quot;&gt;Select Country&lt;/label&gt;
+      &lt;select id=&quot;country&quot; style=&quot;width: 100px;&quot;&gt;
+        &lt;option&gt;USA&lt;/option&gt;
+        &lt;option&gt;Other&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element invalid&quot;&gt;
+      &lt;label for=&quot;bio&quot;&gt;Bio&lt;/label&gt;
+      &lt;textarea id=&quot;bio&quot;&gt;Bio&lt;/textarea&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element valid&quot;&gt;
+      &lt;label&gt;Is Admin&lt;/label&gt;
+      &lt;input id=&quot;is-admin-yes&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot;&gt; &lt;label for=&quot;is-admin-yes&quot; /&gt;Yes&lt;/label&gt;
+      &lt;input id=&quot;is-admin-no&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot; /&gt; &lt;label for=&quot;is-admin-no&quot;&gt;No&lt;/label&gt;
+      &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Compact form.</p>
 <p><form class="compact">
   <div>
     <div class="input-element valid">
-      <div class="container">
-        <label for="first-name">First Name</label>
-        <input id="first-name" type="text" />
-      </div>
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" />
       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-      <div class="input-message inline">Valid</div>
     </div>
   </div>
   <div>
     <div class="input-element valid">
-      <div class="container">
-        <label for="last-name">Last Name</label>
-        <input id="last-name" type="text" />
-      </div>
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" />
       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-      <div class="input-message inline">Valid</div>
     </div>
   </div>
   <div>
     <div class="input-element invalid">
-      <div class="container">
-        <label for="is-active"><input id="is-active" type="checkbox" /> Is Active</label>
+      <input id="is-active" type="checkbox" /> <label for="is-active">Is Active</label>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
       </div>
-      <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
     </div>
   </div>
   <div>
-    <div class="input-element invalid">
-      <div class="container">
-        <label for="country">Select Country</label>
-        <select id="country">
-          <option>USA</option>
-          <option>Other</option>
-        </select>
+    <div class="input-element invalid" data-input-type="select">
+      <label for="country">Select Country</label>
+      <select id="country" style="width: 100px;">
+        <option>USA</option>
+        <option>Other</option>
+      </select>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
       </div>
-      <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+    </div>
+  <div>
+  <div>
+    <div class="input-element invalid">
+      <label for="bio">Bio</label>
+      <textarea id="bio">Bio</textarea>
+      <div class="tooltip">
+        <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+        <div class="content">Error message</div>
+      </div>
     </div>
   <div>
   <div>
     <div class="input-element valid">
-      <div class="container">
-        <label>Is Admin</label>
-        <label for="is-admin-yes" /><input id="is-admin-yes" name="isAdmin" type="radio"> Yes</label>
-        <label for="is-admin-no"><input id="is-admin-no" name="isAdmin" type="radio" /> No</label>
-      </div>
+      <label>Is Admin</label>
+      <input id="is-admin-yes" name="isAdmin" type="radio"> <label for="is-admin-yes" />Yes</label>
+      <input id="is-admin-no" name="isAdmin" type="radio" /> <label for="is-admin-no">No</label>
       <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
     </div>
   </div>
@@ -222,51 +345,55 @@
 <pre><code class="lang-html">&lt;form class=&quot;compact&quot;&gt;
   &lt;div&gt;
     &lt;div class=&quot;input-element valid&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;label for=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
-        &lt;input id=&quot;first-name&quot; type=&quot;text&quot; /&gt;
-      &lt;/div&gt;
+      &lt;label for=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
+      &lt;input id=&quot;first-name&quot; type=&quot;text&quot; /&gt;
       &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-      &lt;div class=&quot;input-message inline&quot;&gt;Valid&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;input-element valid&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;label for=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
-        &lt;input id=&quot;last-name&quot; type=&quot;text&quot; /&gt;
-      &lt;/div&gt;
+      &lt;label for=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
+      &lt;input id=&quot;last-name&quot; type=&quot;text&quot; /&gt;
       &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-      &lt;div class=&quot;input-message inline&quot;&gt;Valid&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div&gt;
     &lt;div class=&quot;input-element invalid&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;label for=&quot;is-active&quot;&gt;&lt;input id=&quot;is-active&quot; type=&quot;checkbox&quot; /&gt; Is Active&lt;/label&gt;
+      &lt;input id=&quot;is-active&quot; type=&quot;checkbox&quot; /&gt; &lt;label for=&quot;is-active&quot;&gt;Is Active&lt;/label&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
       &lt;/div&gt;
-      &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div&gt;
-    &lt;div class=&quot;input-element invalid&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;label for=&quot;country&quot;&gt;Select Country&lt;/label&gt;
-        &lt;select id=&quot;country&quot;&gt;
-          &lt;option&gt;USA&lt;/option&gt;
-          &lt;option&gt;Other&lt;/option&gt;
-        &lt;/select&gt;
+    &lt;div class=&quot;input-element invalid&quot; data-input-type=&quot;select&quot;&gt;
+      &lt;label for=&quot;country&quot;&gt;Select Country&lt;/label&gt;
+      &lt;select id=&quot;country&quot; style=&quot;width: 100px;&quot;&gt;
+        &lt;option&gt;USA&lt;/option&gt;
+        &lt;option&gt;Other&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
       &lt;/div&gt;
-      &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
+    &lt;/div&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;input-element invalid&quot;&gt;
+      &lt;label for=&quot;bio&quot;&gt;Bio&lt;/label&gt;
+      &lt;textarea id=&quot;bio&quot;&gt;Bio&lt;/textarea&gt;
+      &lt;div class=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;div&gt;
   &lt;div&gt;
     &lt;div class=&quot;input-element valid&quot;&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;label&gt;Is Admin&lt;/label&gt;
-        &lt;label for=&quot;is-admin-yes&quot; /&gt;&lt;input id=&quot;is-admin-yes&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot;&gt; Yes&lt;/label&gt;
-        &lt;label for=&quot;is-admin-no&quot;&gt;&lt;input id=&quot;is-admin-no&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot; /&gt; No&lt;/label&gt;
-      &lt;/div&gt;
+      &lt;label&gt;Is Admin&lt;/label&gt;
+      &lt;input id=&quot;is-admin-yes&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot;&gt; &lt;label for=&quot;is-admin-yes&quot; /&gt;Yes&lt;/label&gt;
+      &lt;input id=&quot;is-admin-no&quot; name=&quot;isAdmin&quot; type=&quot;radio&quot; /&gt; &lt;label for=&quot;is-admin-no&quot;&gt;No&lt;/label&gt;
       &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -283,15 +410,13 @@
               <div class="styledocer-description">
                 <p>You you provide an icon for the input element that is SVG, you just need to add the <code>icon</code> class to the element.</p>
 <p><div class="input-element valid">
-  <div class="container">
-    <input type="text" class="ng-valid" />
-  </div>
+  <label>Label:</label>
+  <input type="text" />
   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;input-element valid&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-valid&quot; /&gt;
-  &lt;/div&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
   &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
 &lt;/div&gt;
 </code></pre>
@@ -306,55 +431,14 @@
               <div class="styledocer-description">
                 <p>If an input element is invalid, you need to add the <code>invalid</code> class on the container.</p>
 <p><div class="input-element invalid">
+  <label>Label:</label>
+  <input type="text" />
   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-  <div class="container">
-    <input type="text" class="ng-invalid" />
-  </div>
-  <div class="input-message">Invalid</div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;input-element invalid&quot;&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
   &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-invalid&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;input-message&quot;&gt;Invalid&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-              </div>
-              
-              
-            </section>
-          
-            <section id="section-Message" class="styledocer-section">
-              <h1 class="styledocer-title">Message</h1>
-              <div class="styledocer-description">
-                <p>You you provide message element (useful for showing success/error message) by adding the <code>message</code> class to the element.</p>
-<p><div class="input-element valid">
-  <div class="container">
-    <input type="text" class="ng-valid" />
-  </div>
-  <div class="input-message">Valid</div>
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;input-element valid&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-valid&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;input-message&quot;&gt;Valid&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<p>By defualt it is displayed <code>block</code> but you can add the <code>inline</code> class to the message element to have it displayed <code>inline</code>.</p>
-<p><div class="input-element valid">
-  <div class="container">
-    <input type="text" class="ng-valid" />
-  </div>
-  <div class="input-message inline">Valid</div>
-</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;input-element valid&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-valid&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;input-message inline&quot;&gt;Valid&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -369,32 +453,51 @@
                 <p>By default, the <code>input</code> element will be colored based on validation however if you wish to keep in <code>input</code> itself plain, add the <code>plain</code> class to the
 container element.</p>
 <p><div class="input-element invalid plain">
+  <label>Label:</label>
+  <input type="text" />
   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-  <div class="container">
-    <input type="text" class="ng-invalid" />
-  </div>
-  <div class="input-message">Invalid</div>
 </div></p>
 <p><div class="input-element valid plain">
-  <div class="container">
-    <input type="text" class="ng-valid" />
-  </div>
+  <label>Label:</label>
+  <input type="text" />
   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-  <div class="input-message">Valid</div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;input-element invalid plain&quot;&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
   &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-invalid&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;input-message&quot;&gt;Invalid&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-element valid plain&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-valid&quot; /&gt;
-  &lt;/div&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
   &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-  &lt;div class=&quot;input-message&quot;&gt;Valid&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+              </div>
+              
+              
+            </section>
+          
+            <section id="section-Tooltip" class="styledocer-section">
+              <h1 class="styledocer-title">Tooltip</h1>
+              <div class="styledocer-description">
+                <p>You you provide tooltip to for example, display an error message if the validation failed.</p>
+<p><div class="input-element invalid">
+  <label>Label:</label>
+  <input type="text" />
+  <div class="tooltip">
+    <div class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></div>
+    <div class="content">Error message</div>
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;input-element invalid&quot;&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
+  &lt;div class=&quot;tooltip&quot;&gt;
+    &lt;div class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;Error message&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -408,18 +511,14 @@ container element.</p>
               <div class="styledocer-description">
                 <p>If an input element is valid, you need to add the <code>valid</code> class on the container.</p>
 <p><div class="input-element valid">
-  <div class="container">
-    <input type="text" class="ng-valid" />
-  </div>
+  <label>Label:</label>
+  <input type="text" />
   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-  <div class="input-message">Valid</div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;input-element valid&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;input type=&quot;text&quot; class=&quot;ng-valid&quot; /&gt;
-  &lt;/div&gt;
+  &lt;label&gt;Label:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; /&gt;
   &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-  &lt;div class=&quot;input-message&quot;&gt;Valid&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
