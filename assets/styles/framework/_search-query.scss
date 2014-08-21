@@ -63,7 +63,7 @@
         background-color: $background-color-danger;
       }
 
-      .validation-icon {
+      .svg-icon {
         fill: $color-danger;
       }
     }
@@ -74,13 +74,13 @@
         background-color: $background-color-safe;
       }
 
-      .validation-icon {
+      .svg-icon {
         fill: $color-safe;
       }
     }
 
     &.empty {
-      .validation-icon {
+      .svg-icon {
         fill: $color-icon-empty-sq;
       }
     }
@@ -101,18 +101,15 @@
 
   /**
    * @section Search Query
-   * @subsection Tooltip
+   * @subsection Tooltip/Icon
    *
-   * The search query can also provide a validation tooltip to provide additional help/visual queue on the state of the search query
+   * The search query can also provide a validation tooltip/icon to provide additional help/visual queue on the state of the search query
    *
    * ```html
    * <div class="extend-text parsing">
    *   <div class="inputs empty">
    *     <textarea class="display" /></textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-   *       <div class="content" style="width: 202px;">State typing you search query</div>
-   *     </div>
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
    *   </div>
    * </div>
    * ```
@@ -121,8 +118,8 @@
    * <div class="extend-text parsing">
    *   <div class="inputs invalid">
    *     <textarea class="display">firstName = 'John</textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
+   *     <div class="tooltip">
+   *       <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
    *       <div class="content" style="width: 350px;">This is a problem with the query near "= 'John"</div>
    *     </div>
    *   </div>
@@ -133,10 +130,7 @@
    * <div class="extend-text parsing">
    *   <div class="inputs valid">
    *     <textarea class="display">firstName = 'John'</textarea>
-   *     <div class="tooltip help">
-   *       <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" /></span>
-   *       <div class="content" style="width: 84px;">Query valid</div>
-   *     </div>
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
    *   </div>
    * </div>
    * ```
@@ -155,5 +149,11 @@
       border: $border-tooltip-content-sq;
       border-radius: $border-radius-tooltip-content-sq;
     }
+  }
+
+  .icon {
+    position: absolute;
+    top: $top-tooltip-sq;
+    right: $right-tooltip-sq
   }
 }

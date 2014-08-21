@@ -383,24 +383,6 @@ $height-tag-remove-icon-tagging: 10px !default;
 
 /**
  * @section Variables
- * @subsection Auto Complete
- *
- * These are the variable the control the look and feel of the auto complete.
- *
- * @var $border-options-ac
- * @var $background-color-options-ac
- * @var $max-height-options-ac
- * @var $padding-options-ac-option-et
- * @var $background-color-option-is-focused-ac
- */
-$border-options-ac: 2px solid shade($color-gray, $percentage-darkest) !default;
-$background-color-options-ac: $color-white !default;
-$max-height-options-ac: 300px !default;
-$padding-option-ac: 3px 6px !default;
-$background-color-option-is-focused-ac: #E1E9F6 !default;
-
-/**
- * @section Variables
  * @subsection Search Query
  *
  * These are the variable the control the look and feel of the search query.
@@ -432,8 +414,6 @@ $border-radius-tooltip-content-sq: 5px !default;
  * @var $padding-compact-label
  * @var $border-radius-input
  * @var $border-input
- * @var $box-shadow-input
- * @var $box-shadow-focus-input
  * @var $padding-input
  * @var $opacity-disabled-input
  * @var $margin-label
@@ -444,8 +424,6 @@ $text-align-compact-label: right !default;
 $padding-compact-label: 0 10px 0 0 !default;
 $border-radius-input: 5px !default;
 $border-input: 1px solid shade($color-gray, $percentage-darkest) !default;
-$box-shadow-input: inset 0px 0px 15px $color-gallery !default;
-$box-shadow-focus-input: inset 0px 0px 15px shade($color-gallery, $percentage-darkest) !default;
 $padding-input: 4px !default;
 $opacity-disabled-input: .7 !default;
 $margin-label: 0 0 3px 0 !default;
@@ -473,19 +451,19 @@ $height-select: 25px !default;
  * @var $box-shadow-invalid-ie
  * @var $box-shadow-valid-ie
  */
-$padding-right-input-text-ie: 25px;
-$top-tooltip-icon-ie: 22px;
-$right-tooltip-icon-ie: 5px;
-$right-select-tooltip-icon-ie: 16px;
-$top-checkbox-tooltip-icon-ie: 1px;
-$right-checkbox-tooltip-icon-ie: -21px;
-$top-radio-tooltip-icon-ie: 15px;
-$right-radio-tooltip-icon-ie: -21px;
-$top-tooltip-icon-compact-ie: 4px;
-$top-checkbox-tooltip-icon-compact-ie: 1px;
-$top-radio-tooltip-icon-compact-ie: -2px;
-$box-shadow-invalid-ie: 0 0 4px $border-color-danger;
-$box-shadow-valid-ie: 0 0 4px $border-color-safe;
+$padding-right-input-text-ie: 25px !default;
+$top-tooltip-icon-ie: 22px !default;
+$right-tooltip-icon-ie: 5px !default;
+$right-select-tooltip-icon-ie: 16px !default;
+$top-checkbox-tooltip-icon-ie: 1px !default;
+$right-checkbox-tooltip-icon-ie: -21px !default;
+$top-radio-tooltip-icon-ie: 15px !default;
+$right-radio-tooltip-icon-ie: -21px !default;
+$top-tooltip-icon-compact-ie: 4px !default;
+$top-checkbox-tooltip-icon-compact-ie: 1px !default;
+$top-radio-tooltip-icon-compact-ie: -2px !default;
+$box-shadow-invalid-ie: 0 0 4px $border-color-danger !default;
+$box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
 
 
 /**
@@ -691,6 +669,27 @@ $font-size-h5: 1.3rem !default;
 $margin-h5: 0 0 1rem 0 !default;
 $font-size-h6: 1.1rem !default;
 $margin-h6: 0 0 1rem 0 !default;
+
+/**
+ * @section Variables
+ * @subsection Auto Complete
+ *
+ * These are the variable the control the look and feel of the auto complete.
+ *
+ * @var $border-options-ac
+ * @var $background-color-options-ac
+ * @var $max-height-options-ac
+ * @var $padding-options-ac-option-et
+ * @var $background-color-option-is-focused-ac
+ */
+$border-options-ac: $border-input !default;
+$background-color-options-ac: $color-white !default;
+$max-height-options-ac: 300px !default;
+$padding-option-ac: 3px 6px !default;
+$background-color-option-is-focused-ac: #E1E9F6 !default;
+$box-shadow-options-ac: $box-shadow-focused-input !default;
+$box-shadow-options-valid-ac: $box-shadow-valid-ie !default;
+$box-shadow-options-invalid-ac: $box-shadow-invalid-ie !default;
 
 //neat variables
 $max-width: 100%;

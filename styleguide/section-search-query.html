@@ -111,7 +111,7 @@
                       
                     
                       
-                        <li class="styledocer-menu-item"><a href="#section-Tooltip"><span class="styledocer-name">Tooltip</span></a></li>
+                        <li class="styledocer-menu-item"><a href="#section-Tooltip/Icon"><span class="styledocer-name">Tooltip/Icon</span></a></li>
                       
                     
                   </ul>
@@ -238,34 +238,28 @@ provide some specific styling of it&#39;s own.  Note that the search query can o
               
             </section>
           
-            <section id="section-Tooltip" class="styledocer-section">
-              <h1 class="styledocer-title">Tooltip</h1>
+            <section id="section-Tooltip/Icon" class="styledocer-section">
+              <h1 class="styledocer-title">Tooltip/Icon</h1>
               <div class="styledocer-description">
-                <p>The search query can also provide a validation tooltip to provide additional help/visual queue on the state of the search query</p>
+                <p>The search query can also provide a validation tooltip/icon to provide additional help/visual queue on the state of the search query</p>
 <p><div class="extend-text parsing">
   <div class="inputs empty">
     <textarea class="display" /></textarea>
-    <div class="tooltip help">
-      <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-      <div class="content" style="width: 202px;">State typing you search query</div>
-    </div>
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
   </div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;extend-text parsing&quot;&gt;
   &lt;div class=&quot;inputs empty&quot;&gt;
     &lt;textarea class=&quot;display&quot; /&gt;&lt;/textarea&gt;
-    &lt;div class=&quot;tooltip help&quot;&gt;
-      &lt;span class=&quot;handle validation-icon&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
-      &lt;div class=&quot;content&quot; style=&quot;width: 202px;&quot;&gt;State typing you search query&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 <p><div class="extend-text parsing">
   <div class="inputs invalid">
     <textarea class="display">firstName = &#39;John</textarea>
-    <div class="tooltip help">
-      <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
+    <div class="tooltip">
+      <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" /></span>
       <div class="content" style="width: 350px;">This is a problem with the query near &quot;= &#39;John&quot;</div>
     </div>
   </div>
@@ -273,8 +267,8 @@ provide some specific styling of it&#39;s own.  Note that the search query can o
 <pre><code class="lang-html">&lt;div class=&quot;extend-text parsing&quot;&gt;
   &lt;div class=&quot;inputs invalid&quot;&gt;
     &lt;textarea class=&quot;display&quot;&gt;firstName = &#39;John&lt;/textarea&gt;
-    &lt;div class=&quot;tooltip help&quot;&gt;
-      &lt;span class=&quot;handle validation-icon&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/span&gt;
+    &lt;div class=&quot;tooltip&quot;&gt;
+      &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;&lt;/span&gt;
       &lt;div class=&quot;content&quot; style=&quot;width: 350px;&quot;&gt;This is a problem with the query near &quot;= &#39;John&quot;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -283,19 +277,13 @@ provide some specific styling of it&#39;s own.  Note that the search query can o
 <p><div class="extend-text parsing">
   <div class="inputs valid">
     <textarea class="display">firstName = &#39;John&#39;</textarea>
-    <div class="tooltip help">
-      <span class="handle validation-icon"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" /></span>
-      <div class="content" style="width: 84px;">Query valid</div>
-    </div>
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
   </div>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;extend-text parsing&quot;&gt;
   &lt;div class=&quot;inputs valid&quot;&gt;
     &lt;textarea class=&quot;display&quot;&gt;firstName = &#39;John&#39;&lt;/textarea&gt;
-    &lt;div class=&quot;tooltip help&quot;&gt;
-      &lt;span class=&quot;handle validation-icon&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;&lt;/span&gt;
-      &lt;div class=&quot;content&quot; style=&quot;width: 84px;&quot;&gt;Query valid&lt;/div&gt;
-    &lt;/div&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
