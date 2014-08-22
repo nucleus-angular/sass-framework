@@ -8,6 +8,11 @@
  * ```
  */
 .message {
+  //can't add position in this is a notify element because they should be fixed possiton
+  &:not(.notify) {
+    position: relative;
+  }
+
   display: inline-block;
   padding: $padding-message;
   border: $border-message;
@@ -15,23 +20,31 @@
 
   /**
    * @section Messages
-   * #subsection Icon
+   * @subsection Icon
    *
    * Messages element can also have an icon.
    *
+   * If you are using an icon, then you must wrap you message content in an element with the `content` class.
+   *
    * ```html
    * <div class="message">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    */
   .icon {
-    vertical-align: middle;
-    margin: $margin-icon-message;
+    position: absolute;
+    top: $top-icon-message;
+    left: $left-icon-message;
     width: $width-icon-message;
     height: $height-icon-message;
     padding: $padding-icon-message;
     border-radius: $border-radius-icon-message;
+  }
+
+  .content {
+    margin-left: $width-icon-message;
   }
 
   /**
@@ -44,7 +57,8 @@
    *
    * ```html
    * <div class="message safe">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -52,7 +66,8 @@
    *
    * ```html
    * <div class="message notice">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -60,7 +75,8 @@
    *
    * ```html
    * <div class="message caution">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    *
@@ -68,7 +84,8 @@
    *
    * ```html
    * <div class="message danger">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a generic message.
+   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+   *   <div class="content">This is a generic message.</div>
    * </div>
    * ```
    */

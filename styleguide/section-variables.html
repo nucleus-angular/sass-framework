@@ -154,11 +154,11 @@
                       
                     
                       
-                        <li class="styledocer-menu-item variables"><a href="#section-Colors"><span class="styledocer-name">Colors<img src="tags.svg" /></span></a></li>
+                        <li class="styledocer-menu-item variables"><a href="#section-Caution-Colors"><span class="styledocer-name">Caution Colors<img src="tags.svg" /></span></a></li>
                       
                     
                       
-                        <li class="styledocer-menu-item variables"><a href="#section-Danger-Colors"><span class="styledocer-name">Danger Colors<img src="tags.svg" /></span></a></li>
+                        <li class="styledocer-menu-item variables"><a href="#section-Colors"><span class="styledocer-name">Colors<img src="tags.svg" /></span></a></li>
                       
                     
                       
@@ -630,6 +630,41 @@
               
             </section>
           
+            <section id="section-Caution-Colors" class="styledocer-section">
+              <h1 class="styledocer-title"><img src="tags.svg" />Caution Colors</h1>
+              <div class="styledocer-description">
+                <p>These are colors used to indicator something you should be cautious with.</p>
+
+              </div>
+              
+                <ul class="styledocer-variables">
+                  
+                    <li class="value">
+                      <span class="name">$border-color-caution</span>
+                      
+                        <span class="value">$color-olive !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$background-color-caution</span>
+                      
+                        <span class="value">shade($color-portafino, 5%) !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$color-caution</span>
+                      
+                        <span class="value">$border-color-caution !default</span>
+                      
+                    </li>
+                  
+                </ul>
+              
+              
+            </section>
+          
             <section id="section-Colors" class="styledocer-section">
               <h1 class="styledocer-title"><img src="tags.svg" />Colors</h1>
               <div class="styledocer-description">
@@ -768,7 +803,7 @@
                     <li class="value">
                       <span class="name">$color-rio-grande</span>
                       
-                        <span class="value">rgba(207, 207, 0, 1) !default</span>
+                        <span class="value">hsla(60.0, 100.0%, 40.6%, 1.0) !default</span>
                       
                     </li>
                   
@@ -881,41 +916,6 @@
                       <span class="name">$color-danger</span>
                       
                         <span class="value">$color-maroon !default</span>
-                      
-                    </li>
-                  
-                </ul>
-              
-              
-            </section>
-          
-            <section id="section-Danger-Colors" class="styledocer-section">
-              <h1 class="styledocer-title"><img src="tags.svg" />Danger Colors</h1>
-              <div class="styledocer-description">
-                <p>These are colors used to indicator something you should be cautious with.</p>
-
-              </div>
-              
-                <ul class="styledocer-variables">
-                  
-                    <li class="value">
-                      <span class="name">$border-color-caution</span>
-                      
-                        <span class="value">$color-olive !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$background-color-caution</span>
-                      
-                        <span class="value">shade($color-portafino, 5%) !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$color-caution</span>
-                      
-                        <span class="value">$color-rio-grande !default</span>
                       
                     </li>
                   
@@ -1202,14 +1202,14 @@
                     <li class="value">
                       <span class="name">$right-select-tooltip-icon-ie</span>
                       
-                        <span class="value">16px !default</span>
+                        <span class="value">22px !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$top-checkbox-tooltip-icon-ie</span>
                       
-                        <span class="value">1px !default</span>
+                        <span class="value">0px !default</span>
                       
                     </li>
                   
@@ -1223,7 +1223,7 @@
                     <li class="value">
                       <span class="name">$top-radio-tooltip-icon-ie</span>
                       
-                        <span class="value">15px !default</span>
+                        <span class="value">-2px !default</span>
                       
                     </li>
                   
@@ -1237,7 +1237,7 @@
                     <li class="value">
                       <span class="name">$top-checkbox-tooltip-icon-compact-ie</span>
                       
-                        <span class="value">1px !default</span>
+                        <span class="value">0px !default</span>
                       
                     </li>
                   
@@ -1298,30 +1298,23 @@
                     </li>
                   
                     <li class="value">
-                      <span class="name">$margin-icon-message</span>
-                      
-                        <span class="value">0 5px 0 0 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
                       <span class="name">$width-icon-message</span>
                       
-                        <span class="value">24px !default</span>
+                        <span class="value">21px !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$height-icon-message</span>
                       
-                        <span class="value">24px !default</span>
+                        <span class="value">21px !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$padding-icon-message</span>
                       
-                        <span class="value">4px !default</span>
+                        <span class="value">3px !default</span>
                       
                     </li>
                   
@@ -1329,6 +1322,20 @@
                       <span class="name">$border-radius-icon-message</span>
                       
                         <span class="value">$width-icon-message / 2 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$top-icon-message</span>
+                      
+                        <span class="value">2px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$left-icon-message</span>
+                      
+                        <span class="value">2px !default</span>
                       
                     </li>
                   

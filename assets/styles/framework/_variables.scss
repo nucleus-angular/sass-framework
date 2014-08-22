@@ -90,7 +90,7 @@ $color-olive: hsla(60, 100%, 24.7%, 1) !default;
 /**
  * @var $color-rio-grande
  */
-$color-rio-grande: rgba(207, 207, 0, 1) !default;
+$color-rio-grande: hsla(60.0, 100.0%, 40.6%, 1.0) !default;
 
 /**
  * @var $color-yellow
@@ -222,7 +222,7 @@ $color-notice: $color-dark-blue !default;
 
 /**
  * @section Variables
- * @subsection Danger Colors
+ * @subsection Caution Colors
  *
  * These are colors used to indicator something you should be cautious with.
  *
@@ -232,7 +232,7 @@ $color-notice: $color-dark-blue !default;
  */
 $border-color-caution: $color-olive !default;
 $background-color-caution: shade($color-portafino, 5%) !default;
-$color-caution: $color-rio-grande !default;
+$color-caution: $border-color-caution !default;
 
 /**
  * @section Variables
@@ -453,12 +453,12 @@ $height-select: 25px !default;
 $padding-right-input-text-ie: 25px !default;
 $top-tooltip-icon-ie: 4px !default;
 $right-tooltip-icon-ie: 5px !default;
-$right-select-tooltip-icon-ie: 16px !default;
-$top-checkbox-tooltip-icon-ie: 1px !default;
+$right-select-tooltip-icon-ie: 22px !default;
+$top-checkbox-tooltip-icon-ie: 0px !default;
 $right-checkbox-tooltip-icon-ie: -21px !default;
-$top-radio-tooltip-icon-ie: 15px !default;
+$top-radio-tooltip-icon-ie: -2px !default;
 $right-radio-tooltip-icon-ie: -21px !default;
-$top-checkbox-tooltip-icon-compact-ie: 1px !default;
+$top-checkbox-tooltip-icon-compact-ie: 0px !default;
 $top-radio-tooltip-icon-compact-ie: -2px !default;
 $box-shadow-invalid-ie: 0 0 4px $border-color-danger !default;
 $box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
@@ -473,20 +473,22 @@ $box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
  * @var $padding-message
  * @var $border-message
  * @var $border-radius
- * @var $margin-icon-message
  * @var $width-icon-message
  * @var $height-icon-message
  * @var $padding-icon-message
  * @var $border-radius-icon-message
+ * @var $top-icon-message
+ * @var $left-icon-message
  */
 $padding-message: 5px !default;
 $border-message: 1px solid $color-gray !default;
 $border-radius: 3px !default;
-$margin-icon-message: 0 5px 0 0 !default;
-$width-icon-message: 24px !default;
-$height-icon-message: 24px !default;
-$padding-icon-message: 4px !default;
+$width-icon-message: 21px !default;
+$height-icon-message: 21px !default;
+$padding-icon-message: 3px !default;
 $border-radius-icon-message: $width-icon-message / 2 !default;
+$top-icon-message: 2px !default;
+$left-icon-message: 2px !default;
 
 /**
  * @section Variables

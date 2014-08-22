@@ -78,13 +78,13 @@
 
   &:hover {
     &:not([disabled]) {
-        background-color: darken($button-main-color, $percentage-darker);
+        background-color: darken($button-main-color, $percentage-dark);
     }
   }
 
   &:active, &.is-active {
     &:not([disabled]) {
-        background-color: darken($button-main-color, $percentage-darker);
+        background-color: darken($button-main-color, $percentage-dark);
     }
   }
 }

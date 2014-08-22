@@ -10,7 +10,7 @@ While this framework is designed to be used with some of the Nucleus Angular com
 
 ### Icons
 
-This framework is designed with SVG based icons.  SVG based icons are support in modern browser (the framework does not consider IE 8 a modern browser) and generally look better and more consistent on all browsers than icon fonts.
+This framework is designed with SVG based icons.  SVG based icons are supported in modern browser (the framework does not consider IE 8 a modern browser) and generally look better and more consistent on all browsers than icon fonts.
 
 ## Nucleus Angular SASS Framework
 
@@ -20,6 +20,4 @@ The Nucleus Angular SASS Framework is a SASS framework that is disigned as a sta
 - A minimalist framework that provides the basic building blocks (but for example doesn't deal with layout at all)
 - It has a flat UI (you won't see shadows, gradients, etc...) however it would be easy enough for you to add that your if you wanted
 - Should look good on desktop and mobile
-- Works with FireFox, Chrome, iOS, Android, and IE 11+
-
-IE 11+ means that this framework is only intended/tested on IE 11+.  It is possible that it might work on IE 10 or 9 but it is not tested and any issue on those browsers will not be fixed.
+- Works with FireFox, Chrome, iOS, Android, and IE 9+
