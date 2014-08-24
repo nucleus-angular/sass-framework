@@ -449,19 +449,21 @@ $height-select: 25px !default;
  * @var $top-radio-tooltip-icon-compact-ie
  * @var $box-shadow-invalid-ie
  * @var $box-shadow-valid-ie
+ * @var $top-tooltip-icon-compact-ie
  */
 $padding-right-input-text-ie: 25px !default;
-$top-tooltip-icon-ie: 4px !default;
+$top-tooltip-icon-ie: 22px !default;
 $right-tooltip-icon-ie: 5px !default;
 $right-select-tooltip-icon-ie: 22px !default;
 $top-checkbox-tooltip-icon-ie: 0px !default;
 $right-checkbox-tooltip-icon-ie: -21px !default;
-$top-radio-tooltip-icon-ie: -2px !default;
+$top-radio-tooltip-icon-ie: 15px !default;
 $right-radio-tooltip-icon-ie: -21px !default;
 $top-checkbox-tooltip-icon-compact-ie: 0px !default;
 $top-radio-tooltip-icon-compact-ie: -2px !default;
 $box-shadow-invalid-ie: 0 0 4px $border-color-danger !default;
 $box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
+$top-tooltip-icon-compact-ie: 4px !default;
 
 
 /**
