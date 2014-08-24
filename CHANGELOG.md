@@ -2,6 +2,7 @@
 
 ## master
 
+- added .editorconfig file
 - fixed issue with multi-lined messages with icons
 - fixed issue with using message as notify
 - changed button hover background colors
