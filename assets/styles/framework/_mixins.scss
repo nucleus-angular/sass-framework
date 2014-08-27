@@ -1,28 +1,28 @@
 @mixin gradient-striped($angle: 45deg) {
   background-image: -webkit-linear-gradient(
-      $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
-      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-      transparent 75%, transparent
+    $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent
   );
   background-image: -moz-linear-gradient(
-      $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
-      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-      transparent 75%, transparent
+    $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent
   );
   background-image: -ms-linear-gradient(
-      $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
-      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-      transparent 75%, transparent
+    $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent
   );
   background-image: -o-linear-gradient(
-      $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
-      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-      transparent 75%, transparent
+    $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent
   );
   background-image: linear-gradient(
-      $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
-      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-      transparent 75%, transparent
+    $angle, rgba(255, 255, 255, .15) 25%, transparent 25%,
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent
   );
 }
 
@@ -35,48 +35,47 @@
     $positionVerticalType: top,
     $positionHorizontalType: left
 ) {
-    $beforeVertical: $positionVertical;
-    $beforeHorizontal: $positionHorizontal;
-    $afterVertical: $positionVertical;
-    $afterHorizontal: $positionHorizontal;
-    $pixelChangeVertical: 1px;
-    $pixelChangeHorizontal: 1px;
+  $beforeVertical: $positionVertical;
+  $beforeHorizontal: $positionHorizontal;
+  $afterVertical: $positionVertical;
+  $afterHorizontal: $positionHorizontal;
+  $pixelChangeVertical: 1px;
+  $pixelChangeHorizontal: 1px;
 
-    //make sure the border appears correctly
-    @if $direction == up {
-        $afterVertical: $afterVertical + 1px;
-    }
-
-    @if $direction == down {
-        $beforeVertical: $beforeVertical + 1px;
-    }
-
-    @if $direction == left {
-        $afterHorizontal: $afterHorizontal + 1px;
-    }
-
-    @if $direction == right {
-        $beforeHorizontal: $beforeHorizontal + 1px;
-    }
-
-    &:before {
-        @include triangle(1.4rem, $border-color, $direction);
-
-        content: '';
-        display: block;
-        position: absolute;
-        #{$positionVerticalType}: $beforeVertical;
-        #{$positionHorizontalType}: $beforeHorizontal;
-    }
-
-    &:after {
-        @include triangle(1.4rem, $fill-color, $direction);
-
-        content: '';
-        display: block;
-        position: absolute;
-        #{$positionVerticalType}: $afterVertical;
-        #{$positionHorizontalType}: $afterHorizontal;
-    }
+  //make sure the border appears correctly
+  @if $direction == up {
+    $afterVertical: $afterVertical + 1px;
   }
 
+  @if $direction == down {
+    $beforeVertical: $beforeVertical + 1px;
+  }
+
+  @if $direction == left {
+    $afterHorizontal: $afterHorizontal + 1px;
+  }
+
+  @if $direction == right {
+    $beforeHorizontal: $beforeHorizontal + 1px;
+  }
+
+  &:before {
+    @include triangle(1.4rem, $border-color, $direction);
+
+    content: '';
+    display: block;
+    position: absolute;
+    #{$positionVerticalType}: $beforeVertical;
+    #{$positionHorizontalType}: $beforeHorizontal;
+  }
+
+  &:after {
+    @include triangle(1.4rem, $fill-color, $direction);
+
+    content: '';
+    display: block;
+    position: absolute;
+    #{$positionVerticalType}: $afterVertical;
+    #{$positionHorizontalType}: $afterHorizontal;
+  }
+}

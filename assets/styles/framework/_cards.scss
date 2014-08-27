@@ -85,11 +85,11 @@
       top: $top-header-actions-card;
       right: $right-header-actions-card;;
 
-      svg {
+      .svg-icon {
         fill: $color-header-card;
-        width: $width-header-actions-svg-card;
-        height: $height-header-actions-svg-card;
-        margin-left: $margin-left-header-actions-svg-card;
+        width: $width-header-actions-icon-card;
+        height: $height-header-actions-icon-card;
+        margin-left: $margin-left-header-actions-icon-card;
 
         &last-child {
           margin-left: 0;

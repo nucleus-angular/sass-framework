@@ -66,11 +66,6 @@
                 </li>
               
                 <li class="styledocer-menu-item">
-                  <a href="section-input-element.html"><span class="styledocer-name">Input Element</span></a>
-                  
-                </li>
-              
-                <li class="styledocer-menu-item">
                   <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
                   
                 </li>
@@ -148,25 +143,29 @@
                 <p>Notify is a way to unobtrusively display a message to the user, be default it display in the top right corner.</p>
 <p><a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a></p>
 <p><div class="notify message notice" data-id="default">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
-  <div class="content">This is a notification message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;a id=&quot;default&quot; class=&quot;show-notify&quot; href&gt;click me to show default notify (auto removed in 2 seconds)&lt;/a&gt;
 &lt;div class=&quot;notify message notice&quot; data-id=&quot;default&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a notification message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;This is a notification message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 <p>Notify elements are <code>position: fixed</code> so just add <code>top</code>/<code>bottom</code>/<code>left</code>/<code>right</code> to the container to position it.</p>
 <p><a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a></p>
 <p><div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-  <div class="content">This is a positioned notification message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;a id=&quot;positioned&quot; class=&quot;show-notify&quot; href&gt;click me to show positioned notify (auto removed in 2 seconds)&lt;/a&gt;
 &lt;div class=&quot;notify message danger&quot; data-id=&quot;positioned&quot; style=&quot;top: 300px; left: 150px; right: auto;&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a positioned notification message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;This is a positioned notification message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 <script type="text/javascript">

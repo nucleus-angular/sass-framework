@@ -16,7 +16,7 @@
  * ```
  */
 .u-hide {
-  display: none;
+  display: none !important;
 }
 
 /**
@@ -52,23 +52,23 @@
 .u-center,
 .u-center-vertical,
 .u-center-horizontal {
-  margin: auto;
-  position: absolute;
+  margin: auto !important;
+  position: absolute !important;
 }
 
 .u-center {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
 }
 
 .u-center-vertical {
-  top: 0;
-  bottom: 0;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 
 .u-center-horizontal {
-  left: 0;
-  right: 0;
+  left: 0 !important;
+  right: 0 !important;
 }

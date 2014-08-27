@@ -1,5 +1,12 @@
 # Change Log
 
+## master
+
+- move variables inclusion outside of main framework include (to make more flexible)
+- major refactor of form styling
+- add !important to utility classes
+- minor tweaks
+
 ## 0.6.0
 
 - added .editorconfig file

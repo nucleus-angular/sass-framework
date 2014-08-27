@@ -50,11 +50,12 @@
    * A quiet button is a button that looks like regular test until you hover over it (using the `quiet` class).
    *
    * ```html
-   * <button>Default</button>
+   * <button class="quiet">Default</button>
    * ```
    */
   &.quiet {
-    color: $color-tundora;
+    color: $color-text;
+    background: none;
   }
 
   &:not(.quiet) {
@@ -77,6 +78,11 @@
   }
 
   &:hover {
+
+    &.quiet {
+      color: $button-text-color;
+    }
+
     &:not([disabled]) {
         background-color: darken($button-main-color, $percentage-dark);
     }
@@ -100,7 +106,7 @@
  */
 button {
   @include button-size(normal);
-  @include button-color($color-silver-chalice, $color-button);
+  @include button-color($background-color-button-default, $color-button-default);
 
   border-radius: $border-radius-button;
   position: relative;
@@ -108,8 +114,10 @@ button {
   font-weight: $font-weight-button;
   cursor: pointer;
 
-   @if $is-uppercased-button == true {
-    text-transform: uppercase;
+  &:not(.quiet) {
+    @if $is-uppercased-button == true {
+      text-transform: uppercase;
+    }
   }
 
   &:focus {
@@ -183,19 +191,19 @@ button {
    * ```
    */
   &.primary {
-    @include button-color($color-chetwode-blue, $color-white);
+    @include button-color($background-color-primary-button, $color-primary-button);
   }
 
   &.caution {
-    @include button-color($color-rio-grande, $color-white);
+    @include button-color($background-color-caution-button, $color-caution-button);
   }
 
   &.danger {
-    @include button-color($color-medium-carmine, $color-white);
+    @include button-color($background-color-danger-button, $color-danger-button);
   }
 
   &.safe {
-    @include button-color($color-apple, $color-white);
+    @include button-color($background-color-safe-button, $color-safe-button);
   }
 
   /**

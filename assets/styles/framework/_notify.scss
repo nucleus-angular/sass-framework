@@ -6,8 +6,9 @@
  * ```html
  * <a id="default" class="show-notify" href>click me to show default notify (auto removed in 2 seconds)</a>
  * <div class="notify message notice" data-id="default">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
- *   <div class="content">This is a notification message.</div>
+ *   <header class="with-icon">
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notification message.
+ *   </header>
  * </div>
  * ```
  *
@@ -16,8 +17,9 @@
  * ```html
  * <a id="positioned" class="show-notify" href>click me to show positioned notify (auto removed in 2 seconds)</a>
  * <div class="notify message danger" data-id="positioned" style="top: 300px; left: 150px; right: auto;">
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *   <div class="content">This is a positioned notification message.</div>
+ *   <header class="with-icon">
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a positioned notification message.
+ *   </header>
  * </div>
  * ```
  *
@@ -37,9 +39,8 @@
  */
 .notify {
   position: fixed;
-  //these are not variables because it is expected these values will not be consistent through the application
-  top: 15px;
-  right: 15px;
+  top: $top-default-notify;
+  right: $right-default-notify;
 
   z-index: $z-index-notify;
   display: inline-block;

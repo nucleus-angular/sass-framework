@@ -19,17 +19,6 @@
     width: 100%;
   }
 
-  //TODO: move to normalize?
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-  }
-
-  ul {
-    cursor: text;
-  }
-
   li {
     cursor: pointer;
   }
@@ -41,7 +30,7 @@
    * One functionality of extend text is the ability of tagging or selecting multiple values with in a text box.
    *
    * ```html
-   * <div class="extend-text is-active" style="width: 500px;">
+   * <div class="extend-text is-active" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="tag-container" style="top: 4px; left: 4px;">
    *     <ul class="tags">
@@ -84,7 +73,7 @@
      * Add the `selected` class to a tag to change the border color.
      *
      * ```html
-     * <div class="extend-text is-active" style="width: 500px;">
+     * <div class="extend-text is-active" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
@@ -113,7 +102,7 @@
      * You can also add an svg icon to indicate you want to remove the tag by adding the svg with the `remove` class.
      *
      * ```html
-     * <div class="extend-text is-active" style="width: 500px;">
+     * <div class="extend-text is-active" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="tag-container" style="top: 4px; left: 4px;">
      *     <ul class="tags">
@@ -155,7 +144,7 @@
    * One functionality of extend text is the ability of doing an auto complete.
    *
    * ```html
-   * <div class="extend-text auto-complete" style="width: 500px;">
+   * <div class="extend-text auto-complete" style="width: 100%;">
    *   <div class="container">
    *     <input class="display" type="text" />
    *   </div>
@@ -163,7 +152,7 @@
    * ```
    *
    * ```html
-   * <div class="extend-text is-active auto-complete" style="width: 500px;">
+   * <div class="extend-text is-active auto-complete" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="auto-complete-options" style="top: 25px;">
    *     <ul>
@@ -198,7 +187,7 @@
      * To highlight an auto complete option, add the `is-focused` class to the item.
      *
      * ```html
-     * <div class="extend-text is-active auto-complete" style="width: 500px;">
+     * <div class="extend-text is-active auto-complete" style="width: 100%;">
      *   <input class="display" type="text" />
      *   <div class="auto-complete-options" style="top: 25px;">
      *     <ul>
@@ -222,7 +211,7 @@
    * If you want to allow the use to enter a value that the auto complete does not give you, you can use the `new-indicator` class.
    *
    * ```html
-   * <div class="extend-text auto-complete" style="width: 500px;">
+   * <div class="extend-text auto-complete" style="width: 100%;">
    *   <input class="display" type="text" />
    *   <div class="new-indicator">New</div>
    * </div>
@@ -242,7 +231,7 @@
  * The Auto Complete and Tagging styling can co-exist.
  *
  * ```html
- * <div class="extend-text is-active auto-complete" style="width: 500px;">
+ * <div class="extend-text is-active auto-complete" style="width: 100%;">
  *   <input class="display" type="text" />
  *   <div class="tag-container" style="top: 4px; left: 4px;">
  *     <ul class="tags">
@@ -281,8 +270,12 @@
  *
  * ```html
  * <div class="input-element valid">
+ *   <label>
+ *     Valid Extend Text
+ *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
+ *   </label>
  *   <div class="container">
- *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *     <div class="extend-text is-active auto-complete" style="width: 100%;">
  *       <input class="display" type="text" />
  *       <div class="tag-container" style="top: 4px; left: 4px;">
  *         <ul class="tags">
@@ -309,7 +302,6 @@
  *       </div>
  *     </div>
  *   </div>
- *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
  * </div>
  * ```
  *
@@ -317,8 +309,17 @@
  *
  * ```html
  * <div class="input-element invalid">
+ *   <label>
+ *     Invalid Extend Text
+ *     <div class="tooltip">
+ *       <div class="handle">
+ *         <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
+ *       </div>
+ *       <div class="content">Invalid</div>
+ *     </div>
+ *   </label>
  *   <div class="container">
- *     <div class="extend-text is-active auto-complete" style="width: 500px;">
+ *     <div class="extend-text is-active auto-complete" style="width: 100%;">
  *       <input class="display" type="text" />
  *       <div class="tag-container" style="top: 4px; left: 4px;">
  *         <ul class="tags">
@@ -344,12 +345,6 @@
  *         </ul>
  *       </div>
  *     </div>
- *   </div>
- *   <div class="tooltip">
- *     <div class="handle">
- *       <img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
- *     </div>
- *     <div class="content">Invalid</div>
  *   </div>
  * </div>
  * ```

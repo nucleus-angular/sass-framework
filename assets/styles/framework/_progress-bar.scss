@@ -82,7 +82,7 @@
     border-color: $border-color-safe;
 
     .indicator {
-      background-color: $background-color-safe;
+      background-color: darken($background-color-safe, $percentage-darker);
     }
   }
 
@@ -90,7 +90,7 @@
     border-color: $border-color-notice;
 
     .indicator {
-      background-color: $background-color-notice;
+      background-color: darken($background-color-notice, $percentage-darker);
     }
   }
 
@@ -98,7 +98,7 @@
     border-color: $border-color-caution;
 
     .indicator {
-      background-color: $background-color-caution
+      background-color: $background-color-caution;
     }
   }
 
@@ -106,7 +106,7 @@
     border-color: $border-color-danger;
 
     .indicator {
-      background-color: $background-color-danger
+      background-color: darken($background-color-danger, $percentage-darkest);
     }
   }
 }

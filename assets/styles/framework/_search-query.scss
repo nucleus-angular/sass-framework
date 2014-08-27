@@ -57,28 +57,6 @@
      * </div>
      * ```
      */
-    &.invalid {
-      textarea {
-        border-color: $border-color-danger;
-        background-color: $background-color-danger;
-      }
-
-      .svg-icon {
-        fill: $color-danger;
-      }
-    }
-
-    &.valid {
-      textarea {
-        border-color: $border-color-safe;
-        background-color: $background-color-safe;
-      }
-
-      .svg-icon {
-        fill: $color-safe;
-      }
-    }
-
     &.empty {
       .svg-icon {
         fill: $color-icon-empty-sq;

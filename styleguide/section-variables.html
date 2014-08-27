@@ -66,11 +66,6 @@
                 </li>
               
                 <li class="styledocer-menu-item">
-                  <a href="section-input-element.html"><span class="styledocer-name">Input Element</span></a>
-                  
-                </li>
-              
-                <li class="styledocer-menu-item">
                   <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
                   
                 </li>
@@ -194,7 +189,7 @@
                       
                     
                       
-                        <li class="styledocer-menu-item variables"><a href="#section-Notify"><span class="styledocer-name">Notify<img src="tags.svg" /></span></a></li>
+                        <li class="styledocer-menu-item variables"><a href="#section-Notity"><span class="styledocer-name">Notity<img src="tags.svg" /></span></a></li>
                       
                     
                       
@@ -243,6 +238,10 @@
                     
                       
                         <li class="styledocer-menu-item variables"><a href="#section-Tree"><span class="styledocer-name">Tree<img src="tags.svg" /></span></a></li>
+                      
+                    
+                      
+                        <li class="styledocer-menu-item variables"><a href="#section-Z-Indexes"><span class="styledocer-name">Z-Indexes<img src="tags.svg" /></span></a></li>
                       
                     
                   </ul>
@@ -355,28 +354,7 @@
                     <li class="value">
                       <span class="name">$border-radius-bdd</span>
                       
-                        <span class="value">3px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-button-bdd</span>
-                      
-                        <span class="value">495 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-button-is-active-bdd</span>
-                      
-                        <span class="value">502 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-content-bdd</span>
-                      
-                        <span class="value">501 !default</span>
+                        <span class="value">3px !default;$padding-content-bdd: 5px !default</span>
                       
                     </li>
                   
@@ -402,14 +380,14 @@
                 <ul class="styledocer-variables">
                   
                     <li class="value">
-                      <span class="name">$background-color-button</span>
+                      <span class="name">$background-color-button-default</span>
                       
                         <span class="value">$color-silver-chalice !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$color-button</span>
+                      <span class="name">$color-button-default</span>
                       
                         <span class="value">$color-white !default</span>
                       
@@ -496,6 +474,62 @@
                       <span class="name">$opacity-disabled-button</span>
                       
                         <span class="value">0.5 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$background-color-primary-button</span>
+                      
+                        <span class="value">$color-chetwode-blue !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$background-color-caution-button</span>
+                      
+                        <span class="value">$color-rio-grande !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$background-color-danger-button</span>
+                      
+                        <span class="value">$color-medium-carmine !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$background-color-safe-button</span>
+                      
+                        <span class="value">$color-apple !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$color-primary-button</span>
+                      
+                        <span class="value">$color-white !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$color-caution-button</span>
+                      
+                        <span class="value">$color-white !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$color-danger-button</span>
+                      
+                        <span class="value">$color-white !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$color-safe-button</span>
+                      
+                        <span class="value">$color-white !default</span>
                       
                     </li>
                   
@@ -605,21 +639,21 @@
                     </li>
                   
                     <li class="value">
-                      <span class="name">$width-header-actions-svg-card</span>
+                      <span class="name">$width-header-actions-icon-card</span>
                       
                         <span class="value">11px !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$height-header-actions-svg-card</span>
+                      <span class="name">$height-header-actions-icon-card</span>
                       
                         <span class="value">11px !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$margin-left-header-actions-svg-card</span>
+                      <span class="name">$margin-left-header-actions-icon-card</span>
                       
                         <span class="value">3px !default</span>
                       
@@ -649,7 +683,7 @@
                     <li class="value">
                       <span class="name">$background-color-caution</span>
                       
-                        <span class="value">shade($color-portafino, 5%) !default</span>
+                        <span class="value">hsla(28.5, 67.3%, 71.2%, 1.0) !default</span>
                       
                     </li>
                   
@@ -677,84 +711,84 @@
                     <li class="value">
                       <span class="name">$color-rosewood</span>
                       
-                        <span class="value">hsla(2.2, 100%, 16.1%, 1) !default</span>
+                        <span class="value">hsla(2.2, 100%, 16%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-maroon</span>
                       
-                        <span class="value">hsla(1, 100%, 23.9%, 1) !default</span>
+                        <span class="value">hsla(1, 100%, 23%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-medium-carmine</span>
                       
-                        <span class="value">hsla(1, 51.7%, 45.5%, 1) !default</span>
+                        <span class="value">hsla(1, 51%, 45%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-medium-carmine-l50</span>
                       
-                        <span class="value">hsla(1, 51.7%, 95.5%, 1) !default</span>
+                        <span class="value">hsla(1, 51%, 98%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-medium-carmine-d30</span>
                       
-                        <span class="value">hsla(1, 51.7%, 15.5%, 1) !default</span>
+                        <span class="value">hsla(1, 51%, 15%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-dawn-pink</span>
                       
-                        <span class="value">hsla(2.6,49.3%,72.2%,1) !default</span>
+                        <span class="value">hsla(2.6,49%,72%,1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-crusoe</span>
                       
-                        <span class="value">hsla(117.8, 100%, 16.1%, 1) !default</span>
+                        <span class="value">hsla(117.8, 100%, 16%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-japanese-laurel</span>
                       
-                        <span class="value">hsla(120.5, 100%, 24.7%, 1) !default</span>
+                        <span class="value">hsla(120.5, 100%, 24%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-apple</span>
                       
-                        <span class="value">hsla(117, 51.7%, 45.5%, 1) !default</span>
+                        <span class="value">hsla(117, 51%, 45%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-apple-l50</span>
                       
-                        <span class="value">hsla(117, 51.7%, 95.5%, 1) !default</span>
+                        <span class="value">hsla(117, 51%, 98%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-apple-d30</span>
                       
-                        <span class="value">hsla(117, 51.7%, 15.5%, 1) !default</span>
+                        <span class="value">hsla(117, 51%, 15%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-panache</span>
                       
-                        <span class="value">hsla(120, 40.5%, 92.7%, 1) !default</span>
+                        <span class="value">hsla(120, 40%, 92%, 1) !default</span>
                       
                     </li>
                   
@@ -768,42 +802,42 @@
                     <li class="value">
                       <span class="name">$color-dark-blue</span>
                       
-                        <span class="value">hsla(239.3, 100%, 33.5%, 1) !default</span>
+                        <span class="value">hsla(239.3, 100%, 33%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-san-marino</span>
                       
-                        <span class="value">hsla(226.7, 47.3%, 46.9%, 1) !default</span>
+                        <span class="value">hsla(226.7, 47%, 46%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-chetwode-blue</span>
                       
-                        <span class="value">hsla(223.1, 54.1%, 69.2%, 1) !default</span>
+                        <span class="value">hsla(223.1, 54%, 69%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$color-snuff</span>
+                      <span class="name">$color-white-lilac</span>
                       
-                        <span class="value">hsla(240, 40.5%, 92.7%, 1) !default</span>
+                        <span class="value">hsla(240, 40%, 98%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-olive</span>
                       
-                        <span class="value">hsla(60, 100%, 24.7%, 1) !default</span>
+                        <span class="value">hsla(28.7, 74.0%, 51.8%, 1.0) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-rio-grande</span>
                       
-                        <span class="value">hsla(60.0, 100.0%, 40.6%, 1.0) !default</span>
+                        <span class="value">hsla(60.0, 100%, 40%, 1.0) !default</span>
                       
                     </li>
                   
@@ -817,7 +851,7 @@
                     <li class="value">
                       <span class="name">$color-portafino</span>
                       
-                        <span class="value">hsla(60.8, 100%, 85.3%, 1) !default</span>
+                        <span class="value">hsla(60.8, 100%, 98%, 1) !default</span>
                       
                     </li>
                   
@@ -831,7 +865,7 @@
                     <li class="value">
                       <span class="name">$color-tundora</span>
                       
-                        <span class="value">hsla(0, 0%, 25.5%, 1) !default</span>
+                        <span class="value">hsla(0, 0%, 25%, 1) !default</span>
                       
                     </li>
                   
@@ -845,28 +879,28 @@
                     <li class="value">
                       <span class="name">$color-silver-chalice</span>
                       
-                        <span class="value">hsla(0, 0%, 66.7%, 1) !default</span>
+                        <span class="value">hsla(0, 0%, 66%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-silver</span>
                       
-                        <span class="value">hsla(0, 0%, 80.4%, 1) !default</span>
+                        <span class="value">hsla(0, 0%, 80%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-silver-d20</span>
                       
-                        <span class="value">hsla(0, 0%, 60.4%, 1) !default</span>
+                        <span class="value">hsla(0, 0%, 60%, 1) !default</span>
                       
                     </li>
                   
                     <li class="value">
                       <span class="name">$color-gallery</span>
                       
-                        <span class="value">hsla(0, 0%, 93.7%, 1) !default</span>
+                        <span class="value">hsla(0, 0%, 93%, 1) !default</span>
                       
                     </li>
                   
@@ -937,13 +971,6 @@
                       <span class="name">$border-radius-et</span>
                       
                         <span class="value">5px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-et</span>
-                      
-                        <span class="value">1 !default</span>
                       
                     </li>
                   
@@ -1066,6 +1093,20 @@
                       
                     </li>
                   
+                    <li class="value">
+                      <span class="name">$background-color-input</span>
+                      
+                        <span class="value">$color-white !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$width-text-input</span>
+                      
+                        <span class="value">100% !default</span>
+                      
+                    </li>
+                  
                 </ul>
               
               
@@ -1179,76 +1220,6 @@
                 <ul class="styledocer-variables">
                   
                     <li class="value">
-                      <span class="name">$padding-right-input-text-ie</span>
-                      
-                        <span class="value">25px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-tooltip-icon-ie</span>
-                      
-                        <span class="value">22px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$right-tooltip-icon-ie</span>
-                      
-                        <span class="value">5px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$right-select-tooltip-icon-ie</span>
-                      
-                        <span class="value">22px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-checkbox-tooltip-icon-ie</span>
-                      
-                        <span class="value">0px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$right-checkbox-tooltip-icon-ie</span>
-                      
-                        <span class="value">-21px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-radio-tooltip-icon-ie</span>
-                      
-                        <span class="value">15px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$right-radio-tooltip-icon-ie</span>
-                      
-                        <span class="value">-21px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-checkbox-tooltip-icon-compact-ie</span>
-                      
-                        <span class="value">0px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-radio-tooltip-icon-compact-ie</span>
-                      
-                        <span class="value">-2px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
                       <span class="name">$box-shadow-invalid-ie</span>
                       
                         <span class="value">0 0 4px $border-color-danger !default</span>
@@ -1263,9 +1234,37 @@
                     </li>
                   
                     <li class="value">
-                      <span class="name">$top-tooltip-icon-compact-ie</span>
+                      <span class="name">$padding-ie</span>
                       
-                        <span class="value">4px !default</span>
+                        <span class="value">5px 0 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$position-label-validator-ie</span>
+                      
+                        <span class="value">relative !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$top-label-validitor-ie</span>
+                      
+                        <span class="value">3px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$margin-label-validator-ie</span>
+                      
+                        <span class="value">0 0 0 5px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$margin-message-ie</span>
+                      
+                        <span class="value">10px 0 0 0 !default</span>
                       
                     </li>
                   
@@ -1298,6 +1297,13 @@
                     </li>
                   
                     <li class="value">
+                      <span class="name">$border-left-width-message</span>
+                      
+                        <span class="value">5px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
                       <span class="name">$border-radius</span>
                       
                         <span class="value">3px !default</span>
@@ -1305,44 +1311,30 @@
                     </li>
                   
                     <li class="value">
-                      <span class="name">$width-icon-message</span>
+                      <span class="name">$size-icon-message</span>
                       
-                        <span class="value">21px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$height-icon-message</span>
-                      
-                        <span class="value">21px !default</span>
+                        <span class="value">1.6rem !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$padding-icon-message</span>
+                      <span class="name">$bottom-icon-message</span>
                       
                         <span class="value">3px !default</span>
                       
                     </li>
                   
                     <li class="value">
-                      <span class="name">$border-radius-icon-message</span>
-                      
-                        <span class="value">$width-icon-message / 2 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$top-icon-message</span>
-                      
-                        <span class="value">2px !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
                       <span class="name">$left-icon-message</span>
                       
-                        <span class="value">2px !default</span>
+                        <span class="value">0 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$font-size-header-message</span>
+                      
+                        <span class="value">1.8rem !default</span>
                       
                     </li>
                   
@@ -1370,7 +1362,7 @@
                     <li class="value">
                       <span class="name">$background-color-notice</span>
                       
-                        <span class="value">$color-snuff !default</span>
+                        <span class="value">$color-white-lilac !default</span>
                       
                     </li>
                   
@@ -1386,19 +1378,26 @@
               
             </section>
           
-            <section id="section-Notify" class="styledocer-section">
-              <h1 class="styledocer-title"><img src="tags.svg" />Notify</h1>
+            <section id="section-Notity" class="styledocer-section">
+              <h1 class="styledocer-title"><img src="tags.svg" />Notity</h1>
               <div class="styledocer-description">
-                <p>These are the variables that control the look and feel for notifications.</p>
+                <p>These are the variable that control the look and feel of the notify.</p>
 
               </div>
               
                 <ul class="styledocer-variables">
                   
                     <li class="value">
-                      <span class="name">$z-index-notify</span>
+                      <span class="name">$top-default-notify</span>
                       
-                        <span class="value">9999 !default</span>
+                        <span class="value">15px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$right-default-notify</span>
+                      
+                        <span class="value">15px !default</span>
                       
                     </li>
                   
@@ -1532,13 +1531,6 @@
                       <span class="name">$border-rp</span>
                       
                         <span class="value">1px solid $color-black !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-content-rp</span>
-                      
-                        <span class="value">11000 !default</span>
                       
                     </li>
                   
@@ -1683,13 +1675,6 @@
                     </li>
                   
                     <li class="value">
-                      <span class="name">$z-index-sl</span>
-                      
-                        <span class="value">10001 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
                       <span class="name">$padding-text-sl</span>
                       
                         <span class="value">50px 0 0 0 !default</span>
@@ -1698,6 +1683,55 @@
                   
                     <li class="value">
                       <span class="name">$text-align-text-sl</span>
+                      
+                        <span class="value">center !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$border-radius-non-blocking-sl</span>
+                      
+                        <span class="value">3px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$padding-non-blocking-sl</span>
+                      
+                        <span class="value">0.25em 0.5em !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$top-non-blocking-sl</span>
+                      
+                        <span class="value">5px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$right-non-blocking-sl</span>
+                      
+                        <span class="value">50% !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$width-non-blocking-sl</span>
+                      
+                        <span class="value">300px !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$margin-non-blocking-sl</span>
+                      
+                        <span class="value">0 -1 * ($width-non-blocking-sl / 2) 0 0 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$text-align-non-blocking-sl</span>
                       
                         <span class="value">center !default</span>
                       
@@ -1728,13 +1762,6 @@
                       <span class="name">$opacity-so</span>
                       
                         <span class="value">.5 !default</span>
-                      
-                    </li>
-                  
-                    <li class="value">
-                      <span class="name">$z-index-so</span>
-                      
-                        <span class="value">999 !default</span>
                       
                     </li>
                   
@@ -1828,13 +1855,6 @@
               </div>
               
                 <ul class="styledocer-variables">
-                  
-                    <li class="value">
-                      <span class="name">$z-index-container-tagging</span>
-                      
-                        <span class="value">2 !default</span>
-                      
-                    </li>
                   
                     <li class="value">
                       <span class="name">$margin-tag-tagging</span>
@@ -1973,6 +1993,97 @@
                       <span class="name">$margin-icon-tree</span>
                       
                         <span class="value">0 3px 0 0 !default</span>
+                      
+                    </li>
+                  
+                </ul>
+              
+              
+            </section>
+          
+            <section id="section-Z-Indexes" class="styledocer-section">
+              <h1 class="styledocer-title"><img src="tags.svg" />Z-Indexes</h1>
+              <div class="styledocer-description">
+                <p>In order to better see how element stack, these are all the z-index values grouped in on location (instead of grouped with each component).</p>
+
+              </div>
+              
+                <ul class="styledocer-variables">
+                  
+                    <li class="value">
+                      <span class="name">$z-index-content-tooltip</span>
+                      
+                        <span class="value">3 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-et</span>
+                      
+                        <span class="value">1 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-container-tagging</span>
+                      
+                        <span class="value">2 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-button-bdd</span>
+                      
+                        <span class="value">495 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-button-is-active-bdd</span>
+                      
+                        <span class="value">502 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-content-bdd</span>
+                      
+                        <span class="value">501 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-so</span>
+                      
+                        <span class="value">999 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-notify</span>
+                      
+                        <span class="value">9999 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-non-blocking-sl</span>
+                      
+                        <span class="value">10000 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-sl</span>
+                      
+                        <span class="value">10001 !default</span>
+                      
+                    </li>
+                  
+                    <li class="value">
+                      <span class="name">$z-index-content-rp</span>
+                      
+                        <span class="value">11000 !default</span>
                       
                     </li>
                   

@@ -12,6 +12,10 @@ While this framework is designed to be used with some of the Nucleus Angular com
 
 This framework is designed with SVG based icons.  SVG based icons are supported in modern browser (the framework does not consider IE 8 a modern browser) and generally look better and more consistent on all browsers than icon fonts.
 
+### Dependant On Each Other
+
+It is important to note that this framework is designed to be used as a whole and not parts.  For example the search query component assumes the input in going to be styled based on the form styling so you would have to copy or re-do a bit of the form styling to get it to look properly.
+
 ## Nucleus Angular SASS Framework
 
 The Nucleus Angular SASS Framework is a SASS framework that is disigned as a start point for use with the Nucleus Angular components.  While this is designed to be used with the Nucleus Angular compoenents, it can be used on it's own.  Some of the key point are:

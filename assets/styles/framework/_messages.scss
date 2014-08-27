@@ -4,7 +4,9 @@
  * Messages are elements to display a piece of information that stands out from most of the other content.
  *
  * ```html
- * <div class="message">This is a generic message.</div>
+ * <div class="message">
+ *   <header>This is a generic message</header>
+ * </div>
  * ```
  */
 .message {
@@ -16,35 +18,86 @@
   display: inline-block;
   padding: $padding-message;
   border: $border-message;
+  border-left-width: $border-left-width-message;
   border-radius: $border-radius;
 
   /**
    * @section Messages
-   * @subsection Icon
+   * @subsection Header
    *
-   * Messages element can also have an icon.
+   * Messages can have a header.
    *
    * If you are using an icon, then you must wrap you message content in an element with the `content` class.
    *
    * ```html
    * <div class="message">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header>
+   *     This is a generic message.
+   *   </header>
+   * </div>
+   * ```
+   *
+   * Header can also have an icon my adding the `with-icon` class to the header.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
    * </div>
    * ```
    */
-  .icon {
-    position: absolute;
-    top: $top-icon-message;
-    left: $left-icon-message;
-    width: $width-icon-message;
-    height: $height-icon-message;
-    padding: $padding-icon-message;
-    border-radius: $border-radius-icon-message;
+  header {
+    position: relative;
+    font-size: $font-size-header-message;
+
+    &.with-icon {
+      padding-left: $size-icon-message + ($font-size-header-message / 4);
+    }
   }
 
+  .icon {
+    position: absolute;
+    bottom: $bottom-icon-message;
+    left: $left-icon-message;
+    width: $size-icon-message;
+    height: $size-icon-message;
+  }
+
+  /**
+   * @section Messages
+   * @subsection Content
+   *
+   * In addition to a header, you can also have content for the message.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
+   *   <div class="content">
+   *     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae quam imperdiet, mollis lorem in, volutpat diam. Donec fermentum, tortor non consequat posuere, turpis mauris fringilla lorem, vel laoreet magna nulla sed lectus. Sed ac ullamcorper orci. Praesent pulvinar ex.<p>
+   *     <ul>
+   *       <li>Item 1</li>
+   *       <li>Item 2</li>
+   *       <li>Item 3</li>
+   *       <li>Item 4</li>
+   *     </ul>
+   *   </div>
+   * </div>
+   * ```
+   *
+   * You can also have content with a header.
+   *
+   * ```html
+   * <div class="message safe">
+   *   <div class="content">
+   *     Some simple message.
+   *   </div>
+   * </div>
+   * ```
+   */
   .content {
-    margin-left: $width-icon-message;
   }
 
   /**
@@ -57,8 +110,9 @@
    *
    * ```html
    * <div class="message safe">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+   *   </header>
    * </div>
    * ```
    *
@@ -66,8 +120,9 @@
    *
    * ```html
    * <div class="message notice">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notice message.
+   *   </header>
    * </div>
    * ```
    *
@@ -75,8 +130,9 @@
    *
    * ```html
    * <div class="message caution">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a caution message.
+   *   </header>
    * </div>
    * ```
    *
@@ -84,52 +140,49 @@
    *
    * ```html
    * <div class="message danger">
-   *   <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-   *   <div class="content">This is a generic message.</div>
+   *   <header class="with-icon">
+   *     <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a danger message.
+   *   </header>
    * </div>
    * ```
    */
   &.safe {
     background-color: $background-color-safe;
-    color: $color-safe;
-    fill: $background-color-safe;
+    fill: $border-color-safe;
     border-color: $border-color-safe;
 
-    .icon {
-      background-color: $border-color-safe;
+    header {
+      color: $color-safe;
     }
   }
 
   &.notice {
     background-color: $background-color-notice;
-    color: $color-notice;
-    fill: $background-color-notice;
+    fill: $border-color-notice;
     border-color: $border-color-notice;
 
-    .icon {
-      background-color: $border-color-notice;
+    header {
+      color: $color-notice;
     }
   }
 
   &.caution {
     background-color: $background-color-caution;
-    color: $color-caution;
-    fill: $background-color-caution;
+    fill: $border-color-caution;
     border-color: $border-color-caution;
 
-    .icon {
-      background-color: $border-color-caution;
+    header {
+      color: $color-caution;
     }
   }
 
   &.danger {
     background-color: $background-color-danger;
-    color: $color-danger;
-    fill: $background-color-danger;
+    fill: $border-color-danger;
     border-color: $border-color-danger;
 
-    .icon {
-      background-color: $border-color-danger;
+    header {
+      color: $color-danger;
     }
   }
 }

@@ -12,50 +12,51 @@
 /**
  * @var $color-rosewood
  */
-$color-rosewood: hsla(2.2, 100%, 16.1%, 1) !default;
+$color-rosewood: hsla(2.2, 100%, 16%, 1) !default;
 
 /**
  * @var $color-maroon
  */
-$color-maroon: hsla(1, 100%, 23.9%, 1) !default;
+$color-maroon: hsla(1, 100%, 23%, 1) !default;
 
 /**
  * @var $color-medium-carmine
  * @var $color-medium-carmine-l50
  * @var $color-medium-carmine-d30
  */
-$color-medium-carmine: hsla(1, 51.7%, 45.5%, 1) !default;
-$color-medium-carmine-l50: hsla(1, 51.7%, 95.5%, 1) !default;
-$color-medium-carmine-d30: hsla(1, 51.7%, 15.5%, 1) !default;
+$color-medium-carmine: hsla(1, 51%, 45%, 1) !default;
+$color-medium-carmine-l50: hsla(1, 51%, 98%, 1) !default;
+$color-medium-carmine-d30: hsla(1, 51%, 15%, 1) !default;
 
 /**
  * @var $color-dawn-pink
  */
-$color-dawn-pink: hsla(2.6,49.3%,72.2%,1) !default;
+$color-dawn-pink: hsla(2.6,49%,72%,1) !default;
 
 /**
  * @var $color-crusoe
  */
-$color-crusoe: hsla(117.8, 100%, 16.1%, 1) !default;
+$color-crusoe: hsla(117.8, 100%, 16%, 1) !default;
 
 /**
  * @var $color-japanese-laurel
  */
-$color-japanese-laurel: hsla(120.5, 100%, 24.7%, 1) !default;
+$color-japanese-laurel: hsla(120.5, 100%, 24%, 1) !default;
 
 /**
  * @var $color-apple
  * @var $color-apple-l50
  * @var $color-apple-d30
  */
-$color-apple: hsla(117, 51.7%, 45.5%, 1) !default;
-$color-apple-l50: hsla(117, 51.7%, 95.5%, 1) !default;
-$color-apple-d30: hsla(117, 51.7%, 15.5%, 1) !default;
+$color-apple: hsla(117, 51%, 45%, 1) !default;
+$color-apple-l50: hsla(117, 51%, 98%, 1) !default;
+$color-apple-d30: hsla(117, 51%, 15%, 1) !default;
 
 /**
  * @var $color-panache
  */
-$color-panache: hsla(120, 40.5%, 92.7%, 1) !default;
+$color-panache: hsla(120, 40%, 92%, 1) !default;
+$color-gold-sand: hsla(28.5, 67.3%, 71.2%, 1.0) !default;
 
 /**
  * @var $color-downriver
@@ -65,32 +66,32 @@ $color-downriver: rgba(9, 24, 80, 1) !default;
 /**
  * @var $color-dark-blue
  */
-$color-dark-blue: hsla(239.3, 100%, 33.5%, 1) !default;
+$color-dark-blue: hsla(239.3, 100%, 33%, 1) !default;
 
 /**
  * @var $color-san-marino
  */
-$color-san-marino: hsla(226.7, 47.3%, 46.9%, 1) !default;
+$color-san-marino: hsla(226.7, 47%, 46%, 1) !default;
 
 /**
  * @var $color-chetwode-blue
  */
-$color-chetwode-blue: hsla(223.1, 54.1%, 69.2%, 1) !default;
+$color-chetwode-blue: hsla(223.1, 54%, 69%, 1) !default;
 
 /**
- * @var $color-snuff
+ * @var $color-white-lilac
  */
-$color-snuff: hsla(240, 40.5%, 92.7%, 1) !default;
+$color-white-lilac: hsla(240, 40%, 98%, 1) !default;
 
 /**
  * @var $color-olive
  */
-$color-olive: hsla(60, 100%, 24.7%, 1) !default;
+$color-olive: hsla(28.7, 74.0%, 51.8%, 1.0) !default;
 
 /**
  * @var $color-rio-grande
  */
-$color-rio-grande: hsla(60.0, 100.0%, 40.6%, 1.0) !default;
+$color-rio-grande: hsla(60.0, 100%, 40%, 1.0) !default;
 
 /**
  * @var $color-yellow
@@ -100,7 +101,7 @@ $color-yellow: hsla(60, 100%, 50%, 1) !default;
 /**
  * @var $color-portafino
  */
-$color-portafino: hsla(60.8, 100%, 85.3%, 1) !default;
+$color-portafino: hsla(60.8, 100%, 98%, 1) !default;
 
 /**
  * @var $color-black
@@ -110,8 +111,8 @@ $color-black: hsla(0, 0%, 0%, 1) !default;
 /**
  * @var $color-tundora
  */
-$color-tundora: hsla(0, 0%, 25.5%, 1) !default;
-$color-tundora-l50: hsla(0, 0%, 75.5%, 1) !default;
+$color-tundora: hsla(0, 0%, 25%, 1) !default;
+$color-tundora-l50: hsla(0, 0%, 75%, 1) !default;
 
 /**
  * @var $color-gray
@@ -121,19 +122,19 @@ $color-gray: hsla(0, 0%, 50%, 1) !default;
 /**
  * @var $color-silver-chalice
  */
-$color-silver-chalice: hsla(0, 0%, 66.7%, 1) !default;
+$color-silver-chalice: hsla(0, 0%, 66%, 1) !default;
 
 /**
  * @var $color-silver
  * @var $color-silver-d20
  */
-$color-silver: hsla(0, 0%, 80.4%, 1) !default;
-$color-silver-d20: hsla(0, 0%, 60.4%, 1) !default;
+$color-silver: hsla(0, 0%, 80%, 1) !default;
+$color-silver-d20: hsla(0, 0%, 60%, 1) !default;
 
 /**
  * @var $color-gallery
  */
-$color-gallery: hsla(0, 0%, 93.7%, 1) !default;
+$color-gallery: hsla(0, 0%, 93%, 1) !default;
 
 /**
  * @var $color-white
@@ -217,7 +218,7 @@ $color-danger: $color-maroon !default;
  * @var $color-notice
  */
 $border-color-notice: $color-downriver !default;
-$background-color-notice: $color-snuff !default;
+$background-color-notice: $color-white-lilac !default;
 $color-notice: $color-dark-blue !default;
 
 /**
@@ -231,7 +232,7 @@ $color-notice: $color-dark-blue !default;
  * @var $color-caution
  */
 $border-color-caution: $color-olive !default;
-$background-color-caution: shade($color-portafino, 5%) !default;
+$background-color-caution: hsla(28.5, 67.3%, 71.2%, 1.0) !default;
 $color-caution: $border-color-caution !default;
 
 /**
@@ -246,20 +247,13 @@ $color-caution: $border-color-caution !default;
  * @var $border-bdd
  * @var $font-weight-bdd
  * @var $border-radius-bdd
- * @var $z-index-button-bdd
- * @var $z-index-button-is-active-bdd
- * @var $z-index-content-bdd
  * @var $padding-content-bdd
  */
 $color-bdd: $color-white !default;
 $background-color-content-bdd: darken($color-silver-chalice, $percentage-darker) !default;
 $border-bdd: 1px solid $color-black !default;
 $font-weight-bdd: 200 !default;
-$border-radius-bdd: 3px !default;
-$z-index-button-bdd: 495 !default;
-$z-index-button-is-active-bdd: 502 !default;
-$z-index-content-bdd: 501 !default;
-$padding-content-bdd: 5px !default;
+$border-radius-bdd: 3px !default;$padding-content-bdd: 5px !default;
 
 /**
  * @section Variables
@@ -268,8 +262,8 @@ $padding-content-bdd: 5px !default;
  * These are the variables that control the look and feel of the buttons.
  *
  *
- * @var $background-color-button
- * @var $color-button
+ * @var $background-color-button-default
+ * @var $color-button-default
  * @var $border-radius-button
  * @var $font-weight-button
  * @var $is-uppercased-button
@@ -282,9 +276,25 @@ $padding-content-bdd: 5px !default;
  * @var $font-size-largest-button
  * @var $padding-largest-button
  * @var $opacity-disabled-button
+ * @var $background-color-primary-button
+ * @var $background-color-caution-button
+ * @var $background-color-danger-button
+ * @var $background-color-safe-button
+ * @var $color-primary-button
+ * @var $color-caution-button
+ * @var $color-danger-button
+ * @var $color-safe-button
  */
-$background-color-button: $color-silver-chalice !default;
-$color-button: $color-white !default;
+$background-color-button-default: $color-silver-chalice !default;
+$background-color-primary-button: $color-chetwode-blue !default;
+$background-color-caution-button: $color-rio-grande !default;
+$background-color-danger-button: $color-medium-carmine !default;
+$background-color-safe-button: $color-apple !default;
+$color-button-default: $color-white !default;
+$color-primary-button: $color-white !default;
+$color-caution-button: $color-white !default;
+$color-danger-button: $color-white !default;
+$color-safe-button: $color-white !default;
 $border-radius-button: 3px !default;
 $font-weight-button: 400 !default;
 $is-uppercased-button: true !default;
@@ -318,9 +328,9 @@ $opacity-disabled-button: 0.5 !default;
  * @var $background-color-header-card
  * @var $top-header-actions-card
  * @var $right-header-actions-card
- * @var $width-header-actions-svg-card
- * @var $height-header-actions-svg-card
- * @var $margin-left-header-actions-svg-card
+ * @var $width-header-actions-icon-card
+ * @var $height-header-actions-icon-card
+ * @var $margin-left-header-actions-icon-card
  */
 $margin-card: 15px 0 !default;
 $border-radius-card: 3px !default;
@@ -334,9 +344,9 @@ $padding-content-card: 8px !default;
 $background-color-header-card: $color-gallery !default;
 $top-header-actions-card: 5px !default;
 $right-header-actions-card: 5px !default;
-$width-header-actions-svg-card: 11px !default;
-$height-header-actions-svg-card: 11px !default;
-$margin-left-header-actions-svg-card: 3px !default;
+$margin-left-header-actions-icon-card: 3px !default;
+$width-header-actions-icon-card: 11px !default;
+$height-header-actions-icon-card: 11px !default;
 
 
 /**
@@ -346,12 +356,10 @@ $margin-left-header-actions-svg-card: 3px !default;
  * These are the variable the control the look and feel of the extend text.
  *
  * @var $border-radius-et
- * @var $z-index-et
  * @var $top-new-indicator-et
  * @var $right-new-indicator-et
  */
 $border-radius-et: 5px !default;
-$z-index-et: 1 !default;
 $top-new-indicator-et: 6px !default;
 $right-new-indicator-et: 8px !default;
 
@@ -361,7 +369,6 @@ $right-new-indicator-et: 8px !default;
  *
  * These are the variable the control the look and feel of the tagging.
  *
- * @var $z-index-container-tagging
  * @var $margin-tag-tagging
  * @var $background-color-tag-tagging
  * @var $border-tag-tagging
@@ -371,7 +378,6 @@ $right-new-indicator-et: 8px !default;
  * @var $width-tag-remove-icon-tagging
  * @var $height-tag-remove-icon-tagging
  */
-$z-index-container-tagging: 2 !default;
 $margin-tag-tagging: 0 6px 0 0 !default;
 $background-color-tag-tagging: rgb(184, 215, 235) !default;
 $border-tag-tagging: 1px solid rgb(95, 134, 142) !default;
@@ -419,6 +425,8 @@ $border-radius-tooltip-content-sq: 5px !default;
  * @var $margin-label
  * @var $box-shadow-focused-input
  * @var $height-select
+ * @var $background-color-input
+ * @var $width-text-input
  */
 $text-align-compact-label: right !default;
 $padding-compact-label: 0 10px 0 0 !default;
@@ -429,7 +437,9 @@ $opacity-disabled-input: .7 !default;
 $margin-label: 0 0 3px 0 !default;
 $box-shadow-focused-input: 0 0 4px $border-color-notice !default;
 $height-select: 25px !default;
-
+$background-color-input: $color-white !default;
+$width-text-input: 100% !default;
+$margin-radio-checkbox: 3px !default;
 
 /**
  * @section Variables
@@ -437,34 +447,21 @@ $height-select: 25px !default;
  *
  * These are the elements that control the look and feel of the input element.
  *
- * @var $padding-right-input-text-ie
- * @var $top-tooltip-icon-ie
- * @var $right-tooltip-icon-ie
- * @var $right-select-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-ie
- * @var $right-checkbox-tooltip-icon-ie
- * @var $top-radio-tooltip-icon-ie
- * @var $right-radio-tooltip-icon-ie
- * @var $top-checkbox-tooltip-icon-compact-ie
- * @var $top-radio-tooltip-icon-compact-ie
  * @var $box-shadow-invalid-ie
  * @var $box-shadow-valid-ie
- * @var $top-tooltip-icon-compact-ie
+ * @var $padding-ie
+ * @var $position-label-validator-ie
+ * @var $top-label-validitor-ie
+ * @var $margin-label-validator-ie
+ * @var $margin-message-ie
  */
-$padding-right-input-text-ie: 25px !default;
-$top-tooltip-icon-ie: 22px !default;
-$right-tooltip-icon-ie: 5px !default;
-$right-select-tooltip-icon-ie: 22px !default;
-$top-checkbox-tooltip-icon-ie: 0px !default;
-$right-checkbox-tooltip-icon-ie: -21px !default;
-$top-radio-tooltip-icon-ie: 15px !default;
-$right-radio-tooltip-icon-ie: -21px !default;
-$top-checkbox-tooltip-icon-compact-ie: 0px !default;
-$top-radio-tooltip-icon-compact-ie: -2px !default;
 $box-shadow-invalid-ie: 0 0 4px $border-color-danger !default;
 $box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
-$top-tooltip-icon-compact-ie: 4px !default;
-
+$padding-ie: 5px 0 !default;
+$position-label-validator-ie: relative !default;
+$top-label-validitor-ie: 3px !default;
+$margin-label-validator-ie: 0 0 0 5px !default;
+$margin-message-ie: 10px 0 0 0 !default;
 
 /**
  * @section Variables
@@ -474,33 +471,21 @@ $top-tooltip-icon-compact-ie: 4px !default;
  *
  * @var $padding-message
  * @var $border-message
+ * @var $border-left-width-message
  * @var $border-radius
- * @var $width-icon-message
- * @var $height-icon-message
- * @var $padding-icon-message
- * @var $border-radius-icon-message
- * @var $top-icon-message
+ * @var $size-icon-message
+ * @var $bottom-icon-message
  * @var $left-icon-message
+ * @var $font-size-header-message
  */
 $padding-message: 5px !default;
 $border-message: 1px solid $color-gray !default;
+$border-left-width-message: 5px !default;
 $border-radius: 3px !default;
-$width-icon-message: 21px !default;
-$height-icon-message: 21px !default;
-$padding-icon-message: 3px !default;
-$border-radius-icon-message: $width-icon-message / 2 !default;
-$top-icon-message: 2px !default;
-$left-icon-message: 2px !default;
-
-/**
- * @section Variables
- * @subsection Notify
- *
- * These are the variables that control the look and feel for notifications.
- *
- * @var $z-index-notify
- */
-$z-index-notify: 9999 !default;
+$size-icon-message: 1.6rem !default;
+$bottom-icon-message: 3px !default;
+$left-icon-message: 0 !default;
+$font-size-header-message: 1.8rem !default;
 
 /**
  * @section Variables
@@ -528,13 +513,11 @@ $background-color-indicator-pb: rgb(230, 230, 230) !default;
  *
  * @var $border-radius-center-rp
  * @var $border-rp
- * @var $z-index-content-rp
  * @var $background-color-content-rp
  * @var $padding-content-rp
  */
 $border-radius-center-rp: 5px !default;
 $border-rp: 1px solid $color-black !default;
-$z-index-content-rp: 11000 !default;
 $background-color-content-rp: $color-white !default;
 $padding-content-rp: 8px !default;
 
@@ -545,15 +528,19 @@ $padding-content-rp: 8px !default;
  * These are the variables that control the look and feel of the site loader.
  *
  * @var $background-color-sl
- * @var $z-index-sl
  * @var $padding-text-sl
  * @var $text-align-text-sl
+ * @var $border-radius-non-blocking-sl
+ * @var $padding-non-blocking-sl
+ * @var $top-non-blocking-sl
+ * @var $right-non-blocking-sl
+ * @var $width-non-blocking-sl
+ * @var $margin-non-blocking-sl
+ * @var $text-align-non-blocking-sl
  */
 $background-color-sl: $color-white !default;
-$z-index-sl: 10001 !default;
 $padding-text-sl: 50px 0 0 0 !default;
 $text-align-text-sl: center !default;
-$z-index-non-blocking-sl: 10000 !default;
 $border-radius-non-blocking-sl: 3px !default;
 $padding-non-blocking-sl: 0.25em 0.5em !default;
 $top-non-blocking-sl: 5px !default;
@@ -570,11 +557,9 @@ $text-align-non-blocking-sl: center !default;
  *
  * @var $background-color-so
  * @var $opacity-so
- * @var $z-index-so
  */
 $background-color-so: $color-black !default;
 $opacity-so: .5 !default;
-$z-index-so: 999 !default;
 
 /**
  * @section Variables
@@ -620,7 +605,6 @@ $padding-content-tooltip: 5px !default;
 $background-content-tooltip: rgb(255, 255, 255) !default;
 $border-content-tooltip: 1px solid rgb(0, 0, 0) !default;
 $border-radius-tooltip: 3px !default;
-$z-index-content-tooltip: 1 !default;
 
 /**
  * @section Variables
@@ -692,6 +676,49 @@ $background-color-option-is-focused-ac: #E1E9F6 !default;
 $box-shadow-options-ac: $box-shadow-focused-input !default;
 $box-shadow-options-valid-ac: $box-shadow-valid-ie !default;
 $box-shadow-options-invalid-ac: $box-shadow-invalid-ie !default;
+
+/**
+ * @section Variables
+ * @subsection Notity
+ *
+ * These are the variable that control the look and feel of the notify.
+ *
+ * @var $top-default-notify
+ * @var $right-default-notify
+ */
+$top-default-notify: 15px !default;
+$right-default-notify: 15px !default;
+
+/**
+ * @section Variables
+ * @subsection Z-Indexes
+ *
+ * @var $z-index-content-tooltip
+ * @var $z-index-et
+ * @var $z-index-container-tagging
+ * @var $z-index-button-bdd
+ * @var $z-index-button-is-active-bdd
+ * @var $z-index-content-bdd
+ * @var $z-index-so
+ * @var $z-index-notify
+ * @var $z-index-non-blocking-sl
+ * @var $z-index-sl
+ * @var $z-index-content-rp
+ *
+ * In order to better see how element stack, these are all the z-index values grouped in on location (instead of grouped with each component).
+ */
+$z-index-et: 1 !default;
+$z-index-container-tagging: 2 !default;
+$z-index-content-tooltip: 3 !default;
+$z-index-button-bdd: 495 !default;
+$z-index-button-is-active-bdd: 502 !default;
+$z-index-content-bdd: 501 !default;
+$z-index-so: 999 !default;
+$z-index-notify: 9999 !default;
+$z-index-non-blocking-sl: 10000 !default;
+$z-index-sl: 10001 !default;
+$z-index-content-rp: 11000 !default;
+
 
 //neat variables
 $max-width: 100%;

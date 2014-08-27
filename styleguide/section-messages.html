@@ -66,11 +66,6 @@
                 </li>
               
                 <li class="styledocer-menu-item">
-                  <a href="section-input-element.html"><span class="styledocer-name">Input Element</span></a>
-                  
-                </li>
-              
-                <li class="styledocer-menu-item">
                   <a href="section-messages.html"><span class="styledocer-name">Messages</span></a>
                   
                   <ul class="styledocer-menu-child">
@@ -78,7 +73,11 @@
                       
                     
                       
-                        <li class="styledocer-menu-item"><a href="#section-Icon"><span class="styledocer-name">Icon</span></a></li>
+                        <li class="styledocer-menu-item"><a href="#section-Content"><span class="styledocer-name">Content</span></a></li>
+                      
+                    
+                      
+                        <li class="styledocer-menu-item"><a href="#section-Header"><span class="styledocer-name">Header</span></a></li>
                       
                     
                       
@@ -160,8 +159,12 @@
               <h1 class="styledocer-title">Messages</h1>
               <div class="styledocer-description">
                 <p>Messages are elements to display a piece of information that stands out from most of the other content.</p>
-<p><div class="message">This is a generic message.</div></p>
-<pre><code class="lang-html">&lt;div class=&quot;message&quot;&gt;This is a generic message.&lt;/div&gt;
+<p><div class="message">
+  <header>This is a generic message</header>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;message&quot;&gt;
+  &lt;header&gt;This is a generic message&lt;/header&gt;
+&lt;/div&gt;
 </code></pre>
 
               </div>
@@ -169,18 +172,83 @@
               
             </section>
           
-            <section id="section-Icon" class="styledocer-section">
-              <h1 class="styledocer-title">Icon</h1>
+            <section id="section-Content" class="styledocer-section">
+              <h1 class="styledocer-title">Content</h1>
               <div class="styledocer-description">
-                <p>Messages element can also have an icon.</p>
+                <p>In addition to a header, you can also have content for the message.</p>
+<p><div class="message safe">
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+  </header>
+  <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae quam imperdiet, mollis lorem in, volutpat diam. Donec fermentum, tortor non consequat posuere, turpis mauris fringilla lorem, vel laoreet magna nulla sed lectus. Sed ac ullamcorper orci. Praesent pulvinar ex.<p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;message safe&quot;&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;This is a safe message.
+  &lt;/header&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae quam imperdiet, mollis lorem in, volutpat diam. Donec fermentum, tortor non consequat posuere, turpis mauris fringilla lorem, vel laoreet magna nulla sed lectus. Sed ac ullamcorper orci. Praesent pulvinar ex.&lt;p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+      &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>You can also have content with a header.</p>
+<p><div class="message safe">
+  <div class="content">
+    Some simple message.
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;message safe&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    Some simple message.
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+              </div>
+              
+              
+            </section>
+          
+            <section id="section-Header" class="styledocer-section">
+              <h1 class="styledocer-title">Header</h1>
+              <div class="styledocer-description">
+                <p>Messages can have a header.</p>
 <p>If you are using an icon, then you must wrap you message content in an element with the <code>content</code> class.</p>
 <p><div class="message">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-  <div class="content">This is a generic message.</div>
+  <header>
+    This is a generic message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;message&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a generic message.&lt;/div&gt;
+  &lt;header&gt;
+    This is a generic message.
+  &lt;/header&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Header can also have an icon my adding the <code>with-icon</code> class to the header.</p>
+<p><div class="message safe">
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+  </header>
+</div></p>
+<pre><code class="lang-html">&lt;div class=&quot;message safe&quot;&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;This is a safe message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 
@@ -195,42 +263,50 @@
                 <p>There are a number of different states that a message can be in that determine the coloring on the message box.</p>
 <p>You can add the <code>safe</code> class to add a greenish color.</p>
 <p><div class="message safe">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />
-  <div class="content">This is a generic message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg" />This is a safe message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;message safe&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a generic message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/check.svg&quot; /&gt;This is a safe message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 <p>You can add the <code>notice</code> class to add a blueish color.</p>
 <p><div class="message notice">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />
-  <div class="content">This is a generic message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg" />This is a notice message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;message notice&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a generic message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/info.svg&quot; /&gt;This is a notice message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 <p>You can add the <code>caution</code> class to add a yellowish color.</p>
 <p><div class="message caution">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />
-  <div class="content">This is a generic message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" />This is a caution message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;message caution&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a generic message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;This is a caution message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 <p>You can add the <code>danger</code> class to add a redish color.</p>
 <p><div class="message danger">
-  <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />
-  <div class="content">This is a generic message.</div>
+  <header class="with-icon">
+    <img class="icon svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg" />This is a danger message.
+  </header>
 </div></p>
 <pre><code class="lang-html">&lt;div class=&quot;message danger&quot;&gt;
-  &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a generic message.&lt;/div&gt;
+  &lt;header class=&quot;with-icon&quot;&gt;
+    &lt;img class=&quot;icon svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/x.svg&quot; /&gt;This is a danger message.
+  &lt;/header&gt;
 &lt;/div&gt;
 </code></pre>
 
