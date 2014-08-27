@@ -142,7 +142,8 @@ $color-gallery: hsla(0, 0%, 93%, 1) !default;
  */
 $color-white: hsla(0, 0%, 100%, 1) !default;
 $color-white-d15: hsla(0, 0%, 85%, 1) !default;
-
+$color-link-water: hsla(217.1, 53.8%, 92.4%, 1.0) !default;
+$color-danube: hsla(217.2, 58.1%, 66.3%, 1.0) !default;
 /**
  * @section Variables
  * @subsection Percentage
@@ -178,6 +179,7 @@ $percentage-lightest: 30% !default;
 $font-size: 1.3rem !default;
 $font-family: sans-serif !default;
 $color-text: $color-tundora !default;
+$color-light-text: $color-white !default;
 
 /**
  * @section Variables
@@ -672,7 +674,7 @@ $border-options-ac: $border-input !default;
 $background-color-options-ac: $color-white !default;
 $max-height-options-ac: 300px !default;
 $padding-option-ac: 3px 6px !default;
-$background-color-option-is-focused-ac: #E1E9F6 !default;
+$background-color-option-is-focused-ac: $color-link-water !default;
 $box-shadow-options-ac: $box-shadow-focused-input !default;
 $box-shadow-options-valid-ac: $box-shadow-valid-ie !default;
 $box-shadow-options-invalid-ac: $box-shadow-invalid-ie !default;
@@ -719,6 +721,52 @@ $z-index-non-blocking-sl: 10000 !default;
 $z-index-sl: 10001 !default;
 $z-index-content-rp: 11000 !default;
 
+/**
+ * @section Variables
+ * @subsection Tables
+ *
+ * These are the variables that control the look and feel of tables.
+ *
+ * @var $margin-table
+ * @var $background-color-head-table
+ * @var $background-color-row-even-table
+ * @var $color-head-table
+ * @var $padding-cell-table
+ * @var $border-cell-table
+ */
+$margin-table: 5px !default;
+$background-color-head-table: $color-danube !default;
+$background-color-row-even-table: $color-link-water !default;
+$color-head-table: $color-white !default;
+$padding-cell-table: 5px !default;
+$border-cell-table: 1px solid $color-black !default;
+
+/**
+ * @section Variables
+ * @subsection Loading Indicator
+ *
+ * These are the variables that control the look and feel of the loading indicator.
+ *
+ * @var $number-of-indicators
+ * @var $size-indicator-loading
+ * @var $margin-indicator-loading
+ * @var $height-loading
+ * @var $width-loading
+ * @var $opacity-indicator-low-loading
+ * @var $opacity-indicator-high-loading
+ * @var $background-color-loading
+ * @var $border-loading
+ * @var $animation-time-indicator
+ */
+$number-of-indicators: 4 !default;
+$size-indicator-loading: 8px !default;
+$margin-indicator-loading: 3px !default;
+$height-loading: $size-indicator-loading + ($margin-indicator-loading * 2) !default;
+$width-loading: ($size-indicator-loading * $number-of-indicators) + ($margin-indicator-loading * ($number-of-indicators * 2)) !default;
+$opacity-indicator-low-loading: 0 !default;
+$opacity-indicator-high-loading: .80 !default;
+$background-color-loading: $color-tundora !default;
+$border-loading: 1px solid $color-black !default;
 
 //neat variables
 $max-width: 100%;

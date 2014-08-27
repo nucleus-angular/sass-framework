@@ -226,6 +226,14 @@ select {
   width: $width-text-input;
 }
 
+select,
+input:not([type="checkbox"]):not([type="radio"]) {
+  &.inline {
+    width: auto;
+    margin: 0 3px;
+  }
+}
+
 .input-element {
   position: relative;
   padding: $padding-ie;
@@ -358,7 +366,6 @@ select {
     textarea,
     .static-data {
       display: inline-block;
-      width: auto;
     }
   }
 

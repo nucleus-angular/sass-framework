@@ -10,15 +10,21 @@
  *
  * ```html
  * <ul>
- *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (auto removed in 2 seconds)</a></li>
- *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (auto removed in 2 seconds)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (hit escape to close)</a></li>
+ *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (hit escape to close)</a></li>
  * </ul>
  * <div class="revealing-panel">
  *   <div class="site-overlay"></div>
- *   <div class="content">Revealing panel content</div>
+ *   <div class="content">
+ *     Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ *     BOTTOM!!!
+ *   </div>
  * </div>
  * ```
  *
@@ -29,11 +35,13 @@
  *     var position = $(this).data('position');
  *     $('.revealing-panel').addClass('is-active').addClass(position);
  *     $('.site-overlay').addClass('is-active');
+ *   });
  *
- *     setTimeout(function() {
- *       $('.revealing-panel').removeClass('is-active').removeClass(position);
+ *   $(document).keydown(function(event) {
+ *     if(event.which === 27) {
+ *       $('.revealing-panel').removeClass('is-active').removeClass('center left top right bottom');
  *       $('.site-overlay').removeClass('is-active');
- *     }, 2000);
+ *     }
  *   });
  * });
  * </script>
@@ -218,7 +226,7 @@
     position: fixed;
     z-index: $z-index-content-rp;
     background-color: $background-color-content-rp;
-    overflow: hidden;
+    overflow: scroll;
     display: none;
     padding: $padding-content-rp;
   }

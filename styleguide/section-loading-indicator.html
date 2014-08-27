@@ -27,7 +27,7 @@
             <h1 class="styledocer-doc-title"><a href="./">Style Guide</a></h1>
           </header>
           <nav class="styledocer-nav">
-            <ul class="styledocer-menu" data-styledocer-ref="Revealing Panel">
+            <ul class="styledocer-menu" data-styledocer-ref="Loading Indicator">
               <li class="styledocer-menu-item"><a href="./index.html"><span class="styledocer-name">Overview</span></a></li>
               
                 <li class="styledocer-menu-item">
@@ -147,62 +147,27 @@
       <div class="styledocer-content">
         <article class="styledocer-article">
           
-            <section id="section-Revealing-Panel" class="styledocer-section first">
-              <h1 class="styledocer-title">Revealing Panel</h1>
+            <section id="section-Loading-Indicator" class="styledocer-section first">
+              <h1 class="styledocer-title">Loading Indicator</h1>
               <div class="styledocer-description">
-                <p>You can display the panel on all 4 sides on the page.</p>
-<p><ul>
-  <li><a class="show-revealing-panel" href data-position="center">click me to show revealing panel center (hit escape to close)</a></li>
-  <li><a class="show-revealing-panel" href data-position="left">click me to show revealing panel left (hit escape to close)</a></li>
-  <li><a class="show-revealing-panel" href data-position="top">click me to show revealing panel top (hit escape to close)</a></li>
-  <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (hit escape to close)</a></li>
-  <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (hit escape to close)</a></li>
-</ul></p>
-<p><div class="revealing-panel">
-  <div class="site-overlay"></div>
-  <div class="content">
-    Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    BOTTOM!!!
+                <p>This is a element you can use to indicator to the user the something is loading</p>
+<p><div style="background-color: gray; width: 500px; height: 300px; position: relative;">
+  <div class="loading u-center">
+    <span class="indicator u-center-vertical"></span>
+    <span class="indicator u-center-vertical"></span>
+    <span class="indicator u-center-vertical"></span>
+    <span class="indicator u-center-vertical"></span>
   </div>
 </div></p>
-<pre><code class="lang-html">&lt;ul&gt;
-  &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;center&quot;&gt;click me to show revealing panel center (hit escape to close)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;left&quot;&gt;click me to show revealing panel left (hit escape to close)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;top&quot;&gt;click me to show revealing panel top (hit escape to close)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;right&quot;&gt;click me to show revealing panel right (hit escape to close)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;bottom&quot;&gt;click me to show revealing panel bottom (hit escape to close)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;revealing-panel&quot;&gt;
-  &lt;div class=&quot;site-overlay&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;content&quot;&gt;
-    Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
-    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-    &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-    BOTTOM!!!
+<pre><code class="lang-html">&lt;div style=&quot;background-color: gray; width: 500px; height: 300px; position: relative;&quot;&gt;
+  &lt;div class=&quot;loading u-center&quot;&gt;
+    &lt;span class=&quot;indicator u-center-vertical&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;indicator u-center-vertical&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;indicator u-center-vertical&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;indicator u-center-vertical&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('.show-revealing-panel').click(function(event) {
-    event.preventDefault();
-    var position = $(this).data('position');
-    $('.revealing-panel').addClass('is-active').addClass(position);
-    $('.site-overlay').addClass('is-active');
-  });
-
-  $(document).keydown(function(event) {
-    if(event.which === 27) {
-      $('.revealing-panel').removeClass('is-active').removeClass('center left top right bottom');
-      $('.site-overlay').removeClass('is-active');
-    }
-  });
-});
-</script>
 
               </div>
               

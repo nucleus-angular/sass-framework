@@ -2,6 +2,10 @@
 
 ## master
 
+- revealing panel now defaults to auto scrolling content
+- can now mark select and text inputs independently as inline
+- added specific loading indicator
+- added default table styles
 - move variables inclusion outside of main framework include (to make more flexible)
 - major refactor of form styling
 - add !important to utility classes

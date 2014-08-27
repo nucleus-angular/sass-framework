@@ -1,0 +1,83 @@
+/**
+ * @section Tables
+ *
+ * These are how tables look by default
+ *
+ * ```html
+ * <table>
+ *   <thead>
+ *     <tr>
+ *       <th>Column 1</th>
+ *       <th>Column 2</th>
+ *       <th>Column 3</th>
+ *       <th>Column 4</th>
+ *       <th>Column 5</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Row 1-1</td>
+ *       <td>Row 1-2</td>
+ *       <td>Row 1-3</td>
+ *       <td>Row 1-4</td>
+ *       <td>Row 1-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 2-1</td>
+ *       <td>Row 2-2</td>
+ *       <td>Row 2-3</td>
+ *       <td>Row 2-4</td>
+ *       <td>Row 2-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 3-1</td>
+ *       <td>Row 3-2</td>
+ *       <td>Row 3-3</td>
+ *       <td>Row 3-4</td>
+ *       <td>Row 3-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 4-1</td>
+ *       <td>Row 4-2</td>
+ *       <td>Row 4-3</td>
+ *       <td>Row 4-4</td>
+ *       <td>Row 4-5</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Row 5-1</td>
+ *       <td>Row 5-2</td>
+ *       <td>Row 5-3</td>
+ *       <td>Row 5-4</td>
+ *       <td>Row 5-5</td>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ * ```
+ */
+table {
+    margin: $margin-table;
+}
+
+thead tr {
+    background-color: $background-color-head-table;
+    color: $color-head-table;
+}
+
+tbody tr:nth-child(even) {
+    background-color: $background-color-row-even-table;
+}
+
+th,
+td {
+    padding: $padding-cell-table;
+    border-top: $border-cell-table;
+    border-bottom: $border-cell-table;
+
+    &:first-child {
+      border-left: $border-cell-table;
+    }
+
+    &:last-child {
+      border-right: $border-cell-table;
+    }
+}

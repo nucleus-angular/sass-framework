@@ -7,26 +7,11 @@
 /**
  * @section Animations
  * subsection Fade In
- * @animation fadeIn
+ * @animation fade-in
  *
  * Provides a smooth animation of the element's `opacity` from `0` to `1`.
  */
-@-webkit-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@-moz-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@-o-keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
-@keyframes fadeIn {
+@include keyframes(fade-in) {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -34,26 +19,11 @@
 /**
  * @section Animations
  * @subsection Fade Out
- * @animation fadeOut
+ * @animation fade-out
  *
  * Provides a smooth animation of the element's `opacity` from `1` to `0` and also adds `display: none` at the end of the animation.
  */
-@-webkit-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;display: none;}
-}
-
-@-moz-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;display: none;}
-}
-
-@-o-keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;display: none;}
-}
-
-@keyframes fadeOut {
+@include keyframes(fade-out) {
   0% {opacity: 1;}
   100% {opacity: 0;display: none;}
 }

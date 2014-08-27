@@ -1,0 +1,59 @@
+/**
+ * @section Loading Indicator
+ *
+ * This is a element you can use to indicator to the user the something is loading
+ *
+ * ```html
+ * <div style="background-color: gray; width: 500px; height: 300px; position: relative;">
+ *   <div class="loading u-center">
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *     <span class="indicator u-center-vertical"></span>
+ *   </div>
+ * </div>
+ * ```
+ */
+@function get-left-loading-indicator($indicator-number) {
+  @return (($indicator-number - 1) * $size-indicator-loading) + (($indicator-number * 2 - 1) * $margin-indicator-loading);
+}
+
+.loading {
+  @include box-sizing(content-box);
+  height: $height-loading;
+  width: $width-loading;
+  background-color: $background-color-loading;
+  border: $border-loading;
+  border-radius: $height-loading / 2;
+
+  .indicator {
+    opacity: 0;//$opacity-indicator-low-loading;
+  }
+
+  @for $i from 1 through $number-of-indicators {
+    .indicator:nth-child(#{$i}) {
+      left: get-left-loading-indicator($i);
+      @include animation(loading-fade $number-of-indicators * .2s linear .1s * ($i - 1) infinite);
+      height: $size-indicator-loading;
+      width: $size-indicator-loading;
+      border-radius: $size-indicator-loading / 2;
+      background-color: $color-white;
+    }
+  }
+}
+
+@include keyframes(loading-fade) {
+  //start clear
+  0% {
+    opacity: 0;
+  }
+
+  //move from high opacity to low opacity
+  1% {
+    opacity: $opacity-indicator-high-loading;
+  }
+
+  100% {
+    opacity: $opacity-indicator-low-loading;
+  }
+}
