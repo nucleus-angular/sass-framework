@@ -1,0 +1,100 @@
+/**
+ * @section Feature Indicator
+ *
+ * This is an element that should be used to indicate features to new users or new features to all users.
+ *
+ * ```html
+ * <div style="width: 24px; height: 24px; border: 1px solid black;">
+ *   <div class="revealing-panel center">
+ *     <div class="feature-indicator handle">
+ *       <span class="indicator"></span>
+ *     </div>
+ *     <div class="site-overlay"></div>
+ *     <div class="content">
+ *       This would be the description of the new feature.  Press escape to close.
+ *     </div>
+ *   </div>
+ * </div>
+ * ```
+ *
+ * <script type="text/javascript">
+ * $(document).ready(function() {
+ *   $('.revealing-panel').click(function(event) {
+ *     event.preventDefault();
+ *     $('.revealing-panel').addClass('is-active');
+ *     $('.site-overlay').addClass('is-active');
+ *     $('.feature-indicator').remove();
+ *   });
+ *
+ *   $(document).keydown(function(event) {
+ *     if(event.which === 27) {
+ *       $('.revealing-panel').removeClass('is-active').remove();
+ *     }
+ *   });
+ * });
+ * </script>
+ */
+.feature-indicator {
+  @include animation(feature-indicator-fade $duration-fade-animation-fi linear 0s infinite);
+  display: inline-block;
+  position: absolute;
+  border: $border-size-fi solid $background-color-fi;
+  cursor: pointer;
+  border-radius: 50%;
+
+  .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include animation(indicator-fade $duration-fade-animation-fi linear 0s infinite);
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $background-color-fi;
+  }
+}
+
+@include keyframes(indicator-fade) {
+  0% {
+    opacity: $opacity-start-fi;
+    width: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    height: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    margin: $border-content-margin-fi;
+  }
+
+  50% {
+    opacity: $opacity-end-fi;
+    width: $size-end-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    height: $size-end-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    margin: $border-content-margin-fi;
+  }
+
+  100% {
+    opacity: $opacity-start-fi;
+    width: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    height: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
+    margin: $border-content-margin-fi;
+  }
+}
+
+@include keyframes(feature-indicator-fade) {
+  0% {
+    width: $size-start-fi - $border-size-fi;
+    height: $size-start-fi - $border-size-fi;
+    margin: ($size-end-fi - $size-start-fi) / 2;
+    border-color: transparentize($background-color-fi, .7);
+  }
+
+  50% {
+    width: $size-end-fi - $border-size-fi;
+    height: $size-end-fi - $border-size-fi;
+    margin: 0;
+    border-color: transparentize($background-color-fi, .9);
+  }
+
+  100% {
+    width: $size-start-fi - $border-size-fi;
+    height: $size-start-fi - $border-size-fi;
+    margin: ($size-end-fi - $size-start-fi) / 2;
+    border-color: transparentize($background-color-fi, .7);
+  }
+}

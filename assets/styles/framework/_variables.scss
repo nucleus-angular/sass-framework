@@ -768,5 +768,29 @@ $opacity-indicator-high-loading: .80 !default;
 $background-color-loading: $color-tundora !default;
 $border-loading: 1px solid $color-black !default;
 
+/**
+ * @section Variables
+ * @subsection Feature Indicator
+ *
+ * These are the variables that control the look and feel for the feature indicator.
+ *
+ * @var $size-start-fi This value must equal at least (`$border-size-fi` * 3) + (`$border-content-margin-fi` * 2) otherwise inner shadow will not work properly
+ * @var $size-end-fi
+ * @var $opacity-start-fi
+ * @var $opacity-end-fi
+ * @var $background-color-fi
+ * @var $duration-fade-animation-fi
+ * @var $border-size-fi
+ * @var $border-content-margin-fi
+ */
+$size-start-fi: 12px !default;
+$size-end-fi: 24px !default;
+$opacity-start-fi: .3 !default;
+$opacity-end-fi: .1 !default;
+$background-color-fi: $color-gray !default;
+$duration-fade-animation-fi: .75s !default;
+$border-size-fi: 2px !default;
+$border-content-margin-fi: 2px !default;
+
 //neat variables
 $max-width: 100%;

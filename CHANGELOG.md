@@ -2,6 +2,7 @@
 
 ## master
 
+- added feature indicator (#1)
 - revealing panel now defaults to auto scrolling content
 - can now mark select and text inputs independently as inline
 - added specific loading indicator

@@ -27,7 +27,7 @@
             <h1 class="styledocer-doc-title"><a href="./">Style Guide</a></h1>
           </header>
           <nav class="styledocer-nav">
-            <ul class="styledocer-menu" data-styledocer-ref="Site Overlay">
+            <ul class="styledocer-menu" data-styledocer-ref="Feature Indicator">
               <li class="styledocer-menu-item"><a href="./index.html"><span class="styledocer-name">Overview</span></a></li>
               
                 <li class="styledocer-menu-item">
@@ -152,24 +152,46 @@
       <div class="styledocer-content">
         <article class="styledocer-article">
           
-            <section id="section-Site-Overlay" class="styledocer-section first">
-              <h1 class="styledocer-title">Site Overlay</h1>
+            <section id="section-Feature-Indicator" class="styledocer-section first">
+              <h1 class="styledocer-title">Feature Indicator</h1>
               <div class="styledocer-description">
-                <p>A site overlay is an element that fades everything behind it (z-index wise) in order to focus attention to anything above the site overlay.</p>
-<p><a class="show-site-overlay" href>click me to show site overlay (auto removed in 2 seconds)</a></p>
-<p><div class="site-overlay"></div></p>
-<pre><code class="lang-html">&lt;a class=&quot;show-site-overlay&quot; href&gt;click me to show site overlay (auto removed in 2 seconds)&lt;/a&gt;
-&lt;div class=&quot;site-overlay&quot;&gt;&lt;/div&gt;
+                <p>This is an element that should be used to indicate features to new users or new features to all users.</p>
+<p><div style="width: 24px; height: 24px; border: 1px solid black;">
+  <div class="revealing-panel center">
+    <div class="feature-indicator handle">
+      <span class="indicator"></span>
+    </div>
+    <div class="site-overlay"></div>
+    <div class="content">
+      This would be the description of the new feature.  Press escape to close.
+    </div>
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;width: 24px; height: 24px; border: 1px solid black;&quot;&gt;
+  &lt;div class=&quot;revealing-panel center&quot;&gt;
+    &lt;div class=&quot;feature-indicator handle&quot;&gt;
+      &lt;span class=&quot;indicator&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;site-overlay&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      This would be the description of the new feature.  Press escape to close.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.show-site-overlay').click(function(event) {
+  $('.revealing-panel').click(function(event) {
     event.preventDefault();
+    $('.revealing-panel').addClass('is-active');
     $('.site-overlay').addClass('is-active');
+    $('.feature-indicator').remove();
+  });
 
-    setTimeout(function() {
-    $('.site-overlay').removeClass('is-active');
-    }, 2000);
+  $(document).keydown(function(event) {
+    if(event.which === 27) {
+      $('.revealing-panel').removeClass('is-active').remove();
+    }
   });
 });
 </script>
