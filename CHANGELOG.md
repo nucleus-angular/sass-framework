@@ -2,8 +2,10 @@
 
 ## master
 
+- center positioning for revealing panel now centers horizontally but has fixed top
+- removed all default heights/widths for revealing panel positions
 - added feature indicator (#1)
-- revealing panel now defaults to auto scrolling content
+- revealing panel content now defaults to auto instead of scroll
 - can now mark select and text inputs independently as inline
 - added specific loading indicator
 - added default table styles

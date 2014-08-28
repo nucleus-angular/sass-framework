@@ -366,6 +366,10 @@ input:not([type="checkbox"]):not([type="radio"]) {
     textarea,
     .static-data {
       display: inline-block;
+
+      //having this property set can make it harder to override width (which is going to be a common use case) so leaving it out and just required it be
+      //manually set any time an inline input element is used (in order to not require a overly specific selector to override)
+      //width: auto;
     }
   }
 

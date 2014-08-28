@@ -30,16 +30,28 @@
  *
  * <script type="text/javascript">
  * $(document).ready(function() {
+ *   var cssSizes = {
+ *     center: {width: '500px'},
+ *     left: {width: '500px'},
+ *     right: {width: '500px'},
+ *     top: {height: '500px'},
+ *     bottom: {height: '500px'}
+ *   };
+ *   var clearCss = {width: '', height: ''};
+ *
  *   $('.show-revealing-panel').click(function(event) {
  *     event.preventDefault();
  *     var position = $(this).data('position');
+ *
+ *     $('.revealing-panel .content').css(cssSizes[position]);
  *     $('.revealing-panel').addClass('is-active').addClass(position);
  *     $('.site-overlay').addClass('is-active');
  *   });
  *
  *   $(document).keydown(function(event) {
  *     if(event.which === 27) {
- *       $('.revealing-panel').removeClass('is-active').removeClass('center left top right bottom');
+ *       $('.revealing-panel').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
+ *       $('.revealing-panel .content').css(clearCss);
  *       $('.site-overlay').removeClass('is-active');
  *     }
  *   });
@@ -110,7 +122,7 @@
 // }
 
 .revealing-panel {
-  //useful for want to have a revealing panel within a element in the page instead of on the page itself
+  //useful for want to have a revealing panel within an element in the page instead of on the page itself
   &.absolute {
     > .content {
       position: absolute;
@@ -127,18 +139,25 @@
   }*/
   &.center {
     > .content {
-      top: 50%;
-      left: 50%;
+      //in order to support changing height and width on a fixed positioned element that should remain centered, we need to make the top a static position and
+      //specific a width on the element.
+
+      //a static top will allow the height of the element to expand and contracted automatically as needed (height should not have to be set)
+      top: 50px;
+
+      //setting a left/right of 0 with a margin of 0 auto will allow the element to remain centered as the width of the element is changed
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      //this prevents the content from going off the bottom of the screen.  the default is a conservative number (500px) however it should probably be overriden
+      //in javascript by calculating the window size so you can make use of the space on the bottom when available ( and the default can be changed).
+      max-height: 500px;
+
       border-radius: $border-radius-center-rp;
       display: none;
-      //opacity: 1;
       border: $border-rp;
-
-      //these handle center positioning
-      //these are not variables as it is not expect for these values to be consistent through the application
-      height: 500px;
-      width: 500px;
-      margin: calc(-500px / 2) 0 0 calc(-500px / 2);
+      //opacity: 1;
 
       /*&.reveal,
       &.reveal-add,
@@ -154,7 +173,7 @@
     &.is-active {
       > .content {
         //these are not variables as it is not expect for these values to be consistent through the application
-        width: 500px;
+        //width: 500px;
       }
     }
 
@@ -171,8 +190,8 @@
   &.right {
     &.is-active {
       > .content {
-        //these are not variables as it is not expect for these values to be consistent through the application
-        width: 500px;
+        //this are not set as it is not expect for these values to be consistent for each instance of a revealing panel
+        //width: 500px;
       }
     }
 
@@ -189,8 +208,8 @@
   &.top {
     &.is-active {
       > .content {
-        //these are not variables as it is not expect for these values to be consistent through the application
-        height: 500px;
+        //this are not set as it is not expect for these values to be consistent for each instance of a revealing panel
+        //height: 500px;
       }
     }
 
@@ -207,8 +226,8 @@
   &.bottom {
     &.is-active {
       > .content {
-        //these are not variables as it is not expect for these values to be consistent through the application
-        height: 500px;
+        //this are not set as it is not expect for these values to be consistent for each instance of a revealing panel
+        //height: 500px;
       }
     }
 
@@ -226,7 +245,7 @@
     position: fixed;
     z-index: $z-index-content-rp;
     background-color: $background-color-content-rp;
-    overflow: scroll;
+    overflow: auto;
     display: none;
     padding: $padding-content-rp;
   }
