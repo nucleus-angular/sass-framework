@@ -517,11 +517,15 @@ $background-color-indicator-pb: rgb(230, 230, 230) !default;
  * @var $border-rp
  * @var $background-color-content-rp
  * @var $padding-content-rp
+ * @var $top-content-center-rp
+ * @var $max-height-content-center-rp
  */
 $border-radius-center-rp: 5px !default;
 $border-rp: 1px solid $color-black !default;
 $background-color-content-rp: $color-white !default;
 $padding-content-rp: 8px !default;
+$top-content-center-rp: 50px !default;
+$max-height-content-center-rp: 500px !default;
 
 /**
  * @section Variables

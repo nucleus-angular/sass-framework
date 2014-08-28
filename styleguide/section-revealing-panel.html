@@ -193,16 +193,28 @@
 </code></pre>
 <script type="text/javascript">
 $(document).ready(function() {
+  var cssSizes = {
+    center: {width: '500px'},
+    left: {width: '500px'},
+    right: {width: '500px'},
+    top: {height: '500px'},
+    bottom: {height: '500px'}
+  };
+  var clearCss = {width: '', height: ''};
+
   $('.show-revealing-panel').click(function(event) {
     event.preventDefault();
     var position = $(this).data('position');
+
+    $('.revealing-panel .content').css(cssSizes[position]);
     $('.revealing-panel').addClass('is-active').addClass(position);
     $('.site-overlay').addClass('is-active');
   });
 
   $(document).keydown(function(event) {
     if(event.which === 27) {
-      $('.revealing-panel').removeClass('is-active').removeClass('center left top right bottom');
+      $('.revealing-panel').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
+      $('.revealing-panel .content').css(clearCss);
       $('.site-overlay').removeClass('is-active');
     }
   });

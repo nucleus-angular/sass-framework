@@ -143,7 +143,7 @@
       //specific a width on the element.
 
       //a static top will allow the height of the element to expand and contracted automatically as needed (height should not have to be set)
-      top: 50px;
+      top: $top-content-center-rp;
 
       //setting a left/right of 0 with a margin of 0 auto will allow the element to remain centered as the width of the element is changed
       left: 0;
@@ -151,8 +151,8 @@
       margin: 0 auto;
 
       //this prevents the content from going off the bottom of the screen.  the default is a conservative number (500px) however it should probably be overriden
-      //in javascript by calculating the window size so you can make use of the space on the bottom when available ( and the default can be changed).
-      max-height: 500px;
+      //in javascript by calculating the window size so you can make use of the space on the bottom when available (and the default can be changed).
+      max-height: $max-height-content-center-rp;
 
       border-radius: $border-radius-center-rp;
       display: none;
