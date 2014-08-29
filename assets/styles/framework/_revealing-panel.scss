@@ -16,8 +16,8 @@
  *   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (hit escape to close)</a></li>
  *   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (hit escape to close)</a></li>
  * </ul>
- * <div class="revealing-panel">
- *   <div class="site-overlay"></div>
+ * <div class="revealing-panel panel1">
+ *   <div class="site-overlay overlay1"></div>
  *   <div class="content">
  *     Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
  *     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -27,6 +27,27 @@
  *   </div>
  * </div>
  * ```
+ *
+ * If you know what the height is going to be a want a revealing panel to show true center, you can set the following properties on the panel's content elemwnt
+ *
+ * - `height`: [whatever value you know it to be]
+ * - `top`: `0`
+ * - `bottom`: `0`
+ * - `margin`: `auto`
+ *
+ * ```html
+ * <ul>
+ *   <li><a class="show-revealing-panel2" href data-position="center">click me to show revealing panel at true center (hit escape to close)</a></li>
+ * </ul>
+ * <div class="revealing-panel panel2">
+ *   <div class="site-overlay overlay2"></div>
+ *   <div class="content" style="top: 0; bottom: 0; margin: auto; height: 100px; width: 500px;">
+ *     Revealing panel content 2.
+ *   </div>
+ * </div>
+ * ```
+ *
+ *
  *
  * <script type="text/javascript">
  * $(document).ready(function() {
@@ -43,16 +64,26 @@
  *     event.preventDefault();
  *     var position = $(this).data('position');
  *
- *     $('.revealing-panel .content').css(cssSizes[position]);
- *     $('.revealing-panel').addClass('is-active').addClass(position);
- *     $('.site-overlay').addClass('is-active');
+ *     $('.panel1 .content').css(cssSizes[position]);
+ *     $('.panel1').addClass('is-active').addClass(position);
+ *     $('.overlay1').addClass('is-active');
+ *   });
+ *
+ *   $('.show-revealing-panel2').click(function(event) {
+ *     event.preventDefault();
+ *     var position = $(this).data('position');
+ *
+ *     $('.panel2').addClass('is-active').addClass(position);
+ *     $('.overlay2').addClass('is-active');
  *   });
  *
  *   $(document).keydown(function(event) {
  *     if(event.which === 27) {
- *       $('.revealing-panel').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
- *       $('.revealing-panel .content').css(clearCss);
- *       $('.site-overlay').removeClass('is-active');
+ *       $('.panel1').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
+ *       $('.panel2').removeClass('is-active').removeClass('center left top right bottom');
+ *       $('.panel1 .content').css(clearCss);
+ *       $('.overlay1').removeClass('is-active');
+ *       $('.overlay2').removeClass('is-active');
  *     }
  *   });
  * });

@@ -163,8 +163,8 @@
   <li><a class="show-revealing-panel" href data-position="right">click me to show revealing panel right (hit escape to close)</a></li>
   <li><a class="show-revealing-panel" href data-position="bottom">click me to show revealing panel bottom (hit escape to close)</a></li>
 </ul></p>
-<p><div class="revealing-panel">
-  <div class="site-overlay"></div>
+<p><div class="revealing-panel panel1">
+  <div class="site-overlay overlay1"></div>
   <div class="content">
     Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -180,14 +180,40 @@
   &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;right&quot;&gt;click me to show revealing panel right (hit escape to close)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class=&quot;show-revealing-panel&quot; href data-position=&quot;bottom&quot;&gt;click me to show revealing panel bottom (hit escape to close)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;revealing-panel&quot;&gt;
-  &lt;div class=&quot;site-overlay&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;revealing-panel panel1&quot;&gt;
+  &lt;div class=&quot;site-overlay overlay1&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;content&quot;&gt;
     Revealing panel content.  The content auto set the over to scroll, just ahead and just try...
     &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     BOTTOM!!!
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>If you know what the height is going to be a want a revealing panel to show true center, you can set the following properties on the panel&#39;s content elemwnt</p>
+<ul>
+<li><code>height</code>: [whatever value you know it to be]</li>
+<li><code>top</code>: <code>0</code></li>
+<li><code>bottom</code>: <code>0</code></li>
+<li><code>margin</code>: <code>auto</code></li>
+</ul>
+<p><ul>
+  <li><a class="show-revealing-panel2" href data-position="center">click me to show revealing panel at true center (hit escape to close)</a></li>
+</ul></p>
+<p><div class="revealing-panel panel2">
+  <div class="site-overlay overlay2"></div>
+  <div class="content" style="top: 0; bottom: 0; margin: auto; height: 100px; width: 500px;">
+    Revealing panel content 2.
+  </div>
+</div></p>
+<pre><code class="lang-html">&lt;ul&gt;
+  &lt;li&gt;&lt;a class=&quot;show-revealing-panel2&quot; href data-position=&quot;center&quot;&gt;click me to show revealing panel at true center (hit escape to close)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;revealing-panel panel2&quot;&gt;
+  &lt;div class=&quot;site-overlay overlay2&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;content&quot; style=&quot;top: 0; bottom: 0; margin: auto; height: 100px; width: 500px;&quot;&gt;
+    Revealing panel content 2.
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -206,16 +232,26 @@ $(document).ready(function() {
     event.preventDefault();
     var position = $(this).data('position');
 
-    $('.revealing-panel .content').css(cssSizes[position]);
-    $('.revealing-panel').addClass('is-active').addClass(position);
-    $('.site-overlay').addClass('is-active');
+    $('.panel1 .content').css(cssSizes[position]);
+    $('.panel1').addClass('is-active').addClass(position);
+    $('.overlay1').addClass('is-active');
+  });
+
+  $('.show-revealing-panel2').click(function(event) {
+    event.preventDefault();
+    var position = $(this).data('position');
+
+    $('.panel2').addClass('is-active').addClass(position);
+    $('.overlay2').addClass('is-active');
   });
 
   $(document).keydown(function(event) {
     if(event.which === 27) {
-      $('.revealing-panel').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
-      $('.revealing-panel .content').css(clearCss);
-      $('.site-overlay').removeClass('is-active');
+      $('.panel1').removeClass('is-active').css(clearCss).removeClass('center left top right bottom');
+      $('.panel2').removeClass('is-active').removeClass('center left top right bottom');
+      $('.panel1 .content').css(clearCss);
+      $('.overlay1').removeClass('is-active');
+      $('.overlay2').removeClass('is-active');
     }
   });
 });
