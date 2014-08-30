@@ -2,6 +2,7 @@
 
 ## master
 
+- added input group
 - center positioning for revealing panel now centers horizontally but has fixed top
 - removed all default heights/widths for revealing panel positions
 - added feature indicator (#1)

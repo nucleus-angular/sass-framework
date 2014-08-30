@@ -259,6 +259,11 @@ input:not([type="checkbox"]):not([type="radio"]) {
    * #inline-form .input-element > label:first-child {
    *   width: 200px;
    * }
+   * #inline-form .input-element input:not([type="checkbox"]):not([type="radio"]),
+   * #inline-form .input-element textarea,
+   * #inline-form .input-element select {
+   *   width: 400px;
+   * }
    * </style>
    * ```html
    * <form id="inline-form">
@@ -452,6 +457,57 @@ input:not([type="checkbox"]):not([type="radio"]) {
       color: $color-safe;
     }
   }
+}
+
+/**
+ * @section Forms
+ * @subsection Input Groups
+ *
+ * If you wish to group input element togther inline, group them in an element with the `input-group` class.
+ *
+ * ```html
+ * <form>
+ *   <div class="input-group">
+ *     <div class="input-element">
+ *       <label>
+ *         Phone Number
+ *       </label>
+ *       <input text="text" style="width: 100px;"/>
+ *     </div>
+ *     <div class="input-element">
+ *       <label>
+ *         Ext
+ *       </label>
+ *       <input text="text" style="width: 30px;" />
+ *     </div>
+ *   </div>
+ * </form>
+ * ```
+ *
+ * This also work with inline input elements
+ *
+ * ```html
+ * <form>
+ *   <div class="input-group">
+ *     <div class="input-element inline">
+ *       <label style="width: 125px;">
+ *         Phone Number
+ *       </label>
+ *       <input text="text" style="width: 100px;"/>
+ *     </div>
+ *     <div class="input-element inline">
+ *       <label style="width: 50px;">
+ *         Ext
+ *       </label>
+ *       <input text="text" style="width: 30px;" />
+ *     </div>
+ *   </div>
+ * </form>
+
+ * ```
+ */
+.input-group .input-element {
+  display: inline-block;
 }
 
 
