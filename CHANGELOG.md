@@ -2,6 +2,8 @@
 
 ## master
 
+- fixed text alignment issue with radio and checkboxes
+- added support for `solid-button` class
 - added input group
 - center positioning for revealing panel now centers horizontally but has fixed top
 - removed all default heights/widths for revealing panel positions

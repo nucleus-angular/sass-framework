@@ -143,6 +143,7 @@ select {
 input[type="radio"],
 input[type="checkbox"] {
   margin: $margin-radio-checkbox;
+  vertical-align: middle;
 }
 
 input ~ label {
