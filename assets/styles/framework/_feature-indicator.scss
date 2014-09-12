@@ -35,10 +35,10 @@
  * </script>
  */
 .feature-indicator {
-  @include animation(feature-indicator-fade $duration-fade-animation-fi linear 0s infinite);
+  @include animation(feature-indicator-fade $duration-fade-animation-feature-indicator linear 0s infinite);
   display: inline-block;
   position: absolute;
-  border: $border-size-fi solid $background-color-fi;
+  border: $border-size-feature-indicator solid $background-color-feature-indicator;
   cursor: pointer;
   border-radius: 50%;
 
@@ -46,55 +46,55 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include animation(indicator-fade $duration-fade-animation-fi linear 0s infinite);
+    @include animation(indicator-fade $duration-fade-animation-feature-indicator linear 0s infinite);
     display: inline-block;
     border-radius: 50%;
-    background-color: $background-color-fi;
+    background-color: $background-color-feature-indicator;
   }
 }
 
 @include keyframes(indicator-fade) {
   0% {
-    opacity: $opacity-start-fi;
-    width: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    height: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    margin: $border-content-margin-fi;
+    opacity: $opacity-start-feature-indicator;
+    width: $size-start-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    height: $size-start-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    margin: $border-content-margin-feature-indicator;
   }
 
   50% {
-    opacity: $opacity-end-fi;
-    width: $size-end-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    height: $size-end-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    margin: $border-content-margin-fi;
+    opacity: $opacity-end-feature-indicator;
+    width: $size-end-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    height: $size-end-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    margin: $border-content-margin-feature-indicator;
   }
 
   100% {
-    opacity: $opacity-start-fi;
-    width: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    height: $size-start-fi - ($border-content-margin-fi * 2 + $border-size-fi * 2) - $border-size-fi;
-    margin: $border-content-margin-fi;
+    opacity: $opacity-start-feature-indicator;
+    width: $size-start-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    height: $size-start-feature-indicator - ($border-content-margin-feature-indicator * 2 + $border-size-feature-indicator * 2) - $border-size-feature-indicator;
+    margin: $border-content-margin-feature-indicator;
   }
 }
 
 @include keyframes(feature-indicator-fade) {
   0% {
-    width: $size-start-fi - $border-size-fi;
-    height: $size-start-fi - $border-size-fi;
-    margin: ($size-end-fi - $size-start-fi) / 2;
-    border-color: transparentize($background-color-fi, .7);
+    width: $size-start-feature-indicator - $border-size-feature-indicator;
+    height: $size-start-feature-indicator - $border-size-feature-indicator;
+    margin: ($size-end-feature-indicator - $size-start-feature-indicator) / 2;
+    border-color: transparentize($background-color-feature-indicator, .7);
   }
 
   50% {
-    width: $size-end-fi - $border-size-fi;
-    height: $size-end-fi - $border-size-fi;
+    width: $size-end-feature-indicator - $border-size-feature-indicator;
+    height: $size-end-feature-indicator - $border-size-feature-indicator;
     margin: 0;
-    border-color: transparentize($background-color-fi, .9);
+    border-color: transparentize($background-color-feature-indicator, .9);
   }
 
   100% {
-    width: $size-start-fi - $border-size-fi;
-    height: $size-start-fi - $border-size-fi;
-    margin: ($size-end-fi - $size-start-fi) / 2;
-    border-color: transparentize($background-color-fi, .7);
+    width: $size-start-feature-indicator - $border-size-feature-indicator;
+    height: $size-start-feature-indicator - $border-size-feature-indicator;
+    margin: ($size-end-feature-indicator - $size-start-feature-indicator) / 2;
+    border-color: transparentize($background-color-feature-indicator, .7);
   }
 }

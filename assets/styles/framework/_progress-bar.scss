@@ -24,20 +24,20 @@
  * ```
  */
 .progress-bar {
-  border: $border-pb;
+  border: $border-progress-bar;
   position: relative;
   display: inline-block;
-  min-width: $min-width-pb;
-  height: $height-pb;
+  min-width: $min-width-progress-bar;
+  height: $height-progress-bar;
   overflow: hidden;
   cursor: pointer;
-  border-radius: $border-radius-pb;
+  border-radius: $border-radius-progress-bar;
 
   .indicator {
     position: absolute;
     display: block;
-    height: $height-pb;
-    background-color: $background-color-indicator-pb;
+    height: $height-progress-bar;
+    background-color: $background-color-indicator-progress-bar;
   }
 
   /**

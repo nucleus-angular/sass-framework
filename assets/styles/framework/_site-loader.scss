@@ -37,8 +37,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $background-color-sl;
-  z-index: $z-index-sl;
+  background-color: $background-color-site-loader;
+  z-index: $z-index-site-loader;
   display: none;
 
   &.is-active {
@@ -46,9 +46,9 @@
   }
 
   .text {
-    padding: $padding-text-sl;
-    z-index: $z-index-sl;
-    text-align: $text-align-text-sl;
+    padding: $padding-text-site-loader;
+    z-index: $z-index-site-loader;
+    text-align: $text-align-text-site-loader;
   }
 }
 
@@ -78,12 +78,12 @@
  * </script>
  */
 .non-blocking-loader.message {
-  top: $top-non-blocking-sl;
-  right: $right-non-blocking-sl;
-  margin: $margin-non-blocking-sl;
-  width: $width-non-blocking-sl;
-  text-align: $text-align-non-blocking-sl;
-  padding: $padding-non-blocking-sl;
-  border-radius: $border-radius-non-blocking-sl;
-  z-index: $z-index-non-blocking-sl;
+  top: $top-non-blocking-site-loader;
+  right: $right-non-blocking-site-loader;
+  margin: $margin-non-blocking-site-loader;
+  width: $width-non-blocking-site-loader;
+  text-align: $text-align-non-blocking-site-loader;
+  padding: $padding-non-blocking-site-loader;
+  border-radius: $border-radius-non-blocking-site-loader;
+  z-index: $z-index-non-blocking-site-loader;
 }

@@ -237,7 +237,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
 .input-element {
   position: relative;
-  padding: $padding-ie;
+  padding: $padding-input-element;
 
   .static-data {
     display: block;
@@ -381,10 +381,10 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
   .tooltip,
   .icon {
-    position: $position-label-validator-ie;
-    top: $top-label-validitor-ie;
+    position: $position-label-validator-input-element;
+    top: $top-label-validitor-input-element;
     display: inline-block;
-    margin-left: $margin-label-validator-ie;
+    margin-left: $margin-label-validator-input-element;
   }
 
   /**
@@ -406,7 +406,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
    */
   .message {
     display: block;
-    margin-top: $margin-message-ie;
+    margin-top: $margin-message-input-element;
   }
 
   &:not(.plain) {
@@ -418,7 +418,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
   //       background-color: $background-color-danger;
 
   //       &:focus {
-  //         box-shadow: $box-shadow-invalid-ie;
+  //         box-shadow: $box-shadow-invalid-input-element;
   //       }
   //     }
   //   }
@@ -431,7 +431,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
   //       background-color: $background-color-safe;
 
   //       &:focus {
-  //         box-shadow: $box-shadow-valid-ie;
+  //         box-shadow: $box-shadow-valid-input-element;
   //       }
   //     }
   //   }
@@ -520,7 +520,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
     background-color: $background-color-danger;
 
     &:focus {
-      box-shadow: $box-shadow-invalid-ie;
+      box-shadow: $box-shadow-invalid-input-element;
     }
   }
 }
@@ -533,7 +533,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
     background-color: $background-color-safe;
 
     &:focus {
-      box-shadow: $box-shadow-valid-ie;
+      box-shadow: $box-shadow-valid-input-element;
     }
   }
 }

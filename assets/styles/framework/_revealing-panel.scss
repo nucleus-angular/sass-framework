@@ -174,7 +174,7 @@
       //specific a width on the element.
 
       //a static top will allow the height of the element to expand and contracted automatically as needed (height should not have to be set)
-      top: $top-content-center-rp;
+      top: $top-content-center-revealing-panel;
 
       //setting a left/right of 0 with a margin of 0 auto will allow the element to remain centered as the width of the element is changed
       left: 0;
@@ -183,11 +183,11 @@
 
       //this prevents the content from going off the bottom of the screen.  the default is a conservative number (500px) however it should probably be overriden
       //in javascript by calculating the window size so you can make use of the space on the bottom when available (and the default can be changed).
-      max-height: $max-height-content-center-rp;
+      max-height: $max-height-content-center-revealing-panel;
 
-      border-radius: $border-radius-center-rp;
+      border-radius: $border-radius-center-revealing-panel;
       display: none;
-      border: $border-rp;
+      border: $border-revealing-panel;
       //opacity: 1;
 
       /*&.reveal,
@@ -274,11 +274,11 @@
 
   > .content {
     position: fixed;
-    z-index: $z-index-content-rp;
-    background-color: $background-color-content-rp;
+    z-index: $z-index-content-revealing-panel;
+    background-color: $background-color-content-revealing-panel;
     overflow: auto;
     display: none;
-    padding: $padding-content-rp;
+    padding: $padding-content-revealing-panel;
   }
 
   &.is-active {

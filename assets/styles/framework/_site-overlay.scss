@@ -30,9 +30,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $background-color-so;
-    opacity: $opacity-so;
-    z-index: $z-index-so;
+    background-color: $background-color-site-overlay;
+    opacity: $opacity-site-overlay;
+    z-index: $z-index-site-overlay;
     display: none;
 
     &.is-active {

@@ -108,7 +108,7 @@
  */
 button {
   @include button-size(normal);
-  @include button-color($background-color-button-default, $color-button-default);
+  @include button-color($background-color-button-default, $color-default-button);
 
   border-radius: $border-radius-button;
   position: relative;

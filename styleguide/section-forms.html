@@ -81,6 +81,10 @@
                       
                     
                       
+                        <li class="styledocer-menu-item"><a href="#section-Input-Groups"><span class="styledocer-name">Input Groups</span></a></li>
+                      
+                    
+                      
                         <li class="styledocer-menu-item"><a href="#section-Message"><span class="styledocer-name">Message</span></a></li>
                       
                     
@@ -480,6 +484,11 @@
 #inline-form .input-element > label:first-child {
   width: 200px;
 }
+#inline-form .input-element input:not([type="checkbox"]):not([type="radio"]),
+#inline-form .input-element textarea,
+#inline-form .input-element select {
+  width: 400px;
+}
 </style>
 
 <p><form id="inline-form">
@@ -662,6 +671,83 @@
     &lt;/label&gt;
     &lt;label for=&quot;stacked-radio-yes&quot; /&gt;&lt;input id=&quot;stacked-radio-yes&quot; name=&quot;stackedRadio&quot; type=&quot;radio&quot;&gt; Yes&lt;/label&gt;
     &lt;label for=&quot;stacked-radio-no&quot;&gt;&lt;input id=&quot;stacked-radio-no&quot; name=&quot;stackedRadio&quot; type=&quot;radio&quot; /&gt; No&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+
+              </div>
+              
+              
+            </section>
+          
+            <section id="section-Input-Groups" class="styledocer-section">
+              <h1 class="styledocer-title">Input Groups</h1>
+              <div class="styledocer-description">
+                <p>If you wish to group input element togther inline, group them in an element with the <code>input-group</code> class.</p>
+<p><form>
+  <div class="input-group">
+    <div class="input-element">
+      <label>
+        Phone Number
+      </label>
+      <input text="text" style="width: 100px;"/>
+    </div>
+    <div class="input-element">
+      <label>
+        Ext
+      </label>
+      <input text="text" style="width: 30px;" />
+    </div>
+  </div>
+</form></p>
+<pre><code class="lang-html">&lt;form&gt;
+  &lt;div class=&quot;input-group&quot;&gt;
+    &lt;div class=&quot;input-element&quot;&gt;
+      &lt;label&gt;
+        Phone Number
+      &lt;/label&gt;
+      &lt;input text=&quot;text&quot; style=&quot;width: 100px;&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-element&quot;&gt;
+      &lt;label&gt;
+        Ext
+      &lt;/label&gt;
+      &lt;input text=&quot;text&quot; style=&quot;width: 30px;&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+<p>This also work with inline input elements</p>
+<p><form>
+  <div class="input-group">
+    <div class="input-element inline">
+      <label style="width: 125px;">
+        Phone Number
+      </label>
+      <input text="text" style="width: 100px;"/>
+    </div>
+    <div class="input-element inline">
+      <label style="width: 50px;">
+        Ext
+      </label>
+      <input text="text" style="width: 30px;" />
+    </div>
+  </div>
+</form></p>
+<pre><code class="lang-html">&lt;form&gt;
+  &lt;div class=&quot;input-group&quot;&gt;
+    &lt;div class=&quot;input-element inline&quot;&gt;
+      &lt;label style=&quot;width: 125px;&quot;&gt;
+        Phone Number
+      &lt;/label&gt;
+      &lt;input text=&quot;text&quot; style=&quot;width: 100px;&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;input-element inline&quot;&gt;
+      &lt;label style=&quot;width: 50px;&quot;&gt;
+        Ext
+      &lt;/label&gt;
+      &lt;input text=&quot;text&quot; style=&quot;width: 30px;&quot; /&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </code></pre>

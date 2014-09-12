@@ -20,7 +20,7 @@
    * ```
    */
   .inputs {
-    height: $height-inputs-sq;
+    height: $height-inputs-search-query;
     /**
      * @section Search Query
      * @subsection States
@@ -59,7 +59,7 @@
      */
     &.empty {
       .svg-icon {
-        fill: $color-icon-empty-sq;
+        fill: $color-icon-empty-search-query;
       }
     }
   }
@@ -74,7 +74,7 @@
     resize: none;
 
     //add padding to make room for the validation icon
-    padding-right: $padding-textarea-sq;
+    padding-right: $padding-textarea-search-query;
   }
 
   /**
@@ -115,23 +115,23 @@
    */
   .tooltip {
     position: absolute;
-    top: $top-tooltip-sq;
-    right: $right-tooltip-sq;
+    top: $top-tooltip-search-query;
+    right: $right-tooltip-search-query;
 
     .handle {
       cursor: pointer;
     }
 
     .content {
-      text-align: $text-align-tooltip-content-sq;
-      border: $border-tooltip-content-sq;
-      border-radius: $border-radius-tooltip-content-sq;
+      text-align: $text-align-tooltip-content-search-query;
+      border: $border-tooltip-content-search-query;
+      border-radius: $border-radius-tooltip-content-search-query;
     }
   }
 
   .icon {
     position: absolute;
-    top: $top-tooltip-sq;
-    right: $right-tooltip-sq
+    top: $top-tooltip-search-query;
+    right: $right-tooltip-search-query
   }
 }

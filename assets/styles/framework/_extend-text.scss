@@ -11,7 +11,7 @@
 
   &.auto-complete {
     &.is-active .display {
-      border-radius: $border-radius-et $border-radius-et 0 0;
+      border-radius: $border-radius-extend-text $border-radius-extend-text 0 0;
     }
   }
 
@@ -131,7 +131,7 @@
   }
 
   .display {
-    z-index: $z-index-et;
+    z-index: $z-index-extend-text;
     overflow: hidden;
     height: inherit;
     margin: 0;
@@ -166,18 +166,18 @@
    */
   .auto-complete-options {
     position: absolute;
-    border: $border-options-ac;
-    background-color: $background-color-options-ac;
-    z-index: $z-index-et;
+    border: $border-options-auto-complete;
+    background-color: $background-color-options-auto-complete;
+    z-index: $z-index-extend-text;
     border-top: none;
-    max-height: $max-height-options-ac;
+    max-height: $max-height-options-auto-complete;
     overflow: auto;
     width: 100%;
-    border-radius: 0 0 $border-radius-et $border-radius-et;
-    box-shadow: $box-shadow-options-ac;
+    border-radius: 0 0 $border-radius-extend-text $border-radius-extend-text;
+    box-shadow: $box-shadow-options-auto-complete;
 
     li {
-      padding: $padding-option-ac;
+      padding: $padding-option-auto-complete;
     }
 
     /**
@@ -200,7 +200,7 @@
      * ```
      */
     .is-focused {
-      background-color: $background-color-option-is-focused-ac;
+      background-color: $background-color-option-is-focused-auto-complete;
     }
   }
 
@@ -219,8 +219,8 @@
    */
   .new-indicator {
     position: absolute;
-    top: $top-new-indicator-et;
-    right: $right-new-indicator-et;
+    top: $top-new-indicator-extend-text;
+    right: $right-new-indicator-extend-text;
   }
 }
 
@@ -353,7 +353,7 @@
   .extend-text .auto-complete-options {
     //display the darkened version as this should never show when the input is not selected
     border-color: $border-color-danger;
-    box-shadow: $box-shadow-options-invalid-ac;
+    box-shadow: $box-shadow-options-invalid-auto-complete;
   }
 }
 
@@ -361,6 +361,6 @@
   .extend-text .auto-complete-options {
     //display the darkened version as this should never show when the input is not selected
     border-color: $border-color-safe;
-    box-shadow: $box-shadow-options-valid-ac;
+    box-shadow: $box-shadow-options-valid-auto-complete;
   }
 }

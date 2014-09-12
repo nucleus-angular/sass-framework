@@ -47,19 +47,19 @@
 
   display: inline-block;
   position: relative;
-  color: $color-bdd;
-  font-weight: $font-weight-bdd;
+  color: $color-button-drop-down;
+  font-weight: $font-weight-button-drop-down;
   display: inline-block;
 
   &.is-active {
     button {
       border-bottom: none;
-      border-radius: $border-radius-bdd $border-radius-bdd 0 0;
-      z-index: $z-index-button-is-active-bdd;
+      border-radius: $border-radius-button-drop-down $border-radius-button-drop-down 0 0;
+      z-index: $z-index-button-is-active-button-drop-down;
     }
 
     button {
-      background-color: $background-color-content-bdd;
+      background-color: $background-color-content-button-drop-down;
     }
 
     .content {
@@ -68,15 +68,15 @@
   }
 
   button {
-    z-index: $z-index-button-bdd;
+    z-index: $z-index-button-button-drop-down;
   }
 
   .content {
     display: none;
-    border-radius: 0 $border-radius-bdd $border-radius-bdd $border-radius-bdd;
-    padding: $padding-content-bdd;
-    background-color: $background-color-content-bdd;
-    z-index: $z-index-content-bdd;
+    border-radius: 0 $border-radius-button-drop-down $border-radius-button-drop-down $border-radius-button-drop-down;
+    padding: $padding-content-button-drop-down;
+    background-color: $background-color-content-button-drop-down;
+    z-index: $z-index-content-button-drop-down;
   }
 
   /**
@@ -128,11 +128,11 @@
     }
 
     button {
-      border: $border-bdd;
+      border: $border-button-drop-down;
     }
 
     .content {
-      border: $border-bdd;
+      border: $border-button-drop-down;
 
       //this is something that will probably have to be set manually on a case by case level, this should handle common cases though
       top: 97%;
@@ -159,7 +159,7 @@
     .content {
       left: auto;
       right: 0;
-      border-radius: $border-radius-bdd 0 $border-radius-bdd $border-radius-bdd;
+      border-radius: $border-radius-button-drop-down 0 $border-radius-button-drop-down $border-radius-button-drop-down;
     }
   }
 

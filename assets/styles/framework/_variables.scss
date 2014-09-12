@@ -175,6 +175,8 @@ $percentage-lightest: 30% !default;
  *
  * @var $font-size
  * @var $font-family
+ * @var $color-text
+ * @var $color-light-text
  */
 $font-size: 1.3rem !default;
 $font-family: sans-serif !default;
@@ -244,18 +246,18 @@ $color-caution: $border-color-caution !default;
  * These are the variables that control the looked and feel of the button drop downs.
  *
  *
- * @var $color-bdd
- * @var $background-color-content-bdd
- * @var $border-bdd
- * @var $font-weight-bdd
- * @var $border-radius-bdd
- * @var $padding-content-bdd
+ * @var $color-button-drop-down
+ * @var $background-color-content-button-drop-down
+ * @var $border-button-drop-down
+ * @var $font-weight-button-drop-down
+ * @var $border-radius-button-drop-down
+ * @var $padding-content-button-drop-down
  */
-$color-bdd: $color-white !default;
-$background-color-content-bdd: darken($color-silver-chalice, $percentage-darker) !default;
-$border-bdd: 1px solid $color-black !default;
-$font-weight-bdd: 200 !default;
-$border-radius-bdd: 3px !default;$padding-content-bdd: 5px !default;
+$color-button-drop-down: $color-white !default;
+$background-color-content-button-drop-down: darken($color-silver-chalice, $percentage-darker) !default;
+$border-button-drop-down: 1px solid $color-black !default;
+$font-weight-button-drop-down: 200 !default;
+$border-radius-button-drop-down: 3px !default;$padding-content-button-drop-down: 5px !default;
 
 /**
  * @section Variables
@@ -265,7 +267,7 @@ $border-radius-bdd: 3px !default;$padding-content-bdd: 5px !default;
  *
  *
  * @var $background-color-button-default
- * @var $color-button-default
+ * @var $color-default-button
  * @var $border-radius-button
  * @var $font-weight-button
  * @var $is-uppercased-button
@@ -292,7 +294,7 @@ $background-color-primary-button: $color-chetwode-blue !default;
 $background-color-caution-button: $color-rio-grande !default;
 $background-color-danger-button: $color-medium-carmine !default;
 $background-color-safe-button: $color-apple !default;
-$color-button-default: $color-white !default;
+$color-default-button: $color-white !default;
 $color-primary-button: $color-white !default;
 $color-caution-button: $color-white !default;
 $color-danger-button: $color-white !default;
@@ -357,13 +359,13 @@ $height-header-actions-icon-card: 11px !default;
  *
  * These are the variable the control the look and feel of the extend text.
  *
- * @var $border-radius-et
- * @var $top-new-indicator-et
- * @var $right-new-indicator-et
+ * @var $border-radius-extend-text
+ * @var $top-new-indicator-extend-text
+ * @var $right-new-indicator-extend-text
  */
-$border-radius-et: 5px !default;
-$top-new-indicator-et: 6px !default;
-$right-new-indicator-et: 8px !default;
+$border-radius-extend-text: 5px !default;
+$top-new-indicator-extend-text: 6px !default;
+$right-new-indicator-extend-text: 8px !default;
 
 /**
  * @section Variables
@@ -394,23 +396,23 @@ $height-tag-remove-icon-tagging: 10px !default;
  * @subsection Search Query
  *
  * These are the variable the control the look and feel of the search query.
- * @var $height-input-sq
- * @var $color-icon-empty-sq
- * @var $padding-textarea-sq
- * @var $top-tooltip-sq
- * @var $right-tooltip-sq
- * @var $text-align-tooltip-content-sq
- * @var $border-tooltip-content-sq
- * @var $border-radius-tooltip-content-sq
+ * @var $height-input-search-query
+ * @var $color-icon-empty-search-query
+ * @var $padding-textarea-search-query
+ * @var $top-tooltip-search-query
+ * @var $right-tooltip-search-query
+ * @var $text-align-tooltip-content-search-query
+ * @var $border-tooltip-content-search-query
+ * @var $border-radius-tooltip-content-search-query
  */
-$height-inputs-sq: 25px !default;
-$color-icon-empty-sq: $color-tundora !default;
-$padding-textarea-sq: 30px !default;
-$top-tooltip-sq: 4px !default;
-$right-tooltip-sq: 5px !default;
-$text-align-tooltip-content-sq: center !default;
-$border-tooltip-content-sq: 1px solid $color-gray !default;
-$border-radius-tooltip-content-sq: 5px !default;
+$height-inputs-search-query: 25px !default;
+$color-icon-empty-search-query: $color-tundora !default;
+$padding-textarea-search-query: 30px !default;
+$top-tooltip-search-query: 4px !default;
+$right-tooltip-search-query: 5px !default;
+$text-align-tooltip-content-search-query: center !default;
+$border-tooltip-content-search-query: 1px solid $color-gray !default;
+$border-radius-tooltip-content-search-query: 5px !default;
 
 /**
  * @section Variables
@@ -449,21 +451,21 @@ $margin-radio-checkbox: 3px !default;
  *
  * These are the elements that control the look and feel of the input element.
  *
- * @var $box-shadow-invalid-ie
- * @var $box-shadow-valid-ie
- * @var $padding-ie
- * @var $position-label-validator-ie
- * @var $top-label-validitor-ie
- * @var $margin-label-validator-ie
- * @var $margin-message-ie
+ * @var $box-shadow-invalid-input-element
+ * @var $box-shadow-valid-input-element
+ * @var $padding-input-element
+ * @var $position-label-validator-input-element
+ * @var $top-label-validitor-input-element
+ * @var $margin-label-validator-input-element
+ * @var $margin-message-input-element
  */
-$box-shadow-invalid-ie: 0 0 4px $border-color-danger !default;
-$box-shadow-valid-ie: 0 0 4px $border-color-safe !default;
-$padding-ie: 5px 0 !default;
-$position-label-validator-ie: relative !default;
-$top-label-validitor-ie: 3px !default;
-$margin-label-validator-ie: 0 0 0 5px !default;
-$margin-message-ie: 10px 0 0 0 !default;
+$box-shadow-invalid-input-element: 0 0 4px $border-color-danger !default;
+$box-shadow-valid-input-element: 0 0 4px $border-color-safe !default;
+$padding-input-element: 5px 0 !default;
+$position-label-validator-input-element: relative !default;
+$top-label-validitor-input-element: 3px !default;
+$margin-label-validator-input-element: 0 0 0 5px !default;
+$margin-message-input-element: 10px 0 0 0 !default;
 
 /**
  * @section Variables
@@ -491,21 +493,21 @@ $font-size-header-message: 1.8rem !default;
 
 /**
  * @section Variables
- * @subsection Progress Baar
+ * @subsection Progress Bar
  *
  * These are the variables the control the look and feel for progress bars.
  *
- * @var $border-pb
- * @var $min-width-pb
- * @var $height-pb
- * @var $border-radius-pb
- * @var $background-color-indicator-pb
+ * @var $border-progress-bar
+ * @var $min-width-progress-bar
+ * @var $height-progress-bar
+ * @var $border-radius-progress-bar
+ * @var $background-color-indicator-progress-bar
  */
-$border-pb: 1px solid rgb(180, 180, 180) !default;
-$min-width-pb: 40% !default;
-$height-pb: 16px !default;
-$border-radius-pb: $height-pb / 2 !default;
-$background-color-indicator-pb: rgb(230, 230, 230) !default;
+$border-progress-bar: 1px solid rgb(180, 180, 180) !default;
+$min-width-progress-bar: 40% !default;
+$height-progress-bar: 16px !default;
+$border-radius-progress-bar: $height-progress-bar / 2 !default;
+$background-color-indicator-progress-bar: rgb(230, 230, 230) !default;
 
 /**
  * @section Variables
@@ -513,19 +515,19 @@ $background-color-indicator-pb: rgb(230, 230, 230) !default;
  *
  * These are the variables that control the look and feel of the revealing panel.
  *
- * @var $border-radius-center-rp
- * @var $border-rp
- * @var $background-color-content-rp
- * @var $padding-content-rp
- * @var $top-content-center-rp
- * @var $max-height-content-center-rp
+ * @var $border-radius-center-revealing-panel
+ * @var $border-revealing-panel
+ * @var $background-color-content-revealing-panel
+ * @var $padding-content-revealing-panel
+ * @var $top-content-center-revealing-panel
+ * @var $max-height-content-center-revealing-panel
  */
-$border-radius-center-rp: 5px !default;
-$border-rp: 1px solid $color-black !default;
-$background-color-content-rp: $color-white !default;
-$padding-content-rp: 8px !default;
-$top-content-center-rp: 50px !default;
-$max-height-content-center-rp: 500px !default;
+$border-radius-center-revealing-panel: 5px !default;
+$border-revealing-panel: 1px solid $color-black !default;
+$background-color-content-revealing-panel: $color-white !default;
+$padding-content-revealing-panel: 8px !default;
+$top-content-center-revealing-panel: 50px !default;
+$max-height-content-center-revealing-panel: 500px !default;
 
 /**
  * @section Variables
@@ -533,27 +535,27 @@ $max-height-content-center-rp: 500px !default;
  *
  * These are the variables that control the look and feel of the site loader.
  *
- * @var $background-color-sl
- * @var $padding-text-sl
- * @var $text-align-text-sl
- * @var $border-radius-non-blocking-sl
- * @var $padding-non-blocking-sl
- * @var $top-non-blocking-sl
- * @var $right-non-blocking-sl
- * @var $width-non-blocking-sl
- * @var $margin-non-blocking-sl
- * @var $text-align-non-blocking-sl
+ * @var $background-color-site-loader
+ * @var $padding-text-site-loader
+ * @var $text-align-text-site-loader
+ * @var $border-radius-non-blocking-site-loader
+ * @var $padding-non-blocking-site-loader
+ * @var $top-non-blocking-site-loader
+ * @var $right-non-blocking-site-loader
+ * @var $width-non-blocking-site-loader
+ * @var $margin-non-blocking-site-loader
+ * @var $text-align-non-blocking-site-loader
  */
-$background-color-sl: $color-white !default;
-$padding-text-sl: 50px 0 0 0 !default;
-$text-align-text-sl: center !default;
-$border-radius-non-blocking-sl: 3px !default;
-$padding-non-blocking-sl: 0.25em 0.5em !default;
-$top-non-blocking-sl: 5px !default;
-$right-non-blocking-sl: 50% !default;
-$width-non-blocking-sl: 300px !default;
-$margin-non-blocking-sl: 0 -1 * ($width-non-blocking-sl / 2) 0 0 !default;
-$text-align-non-blocking-sl: center !default;
+$background-color-site-loader: $color-white !default;
+$padding-text-site-loader: 50px 0 0 0 !default;
+$text-align-text-site-loader: center !default;
+$border-radius-non-blocking-site-loader: 3px !default;
+$padding-non-blocking-site-loader: 0.25em 0.5em !default;
+$top-non-blocking-site-loader: 5px !default;
+$right-non-blocking-site-loader: 50% !default;
+$width-non-blocking-site-loader: 300px !default;
+$margin-non-blocking-site-loader: 0 -1 * ($width-non-blocking-site-loader / 2) 0 0 !default;
+$text-align-non-blocking-site-loader: center !default;
 
 /**
  * @section Variables
@@ -561,11 +563,11 @@ $text-align-non-blocking-sl: center !default;
  *
  * These are the variables that control the look and feel of the site overlay.
  *
- * @var $background-color-so
- * @var $opacity-so
+ * @var $background-color-site-overlay
+ * @var $opacity-site-overlay
  */
-$background-color-so: $color-black !default;
-$opacity-so: .5 !default;
+$background-color-site-overlay: $color-black !default;
+$opacity-site-overlay: .5 !default;
 
 /**
  * @section Variables
@@ -573,11 +575,11 @@ $opacity-so: .5 !default;
  *
  * These are the variables the control the look and feel of SVG icons.
  *
- * @var $width-si
- * @var $height-si
+ * @var $width-svg-icon
+ * @var $height-svg-icon
  */
-$width-si: 16px !default;
-$height-si: 16px !default;
+$width-svg-icon: 16px !default;
+$height-svg-icon: 16px !default;
 
 /**
  * @section Variables
@@ -668,20 +670,23 @@ $margin-h6: 0 0 1rem 0 !default;
  *
  * These are the variable the control the look and feel of the auto complete.
  *
- * @var $border-options-ac
- * @var $background-color-options-ac
- * @var $max-height-options-ac
- * @var $padding-options-ac-option-et
- * @var $background-color-option-is-focused-ac
+ * @var $border-options-auto-complete
+ * @var $background-color-options-auto-complete
+ * @var $max-height-options-auto-complete
+ * @var $padding-option-auto-complete
+ * @var $background-color-option-is-focused-auto-complete
+ * @var $box-shadow-options-auto-complete
+ * @var $box-shadow-options-valid-auto-complete
+ * @var $box-shadow-options-invalid-auto-complete
  */
-$border-options-ac: $border-input !default;
-$background-color-options-ac: $color-white !default;
-$max-height-options-ac: 300px !default;
-$padding-option-ac: 3px 6px !default;
-$background-color-option-is-focused-ac: $color-link-water !default;
-$box-shadow-options-ac: $box-shadow-focused-input !default;
-$box-shadow-options-valid-ac: $box-shadow-valid-ie !default;
-$box-shadow-options-invalid-ac: $box-shadow-invalid-ie !default;
+$border-options-auto-complete: $border-input !default;
+$background-color-options-auto-complete: $color-white !default;
+$max-height-options-auto-complete: 300px !default;
+$padding-option-auto-complete: 3px 6px !default;
+$background-color-option-is-focused-auto-complete: $color-link-water !default;
+$box-shadow-options-auto-complete: $box-shadow-focused-input !default;
+$box-shadow-options-valid-auto-complete: $box-shadow-valid-input-element !default;
+$box-shadow-options-invalid-auto-complete: $box-shadow-invalid-input-element !default;
 
 /**
  * @section Variables
@@ -700,30 +705,30 @@ $right-default-notify: 15px !default;
  * @subsection Z-Indexes
  *
  * @var $z-index-content-tooltip
- * @var $z-index-et
+ * @var $z-index-extend-text
  * @var $z-index-container-tagging
- * @var $z-index-button-bdd
- * @var $z-index-button-is-active-bdd
- * @var $z-index-content-bdd
- * @var $z-index-so
+ * @var $z-index-button-button-drop-down
+ * @var $z-index-button-is-active-button-drop-down
+ * @var $z-index-content-button-drop-down
+ * @var $z-index-site-overlay
  * @var $z-index-notify
- * @var $z-index-non-blocking-sl
- * @var $z-index-sl
- * @var $z-index-content-rp
+ * @var $z-index-non-blocking-site-loader
+ * @var $z-index-site-loader
+ * @var $z-index-content-revealing-panel
  *
  * In order to better see how element stack, these are all the z-index values grouped in on location (instead of grouped with each component).
  */
-$z-index-et: 1 !default;
+$z-index-extend-text: 1 !default;
 $z-index-container-tagging: 2 !default;
 $z-index-content-tooltip: 3 !default;
-$z-index-button-bdd: 495 !default;
-$z-index-button-is-active-bdd: 502 !default;
-$z-index-content-bdd: 501 !default;
-$z-index-so: 999 !default;
+$z-index-button-button-drop-down: 495 !default;
+$z-index-button-is-active-button-drop-down: 502 !default;
+$z-index-content-button-drop-down: 501 !default;
+$z-index-site-overlay: 999 !default;
 $z-index-notify: 9999 !default;
-$z-index-non-blocking-sl: 10000 !default;
-$z-index-sl: 10001 !default;
-$z-index-content-rp: 11000 !default;
+$z-index-non-blocking-site-loader: 10000 !default;
+$z-index-site-loader: 10001 !default;
+$z-index-content-revealing-panel: 11000 !default;
 
 /**
  * @section Variables
@@ -778,23 +783,23 @@ $border-loading: 1px solid $color-black !default;
  *
  * These are the variables that control the look and feel for the feature indicator.
  *
- * @var $size-start-fi This value must equal at least (`$border-size-fi` * 3) + (`$border-content-margin-fi` * 2) otherwise inner shadow will not work properly
- * @var $size-end-fi
- * @var $opacity-start-fi
- * @var $opacity-end-fi
- * @var $background-color-fi
- * @var $duration-fade-animation-fi
- * @var $border-size-fi
- * @var $border-content-margin-fi
+ * @var $size-start-feature-indicator This value must equal at least (`$border-size-feature-indicator` * 3) + (`$border-content-margin-feature-indicator` * 2) otherwise inner shadow will not work properly
+ * @var $size-end-feature-indicator
+ * @var $opacity-start-feature-indicator
+ * @var $opacity-end-feature-indicator
+ * @var $background-color-feature-indicator
+ * @var $duration-fade-animation-feature-indicator
+ * @var $border-size-feature-indicator
+ * @var $border-content-margin-feature-indicator
  */
-$size-start-fi: 12px !default;
-$size-end-fi: 24px !default;
-$opacity-start-fi: .3 !default;
-$opacity-end-fi: .1 !default;
-$background-color-fi: $color-gray !default;
-$duration-fade-animation-fi: .75s !default;
-$border-size-fi: 2px !default;
-$border-content-margin-fi: 2px !default;
+$size-start-feature-indicator: 12px !default;
+$size-end-feature-indicator: 24px !default;
+$opacity-start-feature-indicator: .3 !default;
+$opacity-end-feature-indicator: .1 !default;
+$background-color-feature-indicator: $color-gray !default;
+$duration-fade-animation-feature-indicator: .75s !default;
+$border-size-feature-indicator: 2px !default;
+$border-content-margin-feature-indicator: 2px !default;
 
 //neat variables
 $max-width: 100%;
