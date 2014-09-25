@@ -1,37 +1,117 @@
 /**
  * @section Tooltip
  *
- * A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it on clicking on it).
+ * A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it or clicking on it).
  *
- * It will content a element with the `handle` class that the user can interact with and an element with the `content` class that is the tooltip content.
+ * It will content a element with the `handle` class that the user can interact with.  This is also an element with the `tooltip-content` class that will be used for regular hover content.
  *
  * ```html
- * <div class="tooltip" style="margin-left: 100px;">
- *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
- *   <div class="content">This is a tooltip content</div>
+ * <div style="position: relative;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content">This is a tooltip content</div>
  * </div>
  * ```
  *
- * If you add the `is-active` class to the main tooltip container, the content will show.
+ * The `tooltip-content` needs the `is-active` class to be visible.
  *
  * ```html
- * <div class="tooltip is-active" style="margin-left: 100px; margin-bottom: 50px;">
- *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
- *   <div class="content">This is a tooltip content</div>
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content is-active">This is a tooltip content</div>
  * </div>
  * ```
  *
- * Positioning the tooltip is just a matter of setting the `top`/`left`/`right`/`bottom` properties.
+ * You can optionally have a element with the class `tooltip-sticky-content` that is designed for sticky content (content that sticks when the `handle` is clicked).
  *
  * ```html
- * <div class="tooltip is-active" style="margin-left: 250px; margin-bottom: 50px;">
- *   <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
- *   <div class="content" style="left: -158px;">This is a tooltip content</div>
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-sticky-content is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * You can also have place an arrow around the content at the center of any side with the `top-arrow`, `bottom-arrow`, `left-arrow`, and `right-arrow` classes.
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content top-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content right-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content left-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-content bottom-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-sticky-content top-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-sticky-content right-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-sticky-content left-arrow is-active">This is a tooltip content</div>
+ * </div>
+ * ```
+ *
+ * ```html
+ * <div style="position: relative; margin-bottom: 40px;">
+ *   <div class="tooltip" style="margin-left: 100px;">
+ *     <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+ *   </div>
+ *   <div class="tooltip-sticky-content bottom-arrow is-active">This is a tooltip content</div>
  * </div>
  * ```
  */
 .tooltip {
-  position: relative;
+  display: inline-block;
+  //position: relative;
 
   &.is-active {
     .content {
@@ -42,14 +122,114 @@
   .handle {
     display: inline-block;
   }
+}
 
-  .content {
-    position: absolute;
-    padding: $padding-content-tooltip;
-    background: $background-content-tooltip;
-    border: $border-content-tooltip;
-    border-radius: $border-radius-tooltip;
-    display: none;
-    z-index: $z-index-content-tooltip;
+.tooltip-content,
+.tooltip-sticky-content {
+  position: absolute;
+  padding: $padding-content-tooltip;
+  border-radius: $border-radius-tooltip;
+  display: none;
+  z-index: $z-index-content-tooltip;
+  color: $color-content-tooltip;
+}
+
+.tooltip-content {
+  &.is-active {
+    display: block;
   }
+
+  &.top-arrow {
+    @include bordered-triangle((
+      direction: up,
+      border-color: $border-color-content-tooltip,
+      background-color: $background-color-content-tooltip
+    ));
+
+    margin-top: 0.7rem;
+  }
+
+  &.right-arrow {
+    @include bordered-triangle((
+      direction: right,
+      border-color: $border-color-content-tooltip,
+      background-color: $background-color-content-tooltip
+    ));
+
+    margin-right: 0.7rem;
+  }
+
+  &.bottom-arrow {
+    @include bordered-triangle((
+      direction: down,
+      border-color: $border-color-content-tooltip,
+      background-color: $background-color-content-tooltip
+    ));
+
+    margin-bottom: 0.7rem;
+  }
+
+  &.left-arrow {
+    @include bordered-triangle((
+      direction: left,
+      border-color: $border-color-content-tooltip,
+      background-color: $background-color-content-tooltip
+    ));
+
+    margin-left: 0.7rem;
+  }
+
+  background: $background-color-content-tooltip;
+  border: $border-content-tooltip;
+  color: $color-content-tooltip;
+}
+
+.tooltip-sticky-content {
+  &.is-active {
+    display: block;
+  }
+
+  &.top-arrow {
+    @include bordered-triangle((
+      direction: up,
+      border-color: $border-color-sticky-content-tooltip,
+      background-color: $background-color-sticky-content-tooltip
+    ));
+
+    margin-top: 0.7rem;
+  }
+
+  &.right-arrow {
+    @include bordered-triangle((
+      direction: right,
+      border-color: $border-color-sticky-content-tooltip,
+      background-color: $background-color-sticky-content-tooltip
+    ));
+
+    margin-right: 0.7rem;
+  }
+
+  &.bottom-arrow {
+    @include bordered-triangle((
+      direction: down,
+      border-color: $border-color-sticky-content-tooltip,
+      background-color: $background-color-sticky-content-tooltip
+    ));
+
+    margin-bottom: 0.7rem;
+  }
+
+  &.left-arrow {
+    @include bordered-triangle((
+      direction: left,
+      border-color: $border-color-sticky-content-tooltip,
+      background-color: $background-color-sticky-content-tooltip
+    ));
+
+    margin-left: 0.7rem;
+  }
+
+  background: $background-color-sticky-content-tooltip;
+  border: $border-sticky-content-tooltip;
+  color: $color-sticky-content-tooltip;
 }

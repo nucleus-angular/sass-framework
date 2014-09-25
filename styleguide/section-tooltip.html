@@ -155,35 +155,152 @@
             <section id="section-Tooltip" class="styledocer-section first">
               <h1 class="styledocer-title">Tooltip</h1>
               <div class="styledocer-description">
-                <p>A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it on clicking on it).</p>
-<p>It will content a element with the <code>handle</code> class that the user can interact with and an element with the <code>content</code> class that is the tooltip content.</p>
-<p><div class="tooltip" style="margin-left: 100px;">
-  <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-  <div class="content">This is a tooltip content</div>
+                <p>A tooltip is a way to display additional infomation when a user interact with an element (like hovering the mouse over it or clicking on it).</p>
+<p>It will content a element with the <code>handle</code> class that the user can interact with.  This is also an element with the <code>tooltip-content</code> class that will be used for regular hover content.</p>
+<p><div style="position: relative;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content">This is a tooltip content</div>
 </div></p>
-<pre><code class="lang-html">&lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
-  &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a tooltip content&lt;/div&gt;
+<pre><code class="lang-html">&lt;div style=&quot;position: relative;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content&quot;&gt;This is a tooltip content&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>If you add the <code>is-active</code> class to the main tooltip container, the content will show.</p>
-<p><div class="tooltip is-active" style="margin-left: 100px; margin-bottom: 50px;">
-  <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-  <div class="content">This is a tooltip content</div>
+<p>The <code>tooltip-content</code> needs the <code>is-active</code> class to be visible.</p>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content is-active">This is a tooltip content</div>
 </div></p>
-<pre><code class="lang-html">&lt;div class=&quot;tooltip is-active&quot; style=&quot;margin-left: 100px; margin-bottom: 50px;&quot;&gt;
-  &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
-  &lt;div class=&quot;content&quot;&gt;This is a tooltip content&lt;/div&gt;
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Positioning the tooltip is just a matter of setting the <code>top</code>/<code>left</code>/<code>right</code>/<code>bottom</code> properties.</p>
-<p><div class="tooltip is-active" style="margin-left: 250px; margin-bottom: 50px;">
-  <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
-  <div class="content" style="left: -158px;">This is a tooltip content</div>
+<p>You can optionally have a element with the class <code>tooltip-sticky-content</code> that is designed for sticky content (content that sticks when the <code>handle</code> is clicked).</p>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-sticky-content is-active">This is a tooltip content</div>
 </div></p>
-<pre><code class="lang-html">&lt;div class=&quot;tooltip is-active&quot; style=&quot;margin-left: 250px; margin-bottom: 50px;&quot;&gt;
-  &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
-  &lt;div class=&quot;content&quot; style=&quot;left: -158px;&quot;&gt;This is a tooltip content&lt;/div&gt;
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-sticky-content is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>You can also have place an arrow around the content at the center of any side with the <code>top-arrow</code>, <code>bottom-arrow</code>, <code>left-arrow</code>, and <code>right-arrow</code> classes.</p>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content top-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content top-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content right-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content right-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content left-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content left-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-content bottom-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-content bottom-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-sticky-content top-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-sticky-content top-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-sticky-content right-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-sticky-content right-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-sticky-content left-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-sticky-content left-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><div style="position: relative; margin-bottom: 40px;">
+  <div class="tooltip" style="margin-left: 100px;">
+    <span class="handle"><img class="svg-icon" src="http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg" /></span>
+  </div>
+  <div class="tooltip-sticky-content bottom-arrow is-active">This is a tooltip content</div>
+</div></p>
+<pre><code class="lang-html">&lt;div style=&quot;position: relative; margin-bottom: 40px;&quot;&gt;
+  &lt;div class=&quot;tooltip&quot; style=&quot;margin-left: 100px;&quot;&gt;
+    &lt;span class=&quot;handle&quot;&gt;&lt;img class=&quot;svg-icon&quot; src=&quot;http://cdn.jsdelivr.net/open-iconic/1.1.0/svg/question-mark.svg&quot; /&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tooltip-sticky-content bottom-arrow is-active&quot;&gt;This is a tooltip content&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 

@@ -2,6 +2,7 @@
 
 ## master
 
+- heavy refactoring of tooltip styling
 - fixed text alignment issue with radio and checkboxes
 - added support for `solid-button` class
 - added input group

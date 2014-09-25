@@ -26,56 +26,104 @@
   );
 }
 
-@mixin bordered-triangle(
-    $border-color: $gray3,
-    $fill-color: $gray1,
-    $direction: up,
-    $positionVertical: 0px,
-    $positionHorizontal: 0px,
-    $positionVerticalType: top,
-    $positionHorizontalType: left
-) {
-  $beforeVertical: $positionVertical;
-  $beforeHorizontal: $positionHorizontal;
-  $afterVertical: $positionVertical;
-  $afterHorizontal: $positionHorizontal;
-  $pixelChangeVertical: 1px;
-  $pixelChangeHorizontal: 1px;
+@mixin bordered-triangle($parameters: ()) {
+  $parameters: map-merge((
+    border-color: $color-gray,
+    background-color: $color-tundora-l50,
+    direction: up,
+    arrow-size: 1.4rem
+  ), $parameters);
 
-  //make sure the border appears correctly
-  @if $direction == up {
-    $afterVertical: $afterVertical + 1px;
+  $default-properties: (
+    up: (
+      background-properties: (
+        top: -0.6rem,
+        left: 50%,
+        margin-left: -0.7rem
+      ),
+      border-properties: (
+        top: -0.7rem,
+        left: 50%,
+        margin-left: -0.7rem
+      )
+    ),
+    down: (
+      background-properties: (
+        bottom: -0.6rem,
+        left: 50%,
+        margin-left: -0.7rem
+      ),
+      border-properties: (
+        bottom: -0.7rem,
+        left: 50%,
+        margin-left: -0.7rem
+      )
+    ),
+    left: (
+      background-properties: (
+        top: 50%,
+        left: -0.6rem,
+        margin-top: -0.7rem
+      ),
+      border-properties: (
+        top: 50%,
+        left: -0.7rem,
+        margin-top: -0.7rem
+      )
+    ),
+    right: (
+      background-properties: (
+        top: 50%,
+        right: -0.6rem,
+        margin-top: -0.7rem
+      ),
+      border-properties: (
+        top: 50%,
+        right: -0.7rem,
+        margin-top: -0.7rem
+      )
+    )
+  );
+
+  $direction: map-get($parameters, direction);
+  $border-color: map-get($parameters, border-color);
+  $background-color: map-get($parameters, background-color);
+  $arrow-size: map-get($parameters, arrow-size);
+  $background-properties: ();
+  $border-properties: ();
+
+  @if map-has-key($parameters, background-properties) {
+    $background-properties: map-get($parameters, background-properties);
+  } @else {
+    $background-properties: map-get(map-get($default-properties, $direction), background-properties);
   }
 
-  @if $direction == down {
-    $beforeVertical: $beforeVertical + 1px;
+  @if map-has-key($parameters, border-properties) {
+    $border-properties: map-get($parameters, border-properties);
+  } @else {
+    $border-properties: map-get(map-get($default-properties, $direction), border-properties);
   }
 
-  @if $direction == left {
-    $afterHorizontal: $afterHorizontal + 1px;
-  }
-
-  @if $direction == right {
-    $beforeHorizontal: $beforeHorizontal + 1px;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
   }
 
   &:before {
-    @include triangle(1.4rem, $border-color, $direction);
+    @include triangle($arrow-size, $border-color, $direction);
 
-    content: '';
-    display: block;
-    position: absolute;
-    #{$positionVerticalType}: $beforeVertical;
-    #{$positionHorizontalType}: $beforeHorizontal;
+    @each $css-property, $css-property-value in $border-properties {
+      #{$css-property}: $css-property-value;
+    }
   }
 
   &:after {
-    @include triangle(1.4rem, $fill-color, $direction);
+    @include triangle($arrow-size, $background-color, $direction);
 
-    content: '';
-    display: block;
-    position: absolute;
-    #{$positionVerticalType}: $afterVertical;
-    #{$positionHorizontalType}: $afterHorizontal;
+    @each $css-property, $css-property-value in $background-properties {
+      #{$css-property}: $css-property-value;
+    }
   }
 }

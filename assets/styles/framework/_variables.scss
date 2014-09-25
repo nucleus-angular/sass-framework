@@ -605,14 +605,27 @@ $background-color-tab-is-active-tabs: $color-tundora-l50 !default;
  *
  * These are the variables that control the look and feel for the tabs.
  *
+ * @var $color-tooltip
  * @var $padding-content-tooltip
- * @var $background-content-tooltip
+ * @var $border-color-content-tooltip
+ * @var $background-color-content-tooltip
  * @var $border-content-tooltip
+ * @var $border-radius-tooltip
+ * @var $background-color-sticky-content-tooltip
+ * @var $border-color-sticky-content-tooltip
+ * @var $border-sticky-content-tooltip
+ * @var $color-sticky-content-tooltip
  */
+$color-content-tooltip: $color-light-text !default;
 $padding-content-tooltip: 5px !default;
-$background-content-tooltip: rgb(255, 255, 255) !default;
-$border-content-tooltip: 1px solid rgb(0, 0, 0) !default;
+$border-color-content-tooltip: $color-black !default;
+$background-color-content-tooltip: $color-black !default;
+$border-content-tooltip: 1px solid $border-color-content-tooltip !default;
 $border-radius-tooltip: 3px !default;
+$background-color-sticky-content-tooltip: $color-white !default;
+$border-color-sticky-content-tooltip: $color-gray !default;
+$border-sticky-content-tooltip: 1px solid $border-color-sticky-content-tooltip !default;
+$color-sticky-content-tooltip: $color-text !default;
 
 /**
  * @section Variables
