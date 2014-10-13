@@ -111,11 +111,11 @@
  */
 .tooltip {
   display: inline-block;
-  //position: relative;
 
   &.is-active {
-    .content {
-      display: block;
+    .hint:before, [data-hint]:before,
+    .hint:after, [data-hint]:after {
+      display: none;
     }
   }
 
@@ -124,63 +124,13 @@
   }
 }
 
-.tooltip-content,
+//.tooltip-content,
 .tooltip-sticky-content {
   position: absolute;
   padding: $padding-content-tooltip;
   border-radius: $border-radius-tooltip;
   display: none;
   z-index: $z-index-content-tooltip;
-  color: $color-content-tooltip;
-}
-
-.tooltip-content {
-  &.is-active {
-    display: block;
-  }
-
-  &.top-arrow {
-    @include bordered-triangle((
-      direction: up,
-      border-color: $border-color-content-tooltip,
-      background-color: $background-color-content-tooltip
-    ));
-
-    margin-top: 0.7rem;
-  }
-
-  &.right-arrow {
-    @include bordered-triangle((
-      direction: right,
-      border-color: $border-color-content-tooltip,
-      background-color: $background-color-content-tooltip
-    ));
-
-    margin-right: 0.7rem;
-  }
-
-  &.bottom-arrow {
-    @include bordered-triangle((
-      direction: down,
-      border-color: $border-color-content-tooltip,
-      background-color: $background-color-content-tooltip
-    ));
-
-    margin-bottom: 0.7rem;
-  }
-
-  &.left-arrow {
-    @include bordered-triangle((
-      direction: left,
-      border-color: $border-color-content-tooltip,
-      background-color: $background-color-content-tooltip
-    ));
-
-    margin-left: 0.7rem;
-  }
-
-  background: $background-color-content-tooltip;
-  border: $border-content-tooltip;
   color: $color-content-tooltip;
 }
 
