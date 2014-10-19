@@ -2,6 +2,7 @@
 
 ## master
 
+- added user-select mixin
 - added hint.css for simple tooltip support
 - heavy refactoring of tooltip styling
 - fixed text alignment issue with radio and checkboxes
