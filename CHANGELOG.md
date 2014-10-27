@@ -2,6 +2,7 @@
 
 ## master
 
+- added get-color() function
 - added user-select mixin
 - added hint.css for simple tooltip support
 - heavy refactoring of tooltip styling

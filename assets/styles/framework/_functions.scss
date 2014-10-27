@@ -1,0 +1,32 @@
+@function get-color($color, $variation: false, $overrride-color-map: null) {
+  $colors: ();
+
+  @if type-of($overrride-color-map) == map {
+    $colors: $overrride-color-map;
+  } @else {
+    $colors: $color-map;
+  }
+
+  @if map-has-key($colors, $color) {
+    $color: map-get($colors, $color);
+  } @else {
+    @error "Invalid color name : #{$color} : you must used one of the pre-defined colors names";
+  }
+
+  @if $variation {
+    @if not map-has-key($color-variation-map, $variation) {
+      @error "Invalid variation : #{$variation}";
+    } @else {
+      $this-variation: map-get($color-variation-map, $variation);
+      $args: join(map-get($this-variation, function), $color);
+
+      @if map-get($this-variation, parameters) {
+        $args: join($args, map-get($this-variation, parameters));
+      }
+
+      @return call($args...);
+    }
+  }
+
+  @return $color;
+}

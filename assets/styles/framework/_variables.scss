@@ -167,6 +167,22 @@ $percentage-light: 10% !default;
 $percentage-lighter: 20% !default;
 $percentage-lightest: 30% !default;
 
+
+/**
+ * @section Variables
+ * @subsection Transparency
+ *
+ * Variable to use to add transparency.
+ *
+ *
+ * @var $add-transparent
+ * @var $add-transparenter
+ * @var $add-transparentest
+ */
+$add-transparent: .1 !default;
+$add-transparenter: .3 !default;
+$add-transparentest: .5 !default;
+
 /**
  * @section Variables
  * @subsection Font
@@ -816,3 +832,52 @@ $border-content-margin-feature-indicator: 2px !default;
 
 //neat variables
 $max-width: 100%;
+
+/**
+ * @section Variables
+ * @subsection Color Function
+ *
+ * Variables used for the get-color() function
+ *
+ * @var $color-map
+ * @var $color-variation-map
+ */
+$color-map: () !default;
+$color-variation-map: (
+    light: (
+        function: lighten,
+        parameters: $percentage-light
+    ),
+    lighter: (
+        function: lighten,
+        parameters: $percentage-lighter
+    ),
+    lightest: (
+        function: lighten,
+        parameters: $percentage-lightest
+    ),
+    dark: (
+        function: darken,
+        parameters: $percentage-dark
+    ),
+    darker: (
+        function: darken,
+        parameters: $percentage-darker
+    ),
+    darkest: (
+        function: darken,
+        parameters: $percentage-darkest
+    ),
+    transparent: (
+        function: transparentize,
+        parameters: $add-transparent
+    ),
+    transparenter: (
+        function: transparentize,
+        parameters: $add-transparenter
+    ),
+    transparentest: (
+        function: transparentize,
+        parameters: $add-transparentest
+    )
+) !default;
